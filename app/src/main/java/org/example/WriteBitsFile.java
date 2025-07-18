@@ -26,7 +26,6 @@ public class WriteBitsFile {
     numBitsFilled++;
 
     if (numBitsFilled == 8) {
-      System.out.println(currentByte);
       fileOut.write(currentByte);
       numBitsFilled = 0;
       currentByte = 0;
