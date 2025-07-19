@@ -13,6 +13,10 @@ public class Node implements Comparable<Node> {
     this.right = null;
   }
 
+  public boolean isleaf() {
+    return (this.left == null && this.right == null);
+  }
+
   @Override
   public int compareTo(Node otherNode) {
     return this.freq - otherNode.freq;

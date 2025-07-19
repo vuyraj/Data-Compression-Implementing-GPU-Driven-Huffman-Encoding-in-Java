@@ -4,6 +4,14 @@ import java.io.FileInputStream;
 
 public class App {
 
+  private static String inputFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/input";
+  private static String compressedFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/compressed.sz";
+  private static String DecompressedFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/output.txt";
+
+  // private static String inputFile = "/home/vuyraj/FreeBSD.vdi";
+  // private static String compressedFile = "/home/vuyraj/comp.sz";
+  // private static String DecompressedFile = "/home/vuyraj/decomp.vdi";
+
   public static void main(String[] args) {
 
     System.out.println("Data Compression");
@@ -11,8 +19,7 @@ public class App {
     cpuHuffman huff = new cpuHuffman();
 
     try {
-      FileInputStream in = new FileInputStream(
-          "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/input");
+      FileInputStream in = new FileInputStream(inputFile);
       int inp;
 
       while ((inp = in.read()) != -1) {
@@ -26,14 +33,11 @@ public class App {
       huff.codeBookCreation(rootNode, "");
       huff.printCodebook();
       System.out.println("Now compressing the file...");
-      huff.compress("/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/input",
-          "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/compressed.sz");
+      cpuCompression.compress(inputFile, compressedFile);
       in.close();
       System.out.println("Compression Successful");
       System.out.println("Decompressing the file ...");
-      cpuDecompression dcmp = new cpuDecompression(
-          "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/compressed.sz",
-          "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/output.txt");
+      cpuDecompression dcmp = new cpuDecompression(compressedFile, DecompressedFile);
       System.out.println("Decompression successful");
       dcmp.decompress();
       dcmp.close();

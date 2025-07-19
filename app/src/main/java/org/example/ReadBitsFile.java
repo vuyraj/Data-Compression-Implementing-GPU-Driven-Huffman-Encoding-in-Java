@@ -1,6 +1,5 @@
 package org.example;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,19 +9,37 @@ public class ReadBitsFile {
   private int currentByte;
   private int numBitsRemaining;
   private boolean isEndOfStream;
-  private long totalbitstoread;
+  private static long totalbitstoread;
 
-  public ReadBitsFile(String filename) throws IOException {
-    File fl = new File(filename);
-    input = new FileInputStream(filename);
+  public ReadBitsFile(FileInputStream input, long len) throws IOException {
+    this.input = input;
     numBitsRemaining = 0;
     isEndOfStream = false;
-    totalbitstoread = (fl.length() * 8) - WriteBitsFile.pad;
+    System.out.println("pads cpuDec: " + cpuDecompression.pad);
+
+    totalbitstoread = len * 8;
+    totalbitstoread -= cpuDecompression.pad;
+    totalbitstoread -= 8;
+    System.out.println(totalbitstoread);
+  }
+
+  public void calibrateTotalbitstoread(int metasize) {
+    totalbitstoread = totalbitstoread - (metasize * 8);
+  }
+
+  public int readByte() throws IOException {
+    return input.read();
+  }
+
+  public byte[] readCode(int len) throws IOException {
+    return input.readNBytes(len);
   }
 
   // Returns the next bit (0 or 1), or -1 if end of stream
   public int readBit() throws IOException {
     if (totalbitstoread == 0) {
+
+      System.out.println("TotalbitsreachedEnd");
       return -1;
     }
     if (isEndOfStream) {
@@ -33,6 +50,7 @@ public class ReadBitsFile {
       currentByte = input.read();
       if (currentByte == -1) {
         isEndOfStream = true;
+        System.out.println(totalbitstoread + "is left to read.");
         return -1;
       }
       numBitsRemaining = 8;

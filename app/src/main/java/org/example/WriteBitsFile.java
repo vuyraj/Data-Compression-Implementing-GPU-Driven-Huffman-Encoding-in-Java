@@ -15,6 +15,7 @@ public class WriteBitsFile {
     fileOut = new FileOutputStream(f);
     currentByte = 0;
     numBitsFilled = 0;
+    pad = 0;
   }
 
   // Writes a single bit to the stream (0 or 1)
@@ -45,12 +46,21 @@ public class WriteBitsFile {
     }
   }
 
+  public void writeInt(int s) throws IOException {
+    fileOut.write(s);
+  }
+
+  public void writeCodeInByte(char by) throws IOException {
+    fileOut.write(by);
+  }
+
   public void close() throws IOException {
     if (numBitsFilled > 0) {
       pad = 8 - numBitsFilled;
       currentByte <<= (8 - numBitsFilled); // Pad with zeros
       fileOut.write(currentByte);
     }
+    fileOut.write(pad);
     fileOut.close();
   }
 

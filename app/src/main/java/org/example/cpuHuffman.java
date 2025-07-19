@@ -1,6 +1,5 @@
 package org.example;
 
-import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -8,7 +7,6 @@ import java.util.PriorityQueue;
 public class cpuHuffman {
   public static Map<Integer, Integer> fmap = new HashMap<>();
   public static Map<Integer, String> codebook = new HashMap<>();
-  public static Map<String, Integer> decodebook = new HashMap<>();
 
   public void frequencyCount(int inp) {
 
@@ -51,7 +49,6 @@ public class cpuHuffman {
     if (n.left == null && n.right == null) {
 
       codebook.put(n.alpha, ctn);
-      decodebook.put(ctn, n.alpha);
 
     }
 
@@ -64,25 +61,6 @@ public class cpuHuffman {
     for (Map.Entry<Integer, String> s : codebook.entrySet()) {
       System.out.println(s.getKey() + " : " + s.getValue());
     }
-  }
-
-  public void compress(String inFileName, String outFileName) {
-    int inp;
-    try {
-      FileInputStream fd = new FileInputStream(inFileName);
-      WriteBitsFile wbf = new WriteBitsFile(outFileName);
-      while ((inp = fd.read()) != -1) {
-        String code = codebook.get(inp);
-        wbf.writeCode(code);
-      }
-
-      wbf.close();
-      fd.close();
-
-    } catch (Exception e) {
-      System.out.println(e);
-    }
-
   }
 
 }
