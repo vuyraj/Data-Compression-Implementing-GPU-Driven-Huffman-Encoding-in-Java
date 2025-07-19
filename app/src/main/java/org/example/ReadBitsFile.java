@@ -15,12 +15,9 @@ public class ReadBitsFile {
     this.input = input;
     numBitsRemaining = 0;
     isEndOfStream = false;
-    System.out.println("pads cpuDec: " + cpuDecompression.pad);
-
     totalbitstoread = len * 8;
     totalbitstoread -= cpuDecompression.pad;
     totalbitstoread -= 8;
-    System.out.println(totalbitstoread);
   }
 
   public void calibrateTotalbitstoread(int metasize) {
@@ -38,8 +35,6 @@ public class ReadBitsFile {
   // Returns the next bit (0 or 1), or -1 if end of stream
   public int readBit() throws IOException {
     if (totalbitstoread == 0) {
-
-      System.out.println("TotalbitsreachedEnd");
       return -1;
     }
     if (isEndOfStream) {
@@ -50,7 +45,6 @@ public class ReadBitsFile {
       currentByte = input.read();
       if (currentByte == -1) {
         isEndOfStream = true;
-        System.out.println(totalbitstoread + "is left to read.");
         return -1;
       }
       numBitsRemaining = 8;

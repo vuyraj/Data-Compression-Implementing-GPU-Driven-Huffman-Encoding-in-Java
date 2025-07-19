@@ -21,7 +21,6 @@ public class cpuDecompression {
   cpuDecompression(String in, String out) throws IOException {
     ifile = new File(in);
     pad = getpad();
-    System.out.println(pad);
     inFile = new ReadBitsFile(new FileInputStream(in), ifile.length());
     outFile = new FileOutputStream(out);
   }
