@@ -37,10 +37,13 @@ public class App {
       in.close();
       System.out.println("Compression Successful");
       System.out.println("Decompressing the file ...");
+     
       cpuDecompression dcmp = new cpuDecompression(compressedFile, DecompressedFile);
+       dcmp.decompress();
       System.out.println("Decompression successful");
-      dcmp.decompress();
+    
       dcmp.close();
+   
     } catch (Exception e) {
       System.out.println("error occured: " + e);
     }
