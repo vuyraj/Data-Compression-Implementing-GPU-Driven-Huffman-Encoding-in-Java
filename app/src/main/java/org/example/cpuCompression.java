@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.util.Map;
 
 public class cpuCompression {
+  private static Map<Integer, String> codebook = canonicalCode.canonicalCodeBook;
 
   public static void compress(String inFileName, String outFileName) {
     int inp;
@@ -11,21 +12,16 @@ public class cpuCompression {
       FileInputStream fd = new FileInputStream(inFileName);
       WriteBitsFile wbf = new WriteBitsFile(outFileName);
 
-      wbf.writeInt(cpuHuffman.codebook.size());
+      // write length to the compressed file
+      for (int i : cpuHuffman.codeLength) {
 
-      for (Map.Entry<Integer, String> entry : cpuHuffman.codebook.entrySet()) {
-        int symbol = entry.getKey();
-        String code = entry.getValue();
+        wbf.writeInt(i);
 
-        wbf.writeInt(symbol);
-        wbf.writeInt(code.length());
-        for (char c : code.toCharArray()) {
-          wbf.writeCodeInByte(c);
-        }
       }
 
+      // encode the file
       while ((inp = fd.read()) != -1) {
-        String code = cpuHuffman.codebook.get(inp);
+        String code = codebook.get(inp);
         wbf.writeCode(code);
       }
 

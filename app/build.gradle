@@ -40,7 +40,7 @@ javafx {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.MainUI'
+    mainClass = 'org.example.App'
 }
 
 tasks.named('test') {

@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class cpuHuffman {
   public static Map<Integer, Integer> fmap = new HashMap<>();
-  public static Map<Integer, String> codebook = new HashMap<>();
+  public static int[] codeLength = new int[256];
 
   public void frequencyCount(int inp) {
 
@@ -47,8 +47,7 @@ public class cpuHuffman {
       return;
     }
     if (n.left == null && n.right == null) {
-
-      codebook.put(n.alpha, ctn);
+      codeLength[n.alpha] = ctn.length();
 
     }
 
@@ -57,10 +56,15 @@ public class cpuHuffman {
 
   }
 
+  public static void toCannonicalCode() {
+    canonicalCode.canonicalCodeConversion(codeLength);
+  }
+
   public void printCodebook() {
-    for (Map.Entry<Integer, String> s : codebook.entrySet()) {
+    System.out.println("cannonical code print");
+    toCannonicalCode();
+    for (Map.Entry<Integer, String> s : canonicalCode.canonicalCodeBook.entrySet()) {
       System.out.println(s.getKey() + " : " + s.getValue());
     }
   }
-
 }

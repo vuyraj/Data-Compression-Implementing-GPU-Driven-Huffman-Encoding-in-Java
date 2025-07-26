@@ -4,13 +4,16 @@ import java.io.FileInputStream;
 
 public class App {
 
-  private static String inputFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/input";
-  private static String compressedFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/compressed.sz";
-  private static String DecompressedFile = "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/output.txt";
+  // private static String inputFile =
+  // "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/Java-lab-1-9.pdf";
+  // private static String compressedFile =
+  // "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/compressedjava.sz";
+  // private static String DecompressedFile =
+  // "/home/vuyraj/git/Data-Compression-Implementing-GPU-Driven-Huffman-Encoding-in-Java/app/out";
 
-  // private static String inputFile = "/home/vuyraj/FreeBSD.vdi";
-  // private static String compressedFile = "/home/vuyraj/comp.sz";
-  // private static String DecompressedFile = "/home/vuyraj/decomp.vdi";
+  private static String inputFile = "/home/vuyraj/input.tar";
+  private static String compressedFile = "/home/vuyraj/comp.tar.sz";
+  private static String DecompressedFile = "/home/vuyraj/decomp.tar";
 
   public static void main(String[] args) {
 
@@ -31,19 +34,23 @@ public class App {
       Node rootNode = huff.huffmanTree();
 
       huff.codeBookCreation(rootNode, "");
-      huff.printCodebook();
+
+      cpuHuffman.toCannonicalCode();
+
+      // huff.printCodebook();
+
       System.out.println("Now compressing the file...");
       cpuCompression.compress(inputFile, compressedFile);
       in.close();
       System.out.println("Compression Successful");
       System.out.println("Decompressing the file ...");
-     
+
       cpuDecompression dcmp = new cpuDecompression(compressedFile, DecompressedFile);
-       dcmp.decompress();
+      dcmp.decompress();
       System.out.println("Decompression successful");
-    
+
       dcmp.close();
-   
+
     } catch (Exception e) {
       System.out.println("error occured: " + e);
     }
