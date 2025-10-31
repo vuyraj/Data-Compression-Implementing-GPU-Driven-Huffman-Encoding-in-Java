@@ -1,0 +1,973 @@
+2025-10-31 20:41:14.958 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 20:41:15.246 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 20:41:15.250 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-10-31 20:41:15.615 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 20:41:40.864 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-10-31 20:42:19.145 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 20:44:49.186 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 20:44:49.468 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 20:44:49.476 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: org/graalvm/collections/UnmodifiableEconomicMap
+2025-10-31 20:44:49.478 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:44:49.478 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:44:49.885 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 20:44:49.889 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:44:50.230 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:44:55.215 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:44:55.216 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:44:55.216 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:44:57.234 [JavaFX Application Thread] ERROR com.datacomp.ui.MainViewController - Failed to load view: /fxml/SettingsView.fxml
+javafx.fxml.LoadException: String is not a valid type.
+/home/vuyraj/Datacomp-cursor/Datacomp/app/build/resources/main/fxml/SettingsView.fxml:29
+
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2718)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.createElement(FXMLLoader.java:2920)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2850)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.datacomp.ui.MainViewController.loadView(MainViewController.java:90)
+	at com.datacomp.ui.MainViewController.showSettings(MainViewController.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.ToggleButton.fire(ToggleButton.java:263)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-31 20:45:03.569 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:12.813 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:12.813 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:45:12.813 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:45:13.397 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:22.127 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:22.127 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:45:22.127 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:45:29.942 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:45:31.412 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:33.593 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:45:34.061 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:34.061 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:45:34.061 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:45:39.016 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:45.094 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:45:45.095 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:45:45.095 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:45:55.065 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 20:48:54.750 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 20:48:55.030 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 20:48:55.041 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: org/graalvm/compiler/api/replacements/SnippetReflectionProvider
+2025-10-31 20:48:55.044 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:48:55.045 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:48:55.384 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 20:48:55.385 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:48:55.782 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:49:10.872 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:49:10.873 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:49:10.873 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:49:13.748 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - TornadoVM not available: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:49:17.001 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:49:17.001 [JavaFX Application Thread] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:49:17.001 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - GPU not available, using CPU service
+2025-10-31 20:51:53.264 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit16093353560866121944/test.bin
+2025-10-31 20:51:53.289 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-10-31 20:51:53.290 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit16093353560866121944/test.bin
+2025-10-31 20:51:53.293 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 20:51:53.294 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:53.443 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:53.444 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:53.590 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:53.591 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:53.732 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:53.732 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:53.816 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:53.817 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:53.941 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:53.942 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:54.020 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.020 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:54.102 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.103 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:51:54.226 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.227 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 10.63 MB/s, 100.06% compression, 0.099s total
+2025-10-31 20:51:54.230 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-10-31 20:51:54.230 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:51:54.231 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-10-31 20:51:54.274 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-10-31 20:51:54.277 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.279 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-10-31 20:51:54.280 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-10-31 20:51:54.297 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-10-31 20:51:54.299 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.299 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-10-31 20:51:54.299 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-10-31 20:51:54.310 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-10-31 20:51:54.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-10-31 20:51:54.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-10-31 20:51:54.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.345 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-10-31 20:51:54.632 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.632 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-10-31 20:51:54.633 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-10-31 20:51:54.641 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-10-31 20:51:54.643 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:51:54.670 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:52:06.426 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-10-31 20:52:06.443 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.444 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-10-31 20:52:06.444 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-10-31 20:52:06.467 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-10-31 20:52:06.470 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.473 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-10-31 20:52:06.474 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-10-31 20:52:06.480 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-10-31 20:52:06.481 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.481 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-10-31 20:52:06.482 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-10-31 20:52:06.482 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.511 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-10-31 20:52:06.847 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.847 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-10-31 20:52:06.848 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-10-31 20:52:06.857 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-10-31 20:52:06.859 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:06.929 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit12872006539959162474/test.bin
+2025-10-31 20:52:06.939 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-10-31 20:52:06.940 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit12872006539959162474/test.bin
+2025-10-31 20:52:06.940 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 20:52:06.941 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.036 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.037 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.174 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.175 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.255 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.256 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.331 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.332 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.397 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.398 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.471 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.471 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.547 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.547 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:07.642 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:07.644 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 13.58 MB/s, 100.06% compression, 0.077s total
+2025-10-31 20:52:07.646 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-10-31 20:52:07.646 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:52:07.647 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-10-31 20:52:07.703 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:52:38.425 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-10-31 20:52:38.448 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.448 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-10-31 20:52:38.448 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-10-31 20:52:38.474 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-10-31 20:52:38.477 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.480 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-10-31 20:52:38.481 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-10-31 20:52:38.487 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-10-31 20:52:38.489 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.489 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-10-31 20:52:38.489 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-10-31 20:52:38.489 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.528 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-10-31 20:52:38.832 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.832 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-10-31 20:52:38.833 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-10-31 20:52:38.845 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-10-31 20:52:38.848 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:38.965 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit2304959144548089495/test.bin
+2025-10-31 20:52:38.980 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-10-31 20:52:38.980 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit2304959144548089495/test.bin
+2025-10-31 20:52:38.980 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 20:52:38.981 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.077 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.077 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.209 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.209 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.333 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.334 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.431 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.432 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.526 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.526 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.607 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.608 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.687 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.689 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 20:52:39.768 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:52:39.770 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 12.08 MB/s, 100.06% compression, 0.087s total
+2025-10-31 20:52:39.775 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-10-31 20:52:39.776 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 20:52:39.776 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-10-31 20:52:39.822 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 20:55:15.507 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 20:55:15.847 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 20:55:16.970 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 20:55:17.815 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 20:55:17.839 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 20:55:18.180 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 20:55:32.754 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 20:55:32.778 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 20:55:32.798 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 20:55:41.472 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 20:56:41.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 20:56:41.606 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 20:56:41.620 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 20:56:53.730 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/input.tar
+2025-10-31 20:56:53.738 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 20:56:53.765 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:56:55.983 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:56:55.996 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:56:56.584 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:56:58.148 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:56:58.152 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:00.048 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:00.052 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:01.880 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:01.884 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:03.818 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:03.822 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:05.659 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:05.663 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:07.496 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:07.500 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:09.390 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:09.395 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 32.94 MB/s, 82.08% compression, 1.865s total
+2025-10-31 20:57:09.396 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 20:57:09.425 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 20:57:09.443 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 20:57:09.459 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:11.370 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:11.386 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:13.266 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:13.286 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:15.184 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:15.200 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:17.033 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:17.049 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:18.966 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:18.989 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:20.867 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:20.884 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:22.756 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:22.771 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 20:57:24.609 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:57:24.613 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 32.64 MB/s, 82.08% compression, 1.881s total
+2025-10-31 20:58:54.603 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/Downloads/drishyam2.mp4
+2025-10-31 20:58:54.603 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 20:58:54.604 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 20:59:57.378 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 20:59:57.605 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:00:56.796 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:00:57.212 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:01:55.660 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:01:55.870 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:03:28.490 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:03:28.710 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:05:15.990 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:05:16.213 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:07:04.288 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:07:04.514 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:08:51.325 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:08:51.556 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:10:41.182 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:10:41.408 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 28.34 MB/s, 99.92% compression, 104.883s total
+2025-10-31 21:10:41.411 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:10:41.433 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:10:41.443 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 21:10:41.454 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:12:29.754 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:12:29.991 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:14:18.096 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:14:18.342 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:16:07.045 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:16:07.300 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:17:54.498 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:17:54.747 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:19:42.185 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:19:42.430 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:21:29.391 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:21:29.651 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:23:16.905 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:23:17.151 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks
+2025-10-31 21:25:49.645 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 2972573064 -> 2970325535 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:25:49.853 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 25.56 MB/s, 99.92% compression, 116.291s total
+2025-10-31 21:27:02.787 [JavaFX Application Thread] ERROR com.datacomp.ui.MainViewController - Failed to load view: /fxml/SettingsView.fxml
+javafx.fxml.LoadException: String is not a valid type.
+/home/vuyraj/Datacomp-cursor/Datacomp/app/build/resources/main/fxml/SettingsView.fxml:29
+
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2718)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.createElement(FXMLLoader.java:2920)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2850)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.datacomp.ui.MainViewController.loadView(MainViewController.java:90)
+	at com.datacomp.ui.MainViewController.showSettings(MainViewController.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.ToggleButton.fire(ToggleButton.java:263)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-31 21:27:10.465 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:27:10.486 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:27:10.496 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:27:16.738 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:27:16.750 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:27:16.761 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:27:38.726 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 21:28:15.792 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-10-31 21:28:15.817 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:15.817 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-10-31 21:28:15.818 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-10-31 21:28:15.838 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-10-31 21:28:15.840 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:15.842 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-10-31 21:28:15.842 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-10-31 21:28:15.846 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-10-31 21:28:15.847 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:15.847 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-10-31 21:28:15.848 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-10-31 21:28:15.848 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:15.875 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-10-31 21:28:16.135 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.135 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-10-31 21:28:16.136 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-10-31 21:28:16.142 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-10-31 21:28:16.143 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.206 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit17428716570973933931/test.bin
+2025-10-31 21:28:16.219 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-10-31 21:28:16.220 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit17428716570973933931/test.bin
+2025-10-31 21:28:16.220 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 21:28:16.220 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.308 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.309 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.391 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.392 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.459 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.459 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.526 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.526 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.603 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.604 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.679 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.680 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.743 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.743 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-10-31 21:28:16.806 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:28:16.807 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 15.15 MB/s, 100.06% compression, 0.069s total
+2025-10-31 21:28:16.811 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-10-31 21:28:16.811 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-10-31 21:28:16.811 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-10-31 21:28:16.844 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-10-31 21:32:19.706 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 21:32:20.007 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 21:32:21.065 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:32:21.696 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:32:21.724 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:32:22.087 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 21:32:27.972 [JavaFX Application Thread] ERROR com.datacomp.ui.MainViewController - Failed to load view: /fxml/SettingsView.fxml
+javafx.fxml.LoadException: String is not a valid type.
+/home/vuyraj/Datacomp-cursor/Datacomp/app/build/resources/main/fxml/SettingsView.fxml:29
+
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2718)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.createElement(FXMLLoader.java:2920)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2850)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.datacomp.ui.MainViewController.loadView(MainViewController.java:90)
+	at com.datacomp.ui.MainViewController.showSettings(MainViewController.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.ToggleButton.fire(ToggleButton.java:263)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-31 21:32:33.573 [JavaFX Application Thread] ERROR com.datacomp.ui.MainViewController - Failed to load view: /fxml/SettingsView.fxml
+javafx.fxml.LoadException: String is not a valid type.
+/home/vuyraj/Datacomp-cursor/Datacomp/app/build/resources/main/fxml/SettingsView.fxml:29
+
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2718)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.createElement(FXMLLoader.java:2920)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2850)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.datacomp.ui.MainViewController.loadView(MainViewController.java:90)
+	at com.datacomp.ui.MainViewController.showSettings(MainViewController.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.ToggleButton.fire(ToggleButton.java:263)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-31 21:33:01.278 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:33:01.308 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:33:01.330 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:33:03.236 [JavaFX Application Thread] ERROR com.datacomp.ui.MainViewController - Failed to load view: /fxml/SettingsView.fxml
+javafx.fxml.LoadException: String is not a valid type.
+/home/vuyraj/Datacomp-cursor/Datacomp/app/build/resources/main/fxml/SettingsView.fxml:29
+
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2718)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.createElement(FXMLLoader.java:2920)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2850)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.datacomp.ui.MainViewController.loadView(MainViewController.java:90)
+	at com.datacomp.ui.MainViewController.showSettings(MainViewController.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.1/javafx.scene.control.ToggleButton.fire(ToggleButton.java:263)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.1/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-31 21:33:07.648 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 21:33:48.047 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 21:33:48.335 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 21:33:48.917 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:33:49.554 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:33:49.588 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:33:49.895 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 21:34:56.355 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:34:56.383 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:34:56.398 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:35:04.164 [pool-3-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/input.tar
+2025-10-31 21:35:04.164 [pool-3-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 21:35:04.166 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:06.586 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:06.589 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:08.414 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:08.419 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:10.198 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:10.203 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:11.971 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:11.980 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:13.818 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:13.822 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:15.526 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:15.531 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:17.230 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:17.236 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:19.063 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:19.068 [pool-3-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 34.74 MB/s, 82.08% compression, 1.768s total
+2025-10-31 21:35:19.068 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:35:19.088 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:35:19.102 [pool-3-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 21:35:19.119 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:20.877 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:20.900 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:22.621 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:22.643 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:24.348 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:24.368 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:26.334 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:26.353 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:28.323 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:28.348 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:30.567 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:30.586 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:32.661 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:32.685 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 21:35:34.840 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 21:35:34.845 [pool-3-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 29.33 MB/s, 82.08% compression, 2.094s total
+2025-10-31 21:36:05.372 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:36:05.397 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:36:05.410 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:36:12.982 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 21:36:42.610 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 21:36:42.831 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 21:36:43.543 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:36:44.045 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:36:44.071 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:36:44.378 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 21:36:46.762 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:36:46.787 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:36:46.811 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:37:10.463 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 21:40:41.960 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 21:40:42.133 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 21:40:42.515 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 21:40:42.943 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 21:40:42.958 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 21:40:43.158 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 21:40:45.548 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:40:45.648 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 32 MB
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: Light
+2025-10-31 21:40:48.279 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 21:40:49.904 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 21:40:53.220 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:40:59.614 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 64 MB
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: Dark
+2025-10-31 21:40:59.615 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 21:41:00.856 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 21:41:02.486 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:41:04.158 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:41:05.346 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: false
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 32 MB
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: false
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: false
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: Dark
+2025-10-31 21:41:10.382 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 21:41:12.511 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 21:41:15.442 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 21:41:18.850 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 22:19:18.194 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 22:19:18.366 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 22:19:19.170 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:19:19.590 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:19:19.604 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:19:19.800 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 22:19:22.528 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 64 MB
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: dark
+2025-10-31 22:19:29.012 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 22:19:30.413 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:19:32.258 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:19:33.723 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:19:33.737 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:19:33.749 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:19:34.920 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:19:37.819 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 64 MB
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: Light
+2025-10-31 22:19:37.820 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 22:19:39.205 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:19:40.458 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:19:43.903 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:19:43.914 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:19:43.925 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:19:45.059 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:19:55.323 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:19:55.323 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:19:55.323 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: CUDA
+2025-10-31 22:19:55.323 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 64 MB
+2025-10-31 22:19:55.324 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:19:55.324 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:19:55.324 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: Light
+2025-10-31 22:19:55.324 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: false
+2025-10-31 22:19:56.460 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:20:02.118 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:20:02.133 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:20:02.145 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:20:25.761 [pool-8-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/input.tar
+2025-10-31 22:20:25.761 [pool-8-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 22:20:25.763 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:27.937 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:27.940 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:29.478 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:29.480 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:31.044 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:31.047 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:32.604 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:32.607 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:34.159 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:34.162 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:35.662 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:35.666 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:37.219 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:37.222 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:38.726 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:38.729 [pool-8-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 40.05 MB/s, 82.08% compression, 1.533s total
+2025-10-31 22:20:38.729 [pool-8-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:20:38.752 [pool-8-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:20:38.764 [pool-8-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 22:20:38.773 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:40.310 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:40.324 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:41.889 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:41.902 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:43.456 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:43.468 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:44.981 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:44.994 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:46.573 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:46.585 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:48.138 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:48.153 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:49.657 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:49.669 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:20:51.236 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:20:51.239 [pool-8-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 39.56 MB/s, 82.08% compression, 1.553s total
+2025-10-31 22:21:54.702 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-10-31 22:24:15.659 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-10-31 22:24:15.913 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-10-31 22:24:16.636 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:24:17.117 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:24:17.146 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:24:17.459 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-10-31 22:24:26.567 [pool-2-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/input.tar
+2025-10-31 22:24:26.568 [pool-2-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 22:24:26.575 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:29.032 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:29.037 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:30.890 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:30.895 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:32.658 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:32.662 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:34.554 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:34.559 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:36.179 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:36.183 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:37.914 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:37.917 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:39.676 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:39.692 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:41.513 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:41.522 [pool-2-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 34.77 MB/s, 82.08% compression, 1.767s total
+2025-10-31 22:24:41.524 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:24:41.570 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:24:41.588 [pool-2-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 22:24:41.606 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:43.782 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:43.814 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:46.136 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:46.159 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:48.082 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:48.101 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:49.999 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:50.025 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:51.763 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:51.801 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:53.541 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:53.557 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:55.390 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:55.407 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:24:57.134 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:24:57.139 [pool-2-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 34.00 MB/s, 82.08% compression, 1.806s total
+2025-10-31 22:27:25.560 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:27:32.129 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:27:32.129 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:27:32.129 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 22:27:32.129 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 128 MB
+2025-10-31 22:27:32.129 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:27:32.139 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:27:32.139 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: dark
+2025-10-31 22:27:32.139 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 22:27:33.577 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:27:38.285 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 128 MB
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: dark
+2025-10-31 22:27:38.286 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 22:27:39.770 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU auto-detect: true
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - GPU fallback on error: true
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Preferred device: any
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Chunk size: 128 MB
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Verify after compression: true
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Keep original file: true
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Theme: dark
+2025-10-31 22:27:46.145 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Enable animations: true
+2025-10-31 22:27:47.702 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings saved successfully
+2025-10-31 22:27:48.534 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:27:48.609 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:27:48.622 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-10-31 22:27:56.603 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/input.tar
+2025-10-31 22:27:56.605 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 22:27:56.605 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:27:58.439 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:27:58.445 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:27:59.986 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:27:59.989 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:01.620 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:01.623 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:03.499 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:03.502 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:05.230 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:05.234 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:06.848 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:06.852 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:08.446 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:08.450 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:10.245 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:10.249 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 35.68 MB/s, 82.08% compression, 1.721s total
+2025-10-31 22:28:10.266 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-10-31 22:28:10.338 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-10-31 22:28:10.351 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking GPU: GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))
+2025-10-31 22:28:10.362 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:11.930 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:11.942 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:13.515 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:13.528 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:15.157 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:15.170 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:16.759 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:16.774 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:18.398 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:18.414 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:20.087 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:20.109 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:21.805 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:21.816 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing input.tar (61419520 bytes) into 2 chunks
+2025-10-31 22:28:23.664 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 61419520 -> 50411818 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-10-31 22:28:23.707 [pool-4-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: GPU [GPU Compression (GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)))]: 36.19 MB/s, 82.08% compression, 1.697s total
+2025-10-31 22:30:44.778 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:30:47.105 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-10-31 22:30:58.385 [pool-6-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /home/vuyraj/Downloads/drishyam2.mp4
+2025-10-31 22:30:58.386 [pool-6-thread-1] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-10-31 22:30:58.386 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing drishyam2.mp4 (2972573064 bytes) into 89 chunks

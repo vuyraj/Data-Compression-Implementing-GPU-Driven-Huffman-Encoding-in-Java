@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.datacomp.ui.CompressController"
+      spacing="20">
+    
+    <Label text="Compress / Decompress" styleClass="view-title"/>
+    
+    <!-- Drag and Drop Area -->
+    <VBox fx:id="dragDropArea" styleClass="drag-drop-area" alignment="CENTER" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="50" right="50" bottom="50" left="50"/>
+        </padding>
+        
+        <Label text="Drag and drop file here" styleClass="drag-drop-label"/>
+        <Label text="or" styleClass="drag-drop-sublabel"/>
+        <Button text="Select File" onAction="#handleSelectFile" styleClass="primary-button"/>
+        
+        <Region VBox.vgrow="ALWAYS" minHeight="20"/>
+        
+        <Label fx:id="fileLabel" text="No file selected" styleClass="file-label"/>
+    </VBox>
+    
+    <!-- Settings -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <CheckBox fx:id="useCpuCheckBox" text="Force CPU mode"/>
+    </HBox>
+    
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="compressButton" text="Compress" onAction="#handleCompress" 
+                styleClass="primary-button" disable="true"/>
+        <Button fx:id="decompressButton" text="Decompress" onAction="#handleDecompress" 
+                styleClass="primary-button" disable="true"/>
+    </HBox>
+    
+    <!-- Progress Section -->
+    <VBox spacing="10" styleClass="progress-section">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Progress:" styleClass="progress-title"/>
+            <Label fx:id="progressLabel" text="" styleClass="progress-text"/>
+        </HBox>
+        
+        <ProgressBar fx:id="progressBar" maxWidth="Infinity" progress="0"/>
+        
+        <HBox spacing="20">
+            <Label fx:id="throughputLabel" text="" styleClass="metric-label"/>
+            <Label fx:id="etaLabel" text="" styleClass="metric-label"/>
+        </HBox>
+        
+        <Label fx:id="statusLabel" text="" styleClass="status-message"/>
+    </VBox>
+    
+</VBox>
+

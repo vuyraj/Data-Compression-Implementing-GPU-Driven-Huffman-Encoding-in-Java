@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="rootPane"
+            fx:controller="com.datacomp.ui.MainViewController"
+            styleClass="root-pane">
+    
+    <!-- Top Navigation Bar -->
+    <top>
+        <HBox styleClass="nav-bar" spacing="10" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="20" bottom="15" left="20"/>
+            </padding>
+            
+            <Label text="DataComp" styleClass="app-title"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <ToggleButton fx:id="dashboardButton" text="Dashboard" onAction="#showDashboard" styleClass="nav-button"/>
+            <ToggleButton fx:id="compressButton" text="Compress" onAction="#showCompress" styleClass="nav-button"/>
+            <ToggleButton fx:id="benchmarkButton" text="Benchmark" onAction="#showBenchmark" styleClass="nav-button"/>
+            <ToggleButton fx:id="settingsButton" text="Settings" onAction="#showSettings" styleClass="nav-button"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Label fx:id="gpuStatusLabel" text="GPU: Checking..." styleClass="status-label"/>
+        </HBox>
+    </top>
+    
+    <!-- Content Area -->
+    <center>
+        <StackPane fx:id="contentPane" styleClass="content-pane">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+        </StackPane>
+    </center>
+    
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            
+            <Label fx:id="statusLabel" text="Ready" styleClass="status-text"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>
+
