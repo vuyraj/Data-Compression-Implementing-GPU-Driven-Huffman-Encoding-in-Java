@@ -115,3 +115,52 @@ compileJava {
         '-Xlint:unchecked'
     ]
 }
+
+// CLI tasks for compression/decompression
+tasks.register('compress', JavaExec) {
+    group = 'application'
+    description = 'Compress a file (usage: -Pinput=<file> -Poutput=<file> [-Pchunk=<size-MB>])'
+    
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.datacomp.cli.DataCompCLI'
+    
+    def inputFile = project.findProperty('input') ?: ''
+    def outputFile = project.findProperty('output') ?: ''
+    def chunkSize = project.findProperty('chunk') ?: '512'
+    
+    if (inputFile && outputFile) {
+        args = ['compress', inputFile, outputFile, chunkSize]
+    } else {
+        args = ['compress', '', ''] // Will show usage
+    }
+}
+
+tasks.register('decompress', JavaExec) {
+    group = 'application'
+    description = 'Decompress a file (usage: -Pinput=<file> -Poutput=<file>)'
+    
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.datacomp.cli.DataCompCLI'
+    
+    def inputFile = project.findProperty('input') ?: ''
+    def outputFile = project.findProperty('output') ?: ''
+    
+    if (inputFile && outputFile) {
+        args = ['decompress', inputFile, outputFile]
+    } else {
+        args = ['decompress', '', ''] // Will show usage
+    }
+}
+
+tasks.register('cli', JavaExec) {
+    group = 'application'
+    description = 'Run CLI with custom args (usage: -Pargs="compress input.txt output.dc")'
+    
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.datacomp.cli.DataCompCLI'
+    
+    def cliArgs = project.findProperty('args') ?: ''
+    if (cliArgs) {
+        args = cliArgs.split('\\s+')
+    }
+}

@@ -99,6 +99,18 @@
     -fx-text-fill: #565f89;
 }
 
+/* Metric Labels */
+.metric-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7aa2f7;
+}
+
+.metric-value {
+    -fx-font-size: 14px;
+    -fx-text-fill: #c0caf5;
+}
+
 /* Buttons */
 .button {
     -fx-background-color: #414868;

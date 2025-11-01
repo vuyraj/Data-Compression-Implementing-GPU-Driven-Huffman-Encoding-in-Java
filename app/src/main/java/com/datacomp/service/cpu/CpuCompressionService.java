@@ -249,16 +249,9 @@ public class CpuCompressionService implements CompressionService {
     }
     
     private HuffmanCode[] rebuildCodes(int[] codeLengths) {
-        return CanonicalHuffman.buildCanonicalCodes(
-            convertLengthsToFrequencies(codeLengths));
-    }
-    
-    private long[] convertLengthsToFrequencies(int[] codeLengths) {
-        long[] frequencies = new long[256];
-        for (int i = 0; i < 256; i++) {
-            frequencies[i] = (codeLengths[i] > 0) ? 1 : 0;
-        }
-        return frequencies;
+        // Directly generate canonical codes from the stored code lengths
+        // Don't rebuild via frequencies - that would create different codes!
+        return CanonicalHuffman.generateCanonicalCodesFromLengths(codeLengths);
     }
     
     private byte[] decodeChunk(byte[] compressedData, int originalSize,
@@ -292,8 +285,7 @@ public class CpuCompressionService implements CompressionService {
     }
     
     private int tryDecode(int code, int length, CanonicalHuffman.HuffmanDecoder decoder) {
-        // This is a simplified version - in practice, decoder has lookup table
-        return -1; // Placeholder
+        return decoder.decodeSymbol(code, length);
     }
     
     @Override

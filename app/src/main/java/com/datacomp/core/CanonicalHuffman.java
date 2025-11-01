@@ -134,6 +134,20 @@ public class CanonicalHuffman {
     }
     
     /**
+     * Public method to generate canonical codes from pre-computed code lengths.
+     * This is used during decompression when code lengths are stored in the file.
+     * 
+     * @param codeLengths Array of code lengths for each symbol (0-255)
+     * @return Array of HuffmanCode objects
+     */
+    public static HuffmanCode[] generateCanonicalCodesFromLengths(int[] codeLengths) {
+        if (codeLengths.length != ALPHABET_SIZE) {
+            throw new IllegalArgumentException("Code lengths array must have 256 elements");
+        }
+        return generateCanonicalCodes(codeLengths);
+    }
+    
+    /**
      * Build decoder lookup table for fast decompression.
      * 
      * @param codes Huffman codes
@@ -195,6 +209,24 @@ public class CanonicalHuffman {
         
         public int getMaxCodeLength() {
             return maxCodeLength;
+        }
+        
+        /**
+         * Decode a symbol given a codeword and its length.
+         * 
+         * @param codeword The codeword bits
+         * @param length The length of the codeword
+         * @return The decoded symbol, or -1 if not found
+         */
+        public int decodeSymbol(int codeword, int length) {
+            Map<Integer, Integer> symbols = lookupTable.get(length);
+            if (symbols != null) {
+                Integer symbol = symbols.get(codeword);
+                if (symbol != null) {
+                    return symbol;
+                }
+            }
+            return -1;
         }
     }
 }

@@ -2,6 +2,7 @@ package com.datacomp.ui;
 
 import com.datacomp.config.AppConfig;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -43,7 +44,7 @@ public class SettingsController implements MainViewController.ConfigurableContro
         // Initialize chunk size spinner
         if (chunkSizeSpinner != null) {
             SpinnerValueFactory<Integer> valueFactory = 
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(16, 128, 32, 16);
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(64, 1024, 512, 64);
             chunkSizeSpinner.setValueFactory(valueFactory);
             chunkSizeSpinner.setEditable(true);
         }
@@ -138,8 +139,10 @@ public class SettingsController implements MainViewController.ConfigurableContro
             
             // Save UI Settings
             if (themeComboBox != null) {
-                settingsStore.put("ui.theme", themeComboBox.getValue());
-                logger.info("Theme: {}", themeComboBox.getValue());
+                String newTheme = themeComboBox.getValue();
+                settingsStore.put("ui.theme", newTheme);
+                applyTheme(newTheme);
+                logger.info("Theme: {}", newTheme);
             }
             if (enableAnimationsCheckBox != null) {
                 settingsStore.put("ui.animationsEnabled", enableAnimationsCheckBox.isSelected());
@@ -211,5 +214,33 @@ public class SettingsController implements MainViewController.ConfigurableContro
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    
+    /**
+     * Apply the selected theme to the application.
+     */
+    private void applyTheme(String themeName) {
+        try {
+            Scene scene = themeComboBox.getScene();
+            if (scene == null) {
+                logger.warn("Cannot apply theme: Scene is null");
+                return;
+            }
+            
+            String cssFile = themeName.equalsIgnoreCase("light") 
+                ? "/css/light-theme.css" 
+                : "/css/dark-theme.css";
+            
+            String css = getClass().getResource(cssFile).toExternalForm();
+            
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(css);
+            
+            logger.info("Theme applied: {}", themeName);
+            
+        } catch (Exception e) {
+            logger.error("Failed to apply theme: {}", themeName, e);
+            showError("Failed to apply theme: " + e.getMessage());
+        }
     }
 }
