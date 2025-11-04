@@ -47,6 +47,9 @@ public class GpuFrequencyService implements FrequencyService {
         }
         
         try {
+            logger.debug("🎮 GPU: Computing histogram for {} bytes", length);
+            long startTime = System.nanoTime();
+            
             // Prepare input (copy relevant portion)
             byte[] input = new byte[length];
             System.arraycopy(data, offset, input, 0, length);
@@ -65,6 +68,12 @@ public class GpuFrequencyService implements FrequencyService {
             try (TornadoExecutionPlan executor = new TornadoExecutionPlan(immutableTaskGraph)) {
                 executor.execute();
             }
+            
+            long duration = System.nanoTime() - startTime;
+            double throughputGBps = (length / 1_000_000_000.0) / (duration / 1_000_000_000.0);
+            
+            logger.debug("🎮 GPU: Histogram completed in {:.2f} ms ({:.2f} GB/s)", 
+                       duration / 1_000_000.0, throughputGBps);
             
             // Convert int[] to long[]
             long[] result = new long[256];
