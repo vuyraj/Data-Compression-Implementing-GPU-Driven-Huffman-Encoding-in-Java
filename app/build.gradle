@@ -126,7 +126,7 @@ tasks.register('compress', JavaExec) {
     
     def inputFile = project.findProperty('input') ?: ''
     def outputFile = project.findProperty('output') ?: ''
-    def chunkSize = project.findProperty('chunk') ?: '512'
+    def chunkSize = project.findProperty('chunk') ?: '32'  // 32MB optimized for MX330 2GB GPU
     
     if (inputFile && outputFile) {
         args = ['compress', inputFile, outputFile, chunkSize]

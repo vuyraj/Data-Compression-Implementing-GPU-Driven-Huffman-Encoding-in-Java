@@ -31,8 +31,8 @@ public class DataCompCLI {
         String inputPath = args[1];
         String outputPath = args[2];
         
-        // Optional: chunk size in MB (default: 512 for optimal GPU performance)
-        int chunkSizeMB = 512;
+        // Optional: chunk size in MB (default: 32 optimized for MX330 2GB GPU)
+        int chunkSizeMB = 32;
         if (args.length > 3) {
             try {
                 chunkSizeMB = Integer.parseInt(args[3]);
