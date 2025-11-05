@@ -1,0 +1,657 @@
+2025-11-04 22:49:17.632 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit7781863704911011565/test.bin
+2025-11-04 22:49:17.662 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-04 22:49:17.663 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit7781863704911011565/test.bin
+2025-11-04 22:49:17.664 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-04 22:49:17.665 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.034 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.034 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.328 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.329 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.640 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.641 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.792 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.793 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.864 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.864 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:18.957 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:18.958 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:19.028 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.029 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:49:19.102 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.103 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 11.37 MB/s, 100.06% compression, 0.092s total
+2025-11-04 22:49:19.106 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-04 22:49:19.106 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-04 22:49:19.106 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-04 22:49:19.136 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-11-04 22:49:19.139 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.139 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-11-04 22:49:19.139 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-11-04 22:49:19.146 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.151 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-11-04 22:49:19.152 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.152 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-11-04 22:49:19.152 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-11-04 22:49:19.153 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-11-04 22:49:19.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-11-04 22:49:19.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-11-04 22:49:19.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.170 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-11-04 22:49:19.331 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.331 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-11-04 22:49:19.332 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-11-04 22:49:19.438 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.450 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-11-04 22:49:19.450 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:49:19.466 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-04 22:50:31.706 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-04 22:50:31.862 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-04 22:50:32.574 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 22:50:32.963 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:50:32.980 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 22:50:33.185 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-04 22:50:40.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 22:50:40.899 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:50:40.909 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 22:50:43.848 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 22:50:43.863 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:50:43.877 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 22:51:05.216 [pool-5-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-04 22:51:05.216 [pool-5-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:51:05.217 [pool-5-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 22:51:06.998 [pool-5-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
+uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 22:51:07.000 [pool-5-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
+java.lang.RuntimeException: GPU computation failed
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	... 11 common frames omitted
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 22:51:07.001 [pool-5-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 22:52:57.540 [pool-5-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052853540 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:27.338 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-11-04 22:53:42.272 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit12831609050939668797/test.bin
+2025-11-04 22:53:42.285 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-04 22:53:42.285 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit12831609050939668797/test.bin
+2025-11-04 22:53:42.286 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-04 22:53:42.287 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:42.588 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:42.588 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:42.842 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:42.842 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.095 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.095 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.231 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.231 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.300 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.300 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.369 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.370 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.443 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.444 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 22:53:43.532 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.533 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 12.01 MB/s, 100.06% compression, 0.087s total
+2025-11-04 22:53:43.539 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-04 22:53:43.540 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-04 22:53:43.540 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-04 22:53:43.563 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-11-04 22:53:43.564 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.565 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-11-04 22:53:43.565 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-11-04 22:53:43.569 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.572 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-11-04 22:53:43.573 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.573 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-11-04 22:53:43.574 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-11-04 22:53:43.575 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.577 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-11-04 22:53:43.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-11-04 22:53:43.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-11-04 22:53:43.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.594 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-11-04 22:53:43.749 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.749 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-11-04 22:53:43.749 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-11-04 22:53:43.853 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.863 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-11-04 22:53:43.864 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 22:53:43.882 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-04 22:55:06.423 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-04 22:55:06.603 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-04 22:55:07.095 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 22:55:07.458 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:55:07.475 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 22:55:07.718 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-04 22:55:11.332 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 22:55:11.344 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:55:11.357 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 22:55:31.282 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-04 22:55:31.282 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 22:55:31.282 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 22:55:33.113 [pool-2-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
+uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 22:55:33.117 [pool-2-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
+java.lang.RuntimeException: GPU computation failed
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	... 11 common frames omitted
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 22:55:33.118 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 22:56:59.913 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052853540 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:00:05.322 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-11-04 23:05:06.537 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit16796723259789632471/test.bin
+2025-11-04 23:05:06.547 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-04 23:05:06.548 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit16796723259789632471/test.bin
+2025-11-04 23:05:06.550 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-04 23:05:06.551 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:06.836 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:06.836 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.083 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.083 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.331 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.331 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.470 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.470 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.544 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.544 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.614 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.615 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.683 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.683 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:05:07.757 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.758 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 12.33 MB/s, 100.06% compression, 0.085s total
+2025-11-04 23:05:07.760 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-04 23:05:07.760 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-04 23:05:07.760 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-04 23:05:07.785 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-11-04 23:05:07.787 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.787 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-11-04 23:05:07.787 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-11-04 23:05:07.792 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.796 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-11-04 23:05:07.798 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.798 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-11-04 23:05:07.799 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-11-04 23:05:07.799 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.802 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-11-04 23:05:07.803 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.803 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-11-04 23:05:07.803 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-11-04 23:05:07.803 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.815 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-11-04 23:05:07.961 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:07.962 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-11-04 23:05:07.962 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-11-04 23:05:08.053 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:08.062 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-11-04 23:05:08.064 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:05:08.083 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-04 23:08:16.696 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-04 23:08:16.870 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-04 23:08:17.367 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 23:08:17.703 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:08:17.718 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 23:08:17.960 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-04 23:08:24.016 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 23:08:24.028 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:08:24.039 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 23:08:29.742 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-04 23:08:29.742 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:08:29.742 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 23:08:31.429 [pool-3-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
+uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 23:08:31.431 [pool-3-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
+java.lang.RuntimeException: GPU computation failed
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:130)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:70)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	... 11 common frames omitted
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 23:08:31.433 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 23:09:55.641 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052853540 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:10:28.071 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-11-04 23:20:26.477 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit13837355016554819278/test.bin
+2025-11-04 23:20:26.587 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-04 23:20:26.587 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit13837355016554819278/test.bin
+2025-11-04 23:20:26.616 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-04 23:20:26.618 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:20:41.264 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:20:41.526 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:20:53.491 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:20:53.704 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:21:46.495 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:21:46.657 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:21:51.050 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:21:51.067 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:21:51.205 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:21:51.404 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:21:51.693 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:21:51.698 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-04 23:26:26.625 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-04 23:26:26.804 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-04 23:26:27.512 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 23:26:27.863 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:26:27.877 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 23:26:28.054 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-04 23:26:30.429 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
+2025-11-04 23:26:30.442 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:26:30.453 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-04 23:26:55.428 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-04 23:26:55.429 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
+2025-11-04 23:26:55.429 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 23:26:57.057 [pool-2-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
+uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 23:26:57.059 [pool-2-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
+java.lang.RuntimeException: GPU computation failed
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
+	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
+	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
+	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
+	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
+[0m
+	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
+	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
+	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
+	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
+	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
+	... 11 common frames omitted
+	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
+		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
+		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
+		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
+		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
+		... 11 common frames omitted
+2025-11-04 23:26:57.061 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
+2025-11-04 23:28:08.688 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052853540 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-04 23:59:15.437 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
