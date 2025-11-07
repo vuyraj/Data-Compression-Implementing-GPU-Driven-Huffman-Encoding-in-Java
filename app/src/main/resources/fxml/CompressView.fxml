@@ -72,6 +72,13 @@
         </HBox>
         
         <Label fx:id="statusLabel" text="" styleClass="status-message"/>
+        
+        <!-- Stage Metrics Display -->
+        <VBox spacing="5" fx:id="stageMetricsBox" managed="false" visible="false">
+            <Label text="Performance Breakdown:" styleClass="section-label"/>
+            <TextArea fx:id="stageMetricsArea" editable="false" wrapText="true" 
+                      prefRowCount="8" styleClass="stage-metrics-area"/>
+        </VBox>
     </VBox>
     
 </VBox>

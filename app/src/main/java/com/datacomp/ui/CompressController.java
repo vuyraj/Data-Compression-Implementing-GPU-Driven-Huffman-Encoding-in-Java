@@ -2,9 +2,12 @@ package com.datacomp.ui;
 
 import com.datacomp.config.AppConfig;
 import com.datacomp.model.CompressionMetrics;
+import com.datacomp.model.StageMetrics;
 import com.datacomp.service.CompressionService;
 import com.datacomp.service.MetricsService;
 import com.datacomp.service.ServiceFactory;
+import com.datacomp.service.cpu.CpuCompressionService;
+import com.datacomp.service.gpu.GpuCompressionService;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -42,6 +45,8 @@ public class CompressController implements MainViewController.ConfigurableContro
     @FXML private Label throughputLabel;
     @FXML private Label etaLabel;
     @FXML private CheckBox useCpuCheckBox;
+    @FXML private VBox stageMetricsBox;
+    @FXML private TextArea stageMetricsArea;
     
     private AppConfig config;
     private CompressionService compressionService;
@@ -252,6 +257,20 @@ public class CompressController implements MainViewController.ConfigurableContro
                 
                 MetricsService.getInstance().addMetrics(metrics);
                 
+                // Get stage metrics from service
+                StageMetrics stageMetrics = null;
+                if (compressionService instanceof CpuCompressionService) {
+                    stageMetrics = ((CpuCompressionService) compressionService).getLastStageMetrics();
+                } else if (compressionService instanceof GpuCompressionService) {
+                    stageMetrics = ((GpuCompressionService) compressionService).getLastStageMetrics();
+                }
+                
+                // Display stage metrics
+                final StageMetrics finalMetrics = stageMetrics;
+                if (finalMetrics != null) {
+                    Platform.runLater(() -> displayStageMetrics(finalMetrics));
+                }
+                
                 return null;
             }
         };
@@ -345,6 +364,20 @@ public class CompressController implements MainViewController.ConfigurableContro
                 
                 MetricsService.getInstance().addMetrics(metrics);
                 
+                // Get stage metrics from service
+                StageMetrics stageMetrics = null;
+                if (compressionService instanceof CpuCompressionService) {
+                    stageMetrics = ((CpuCompressionService) compressionService).getLastStageMetrics();
+                } else if (compressionService instanceof GpuCompressionService) {
+                    stageMetrics = ((GpuCompressionService) compressionService).getLastStageMetrics();
+                }
+                
+                // Display stage metrics
+                final StageMetrics finalMetrics = stageMetrics;
+                if (finalMetrics != null) {
+                    Platform.runLater(() -> displayStageMetrics(finalMetrics));
+                }
+                
                 return null;
             }
         };
@@ -393,6 +426,44 @@ public class CompressController implements MainViewController.ConfigurableContro
             throughputLabel.setText("");
             etaLabel.setText("");
         });
+    }
+    
+    /**
+     * Display stage performance metrics in the GUI.
+     */
+    private void displayStageMetrics(StageMetrics metrics) {
+        if (stageMetricsBox != null && stageMetricsArea != null) {
+            // Build formatted display text
+            StringBuilder sb = new StringBuilder();
+            sb.append("═══════════════════════════════════════════════════\n");
+            
+            // Get all stages
+            for (StageMetrics.Stage stage : StageMetrics.Stage.values()) {
+                if (metrics.getStageCount(stage) > 0) {
+                    double timeMs = metrics.getStageTimeMs(stage);
+                    double percentage = metrics.getStagePercentage(stage);
+                    int count = metrics.getStageCount(stage);
+                    double avgMs = metrics.getAverageStageTimeMs(stage);
+                    double throughput = metrics.getStageThroughputMBps(stage);
+                    
+                    sb.append(String.format("%-25s: %8.2f ms (%5.1f%%)\n",
+                        stage.getDisplayName(), timeMs, percentage));
+                    sb.append(String.format("    %d runs, avg: %.2f ms", count, avgMs));
+                    
+                    if (throughput > 0) {
+                        sb.append(String.format(", %.2f MB/s", throughput));
+                    }
+                    sb.append("\n\n");
+                }
+            }
+            
+            sb.append("═══════════════════════════════════════════════════\n");
+            
+            // Update UI
+            stageMetricsArea.setText(sb.toString());
+            stageMetricsBox.setManaged(true);
+            stageMetricsBox.setVisible(true);
+        }
     }
 }
 

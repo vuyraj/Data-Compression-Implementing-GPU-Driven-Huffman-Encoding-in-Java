@@ -1,116 +1,535 @@
-2025-11-05 20:52:32.104 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 20:52:32.388 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 20:52:33.376 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:52:33.849 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:52:33.869 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:52:34.137 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 20:52:40.387 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:52:40.404 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:52:40.418 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:52:48.358 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 20:52:48.359 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:52:48.359 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing input-dec.tar (61419520 bytes) into 1 chunks
-2025-11-05 20:52:49.330 [pool-3-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU encoding failed: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m - Falling back to multi-threaded CPU
-2025-11-05 20:52:51.212 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compression complete: 61419520 -> 50463077 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:52:51.212 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
-2025-11-05 20:53:07.178 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:53:07.205 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:53:07.227 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:53:08.454 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:53:08.469 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:53:08.486 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:53:13.764 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
-2025-11-05 20:53:26.851 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit6927913104188707248/test.bin
-2025-11-05 20:53:26.864 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
-2025-11-05 20:53:26.864 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit6927913104188707248/test.bin
-2025-11-05 20:53:26.866 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
-2025-11-05 20:53:26.867 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:27.217 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:27.218 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:27.515 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:27.516 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:27.823 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:27.823 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:28.013 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.013 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:28.093 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.093 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:28.204 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.205 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:28.318 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.318 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 20:53:28.410 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.411 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 8.95 MB/s, 100.06% compression, 0.117s total
-2025-11-05 20:53:28.414 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
-2025-11-05 20:53:28.414 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
-2025-11-05 20:53:28.414 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
-2025-11-05 20:53:28.440 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
-2025-11-05 20:53:28.442 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.442 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
-2025-11-05 20:53:28.442 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
-2025-11-05 20:53:28.447 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.451 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
-2025-11-05 20:53:28.452 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.452 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
-2025-11-05 20:53:28.452 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
-2025-11-05 20:53:28.453 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.456 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
-2025-11-05 20:53:28.456 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.456 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
-2025-11-05 20:53:28.457 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
-2025-11-05 20:53:28.457 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.471 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
-2025-11-05 20:53:28.669 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.670 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
-2025-11-05 20:53:28.670 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
-2025-11-05 20:53:28.789 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.799 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
-2025-11-05 20:53:28.800 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 20:53:28.817 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
-2025-11-05 20:57:29.122 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 20:57:29.383 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 20:57:29.859 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:57:30.520 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:57:30.546 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:57:30.841 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 20:57:33.543 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 20:57:33.578 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:57:33.611 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 20:57:57.133 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 20:57:57.135 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 20:57:57.136 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
-2025-11-05 20:57:59.714 [pool-2-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
-uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m
-	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
-	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
-	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
+2025-11-07 22:24:07.548 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit2819005043041598526/test.bin
+2025-11-07 22:24:07.571 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-07 22:24:07.572 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit2819005043041598526/test.bin
+2025-11-07 22:24:07.573 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-07 22:24:07.574 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:07.742 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:07.748 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    23.39 ms ( 16.3%) [1 runs, avg: 23.39 ms]
+Huffman Tree Build       :     1.85 ms (  1.3%) [1 runs, avg: 1.85 ms]
+Encoding                 :    46.64 ms ( 32.5%) [1 runs, avg: 46.64 ms]
+Checksum Computation     :    33.20 ms ( 23.1%) [1 runs, avg: 33.20 ms]
+File I/O                 :    38.25 ms ( 26.6%) [2 runs, avg: 19.13 ms]
+Header Write             :     0.32 ms (  0.2%) [1 runs, avg: 0.32 ms]
+
+2025-11-07 22:24:07.750 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:07.870 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:07.872 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.26 ms (  1.2%) [1 runs, avg: 1.26 ms]
+Huffman Tree Build       :     0.68 ms (  0.7%) [1 runs, avg: 0.68 ms]
+Encoding                 :    37.73 ms ( 36.8%) [1 runs, avg: 37.73 ms]
+Checksum Computation     :    23.45 ms ( 22.9%) [1 runs, avg: 23.45 ms]
+File I/O                 :    39.24 ms ( 38.3%) [2 runs, avg: 19.62 ms]
+Header Write             :     0.15 ms (  0.1%) [1 runs, avg: 0.15 ms]
+
+2025-11-07 22:24:07.873 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:07.964 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:07.967 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.89 ms (  1.1%) [1 runs, avg: 0.89 ms]
+Huffman Tree Build       :     0.27 ms (  0.3%) [1 runs, avg: 0.27 ms]
+Encoding                 :    37.78 ms ( 46.1%) [1 runs, avg: 37.78 ms]
+Checksum Computation     :     1.95 ms (  2.4%) [1 runs, avg: 1.95 ms]
+File I/O                 :    40.98 ms ( 50.0%) [2 runs, avg: 20.49 ms]
+Header Write             :     0.09 ms (  0.1%) [1 runs, avg: 0.09 ms]
+
+2025-11-07 22:24:07.968 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:08.052 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.053 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.68 ms (  0.9%) [1 runs, avg: 0.68 ms]
+Huffman Tree Build       :     0.31 ms (  0.4%) [1 runs, avg: 0.31 ms]
+Encoding                 :    38.83 ms ( 48.8%) [1 runs, avg: 38.83 ms]
+Checksum Computation     :     1.52 ms (  1.9%) [1 runs, avg: 1.52 ms]
+File I/O                 :    38.09 ms ( 47.9%) [2 runs, avg: 19.05 ms]
+Header Write             :     0.05 ms (  0.1%) [1 runs, avg: 0.05 ms]
+
+2025-11-07 22:24:08.054 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:08.136 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.137 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     2.42 ms (  3.1%) [1 runs, avg: 2.42 ms]
+Huffman Tree Build       :     0.35 ms (  0.5%) [1 runs, avg: 0.35 ms]
+Encoding                 :    36.19 ms ( 46.9%) [1 runs, avg: 36.19 ms]
+Checksum Computation     :     2.18 ms (  2.8%) [1 runs, avg: 2.18 ms]
+File I/O                 :    35.99 ms ( 46.6%) [2 runs, avg: 18.00 ms]
+Header Write             :     0.06 ms (  0.1%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:24:08.138 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:08.216 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.218 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.33 ms (  0.4%) [1 runs, avg: 0.33 ms]
+Huffman Tree Build       :     0.32 ms (  0.4%) [1 runs, avg: 0.32 ms]
+Encoding                 :    35.55 ms ( 46.5%) [1 runs, avg: 35.55 ms]
+Checksum Computation     :     1.11 ms (  1.5%) [1 runs, avg: 1.11 ms]
+File I/O                 :    38.99 ms ( 51.1%) [2 runs, avg: 19.50 ms]
+Header Write             :     0.08 ms (  0.1%) [1 runs, avg: 0.08 ms]
+
+2025-11-07 22:24:08.219 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:08.302 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.303 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.13 ms (  1.5%) [1 runs, avg: 1.13 ms]
+Huffman Tree Build       :     0.22 ms (  0.3%) [1 runs, avg: 0.22 ms]
+Encoding                 :    37.73 ms ( 48.5%) [1 runs, avg: 37.73 ms]
+Checksum Computation     :     1.82 ms (  2.3%) [1 runs, avg: 1.82 ms]
+File I/O                 :    36.84 ms ( 47.3%) [2 runs, avg: 18.42 ms]
+Header Write             :     0.10 ms (  0.1%) [1 runs, avg: 0.10 ms]
+
+2025-11-07 22:24:08.304 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
+2025-11-07 22:24:08.386 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.388 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.83 ms (  1.0%) [1 runs, avg: 0.83 ms]
+Huffman Tree Build       :     0.42 ms (  0.5%) [1 runs, avg: 0.42 ms]
+Encoding                 :    37.75 ms ( 47.2%) [1 runs, avg: 37.75 ms]
+Checksum Computation     :     1.46 ms (  1.8%) [1 runs, avg: 1.46 ms]
+File I/O                 :    39.47 ms ( 49.3%) [2 runs, avg: 19.74 ms]
+Header Write             :     0.09 ms (  0.1%) [1 runs, avg: 0.09 ms]
+
+2025-11-07 22:24:08.389 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 12.49 MB/s, 100.06% compression, 0.084s total
+2025-11-07 22:24:08.393 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-07 22:24:08.393 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-07 22:24:08.394 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-07 22:24:08.440 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
+2025-11-07 22:24:08.443 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.444 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.28 ms ( 13.2%) [1 runs, avg: 0.28 ms]
+Huffman Tree Build       :     0.24 ms ( 11.1%) [1 runs, avg: 0.24 ms]
+Encoding                 :     0.35 ms ( 16.4%) [1 runs, avg: 0.35 ms]
+Checksum Computation     :     0.05 ms (  2.6%) [1 runs, avg: 0.05 ms]
+File I/O                 :     1.15 ms ( 54.0%) [2 runs, avg: 0.58 ms]
+Header Write             :     0.06 ms (  2.7%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:24:08.446 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
+2025-11-07 22:24:08.446 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-11-07 22:24:08.453 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.453 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.41 ms (  6.7%) [1 runs, avg: 0.41 ms]
+File I/O                 :     0.38 ms (  6.2%) [3 runs, avg: 0.13 ms]
+Decoding                 :     5.31 ms ( 85.8%) [1 runs, avg: 5.31 ms]
+Checksum Verification    :     0.09 ms (  1.4%) [1 runs, avg: 0.09 ms]
+
+2025-11-07 22:24:08.461 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
+2025-11-07 22:24:08.463 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.464 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.47 ms ( 54.3%) [1 runs, avg: 0.47 ms]
+Huffman Tree Build       :     0.04 ms (  4.9%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.03 ms (  3.4%) [1 runs, avg: 0.03 ms]
+Checksum Computation     :     0.05 ms (  6.2%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.21 ms ( 24.3%) [2 runs, avg: 0.10 ms]
+Header Write             :     0.06 ms (  6.9%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:24:08.465 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
+2025-11-07 22:24:08.465 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-11-07 22:24:08.466 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.467 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.04 ms (  9.8%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.16 ms ( 36.6%) [3 runs, avg: 0.05 ms]
+Decoding                 :     0.19 ms ( 41.2%) [1 runs, avg: 0.19 ms]
+Checksum Verification    :     0.06 ms ( 12.4%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:24:08.472 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
+2025-11-07 22:24:08.473 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.474 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.02 ms ( 42.4%) [1 runs, avg: 0.02 ms]
+Header Write             :     0.03 ms ( 57.6%) [1 runs, avg: 0.03 ms]
+
+2025-11-07 22:24:08.474 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
+2025-11-07 22:24:08.474 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-11-07 22:24:08.475 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.475 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.05 ms (100.0%) [1 runs, avg: 0.05 ms]
+
+2025-11-07 22:24:08.501 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
+2025-11-07 22:24:08.750 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.751 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.01 ms (  0.4%) [3 runs, avg: 0.34 ms]
+Huffman Tree Build       :     0.60 ms (  0.2%) [3 runs, avg: 0.20 ms]
+Encoding                 :   127.47 ms ( 51.7%) [3 runs, avg: 42.49 ms]
+Checksum Computation     :     3.87 ms (  1.6%) [3 runs, avg: 1.29 ms]
+File I/O                 :   113.57 ms ( 46.0%) [4 runs, avg: 28.39 ms]
+Header Write             :     0.12 ms (  0.0%) [1 runs, avg: 0.12 ms]
+
+2025-11-07 22:24:08.751 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
+2025-11-07 22:24:08.752 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-11-07 22:24:08.934 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.935 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.61 ms (  0.3%) [3 runs, avg: 0.20 ms]
+File I/O                 :     3.37 ms (  1.8%) [7 runs, avg: 0.48 ms]
+Decoding                 :   174.89 ms ( 96.0%) [3 runs, avg: 58.30 ms]
+Checksum Verification    :     3.39 ms (  1.9%) [3 runs, avg: 1.13 ms]
+
+2025-11-07 22:24:08.950 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
+2025-11-07 22:24:08.951 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:08.952 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.7%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.04 ms ( 12.2%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.00 ms (  1.3%) [1 runs, avg: 0.00 ms]
+Checksum Computation     :     0.07 ms ( 22.0%) [1 runs, avg: 0.07 ms]
+File I/O                 :     0.17 ms ( 51.0%) [2 runs, avg: 0.08 ms]
+Header Write             :     0.04 ms ( 12.9%) [1 runs, avg: 0.04 ms]
+
+2025-11-07 22:24:08.985 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-07 22:24:30.951 [main] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test_stage_metrics.txt (121 bytes) into 1 chunks
+2025-11-07 22:24:30.976 [main] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 121 -> 725 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:24:30.982 [main] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.01 ms (  0.4%) [1 runs, avg: 0.01 ms]
+Huffman Tree Build       :     0.88 ms ( 30.3%) [1 runs, avg: 0.88 ms]
+Encoding                 :     0.21 ms (  7.2%) [1 runs, avg: 0.21 ms]
+Checksum Computation     :     0.44 ms ( 15.1%) [1 runs, avg: 0.44 ms]
+File I/O                 :     0.82 ms ( 28.5%) [2 runs, avg: 0.41 ms]
+Header Write             :     0.54 ms ( 18.6%) [1 runs, avg: 0.54 ms]
+
+2025-11-07 22:25:11.634 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-07 22:25:11.955 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-07 22:25:11.958 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:25:12.213 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-07 22:25:19.135 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:25:26.589 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:25:26.599 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing sample.pdf (1159383 bytes) into 1 chunks
+2025-11-07 22:25:26.853 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1159383 -> 1140750 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:25:26.856 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    28.61 ms ( 13.7%) [1 runs, avg: 28.61 ms]
+Huffman Tree Build       :     2.60 ms (  1.2%) [1 runs, avg: 2.60 ms]
+Encoding                 :    51.27 ms ( 24.5%) [1 runs, avg: 51.27 ms]
+Checksum Computation     :    80.14 ms ( 38.3%) [1 runs, avg: 80.14 ms]
+File I/O                 :    46.12 ms ( 22.0%) [2 runs, avg: 23.06 ms]
+Header Write             :     0.61 ms (  0.3%) [1 runs, avg: 0.61 ms]
+
+2025-11-07 22:25:51.688 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:25:51.690 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2-1.mkv (3052984682 bytes) into 91 chunks
+2025-11-07 22:26:59.848 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052450963 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:26:59.856 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :   467.22 ms (  0.7%) [91 runs, avg: 5.13 ms]
+Huffman Tree Build       :    17.21 ms (  0.0%) [91 runs, avg: 0.19 ms]
+Encoding                 : 26750.66 ms ( 39.3%) [91 runs, avg: 293.96 ms]
+Checksum Computation     :  3218.16 ms (  4.7%) [91 runs, avg: 35.36 ms]
+File I/O                 : 37685.72 ms ( 55.3%) [92 runs, avg: 409.63 ms]
+Header Write             :     3.46 ms (  0.0%) [1 runs, avg: 3.46 ms]
+
+2025-11-07 22:28:34.315 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:28:56.525 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing d2.mkv.dcz to d2.mkv
+2025-11-07 22:28:56.534 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 91 chunks, original size: 3052984682 bytes
+2025-11-07 22:31:30.746 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3052984682 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:31:30.792 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :    18.17 ms (  0.0%) [91 runs, avg: 0.20 ms]
+File I/O                 : 12312.56 ms (  8.2%) [183 runs, avg: 67.28 ms]
+Decoding                 : 135956.09 ms ( 90.3%) [91 runs, avg: 1494.02 ms]
+Checksum Verification    :  2220.79 ms (  1.5%) [91 runs, avg: 24.40 ms]
+
+2025-11-07 22:32:43.831 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:32:45.666 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-11-07 22:32:50.875 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+2025-11-07 22:45:44.437 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit16883179874676907962/test.bin
+2025-11-07 22:45:44.455 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-07 22:45:44.456 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit16883179874676907962/test.bin
+2025-11-07 22:45:44.459 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:44.460 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-07 22:45:44.460 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.600 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.603 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    21.89 ms ( 19.2%) [1 runs, avg: 21.89 ms]
+Huffman Tree Build       :     3.44 ms (  3.0%) [1 runs, avg: 3.44 ms]
+Encoding                 :    43.61 ms ( 38.3%) [1 runs, avg: 43.61 ms]
+Checksum Computation     :    41.92 ms ( 36.9%) [1 runs, avg: 41.92 ms]
+File I/O                 :     2.45 ms (  2.2%) [2 runs, avg: 1.23 ms]
+Header Write             :     0.44 ms (  0.4%) [1 runs, avg: 0.44 ms]
+
+2025-11-07 22:45:44.604 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.655 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.656 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.32 ms (  0.9%) [1 runs, avg: 0.32 ms]
+Huffman Tree Build       :     0.21 ms (  0.6%) [1 runs, avg: 0.21 ms]
+Encoding                 :    32.90 ms ( 89.7%) [1 runs, avg: 32.90 ms]
+Checksum Computation     :     1.35 ms (  3.7%) [1 runs, avg: 1.35 ms]
+File I/O                 :     1.65 ms (  4.5%) [2 runs, avg: 0.82 ms]
+Header Write             :     0.25 ms (  0.7%) [1 runs, avg: 0.25 ms]
+
+2025-11-07 22:45:44.657 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.699 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.700 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.39 ms (  1.2%) [1 runs, avg: 0.39 ms]
+Huffman Tree Build       :     0.28 ms (  0.9%) [1 runs, avg: 0.28 ms]
+Encoding                 :    28.79 ms ( 89.5%) [1 runs, avg: 28.79 ms]
+Checksum Computation     :     1.40 ms (  4.3%) [1 runs, avg: 1.40 ms]
+File I/O                 :     1.26 ms (  3.9%) [2 runs, avg: 0.63 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:45:44.701 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.729 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.730 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.34 ms (  1.3%) [1 runs, avg: 0.34 ms]
+Huffman Tree Build       :     0.15 ms (  0.6%) [1 runs, avg: 0.15 ms]
+Encoding                 :    23.14 ms ( 88.5%) [1 runs, avg: 23.14 ms]
+Checksum Computation     :     1.01 ms (  3.9%) [1 runs, avg: 1.01 ms]
+File I/O                 :     1.44 ms (  5.5%) [2 runs, avg: 0.72 ms]
+Header Write             :     0.07 ms (  0.3%) [1 runs, avg: 0.07 ms]
+
+2025-11-07 22:45:44.731 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.771 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.772 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.33 ms (  0.9%) [1 runs, avg: 0.33 ms]
+Huffman Tree Build       :     0.26 ms (  0.7%) [1 runs, avg: 0.26 ms]
+Encoding                 :    32.89 ms ( 91.2%) [1 runs, avg: 32.89 ms]
+Checksum Computation     :     1.18 ms (  3.3%) [1 runs, avg: 1.18 ms]
+File I/O                 :     1.37 ms (  3.8%) [2 runs, avg: 0.68 ms]
+Header Write             :     0.05 ms (  0.1%) [1 runs, avg: 0.05 ms]
+
+2025-11-07 22:45:44.772 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.801 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.802 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.42 ms (  1.6%) [1 runs, avg: 0.42 ms]
+Huffman Tree Build       :     0.18 ms (  0.7%) [1 runs, avg: 0.18 ms]
+Encoding                 :    23.75 ms ( 89.2%) [1 runs, avg: 23.75 ms]
+Checksum Computation     :     0.81 ms (  3.0%) [1 runs, avg: 0.81 ms]
+File I/O                 :     1.42 ms (  5.3%) [2 runs, avg: 0.71 ms]
+Header Write             :     0.07 ms (  0.3%) [1 runs, avg: 0.07 ms]
+
+2025-11-07 22:45:44.802 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.832 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.833 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.45 ms (  1.7%) [1 runs, avg: 0.45 ms]
+Huffman Tree Build       :     0.17 ms (  0.6%) [1 runs, avg: 0.17 ms]
+Encoding                 :    23.60 ms ( 89.0%) [1 runs, avg: 23.60 ms]
+Checksum Computation     :     0.82 ms (  3.1%) [1 runs, avg: 0.82 ms]
+File I/O                 :     1.41 ms (  5.3%) [2 runs, avg: 0.71 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-07 22:45:44.834 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.863 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.864 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.65 ms (  2.3%) [1 runs, avg: 0.65 ms]
+Huffman Tree Build       :     0.12 ms (  0.5%) [1 runs, avg: 0.12 ms]
+Encoding                 :    23.61 ms ( 85.5%) [1 runs, avg: 23.61 ms]
+Checksum Computation     :     1.05 ms (  3.8%) [1 runs, avg: 1.05 ms]
+File I/O                 :     2.10 ms (  7.6%) [2 runs, avg: 1.05 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-07 22:45:44.865 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 32.07 MB/s, 100.06% compression, 0.033s total
+2025-11-07 22:45:44.867 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:44.868 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-07 22:45:44.869 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-07 22:45:44.869 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-07 22:45:44.962 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:44.964 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.967 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.968 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.20 ms ( 16.6%) [1 runs, avg: 0.20 ms]
+Huffman Tree Build       :     0.19 ms ( 16.3%) [1 runs, avg: 0.19 ms]
+Encoding                 :     0.33 ms ( 28.2%) [1 runs, avg: 0.33 ms]
+Checksum Computation     :     0.05 ms (  4.6%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.35 ms ( 29.4%) [2 runs, avg: 0.17 ms]
+Header Write             :     0.06 ms (  4.9%) [1 runs, avg: 0.06 ms]
+
+2025-11-07 22:45:44.968 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-07 22:45:44.968 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
+2025-11-07 22:45:44.976 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.978 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.22 ms (  5.1%) [1 runs, avg: 0.22 ms]
+File I/O                 :     0.21 ms (  4.8%) [2 runs, avg: 0.10 ms]
+Decoding                 :     3.77 ms ( 88.0%) [1 runs, avg: 3.77 ms]
+Checksum Verification    :     0.09 ms (  2.0%) [1 runs, avg: 0.09 ms]
+
+2025-11-07 22:45:44.986 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:44.987 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:44.988 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.989 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.03 ms (  9.5%) [1 runs, avg: 0.03 ms]
+Huffman Tree Build       :     0.04 ms ( 11.6%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.01 ms (  3.9%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.03 ms (  9.9%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.19 ms ( 54.9%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.03 ms ( 10.2%) [1 runs, avg: 0.03 ms]
+
+2025-11-07 22:45:44.990 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-07 22:45:44.990 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
+2025-11-07 22:45:44.990 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:44.991 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.06 ms ( 26.4%) [1 runs, avg: 0.06 ms]
+File I/O                 :     0.09 ms ( 39.0%) [2 runs, avg: 0.05 ms]
+Decoding                 :     0.05 ms ( 21.5%) [1 runs, avg: 0.05 ms]
+Checksum Verification    :     0.03 ms ( 13.1%) [1 runs, avg: 0.03 ms]
+
+2025-11-07 22:45:45.014 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:45.015 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-07 22:45:45.015 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:45.016 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.09 ms ( 86.7%) [1 runs, avg: 0.09 ms]
+Header Write             :     0.01 ms ( 13.3%) [1 runs, avg: 0.01 ms]
+
+2025-11-07 22:45:45.016 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-07 22:45:45.016 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
+2025-11-07 22:45:45.016 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:45.016 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.04 ms (100.0%) [2 runs, avg: 0.02 ms]
+
+2025-11-07 22:45:45.018 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:45.031 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-07 22:45:45.067 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:45.068 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.92 ms (  2.0%) [3 runs, avg: 0.64 ms]
+Huffman Tree Build       :     0.43 ms (  0.4%) [3 runs, avg: 0.14 ms]
+Encoding                 :    87.68 ms ( 89.9%) [3 runs, avg: 29.23 ms]
+Checksum Computation     :     2.52 ms (  2.6%) [3 runs, avg: 0.84 ms]
+File I/O                 :     4.84 ms (  5.0%) [4 runs, avg: 1.21 ms]
+Header Write             :     0.08 ms (  0.1%) [1 runs, avg: 0.08 ms]
+
+2025-11-07 22:45:45.069 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-07 22:45:45.069 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
+2025-11-07 22:45:45.146 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:45.147 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.30 ms (  0.2%) [3 runs, avg: 0.10 ms]
+File I/O                 :     1.65 ms (  0.9%) [2 runs, avg: 0.82 ms]
+Decoding                 :   170.03 ms ( 97.3%) [3 runs, avg: 56.68 ms]
+Checksum Verification    :     2.83 ms (  1.6%) [3 runs, avg: 0.94 ms]
+
+2025-11-07 22:45:45.156 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:45.157 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-07 22:45:45.158 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:45:45.158 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  1.1%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.05 ms ( 13.8%) [1 runs, avg: 0.05 ms]
+Encoding                 :     0.00 ms (  1.2%) [1 runs, avg: 0.00 ms]
+Checksum Computation     :     0.04 ms ( 10.3%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.21 ms ( 58.7%) [2 runs, avg: 0.10 ms]
+Header Write             :     0.05 ms ( 15.0%) [1 runs, avg: 0.05 ms]
+
+2025-11-07 22:45:45.162 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:45.183 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-07 22:45:57.774 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-07 22:45:57.968 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-07 22:45:57.970 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:45:57.971 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:45:58.202 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-07 22:46:01.716 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:46:01.716 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:46:08.165 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:46:08.165 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:46:08.169 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: sample.pdf (1159383 bytes) into 1 chunks using 8 workers
+2025-11-07 22:46:08.322 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1159383 -> 1140750 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:46:08.326 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    25.53 ms ( 19.1%) [1 runs, avg: 25.53 ms]
+Huffman Tree Build       :     2.08 ms (  1.6%) [1 runs, avg: 2.08 ms]
+Encoding                 :    61.37 ms ( 46.0%) [1 runs, avg: 61.37 ms]
+Checksum Computation     :    35.84 ms ( 26.9%) [1 runs, avg: 35.84 ms]
+File I/O                 :     8.22 ms (  6.2%) [2 runs, avg: 4.11 ms]
+Header Write             :     0.44 ms (  0.3%) [1 runs, avg: 0.44 ms]
+
+2025-11-07 22:46:23.179 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:46:23.179 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:46:50.053 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:46:50.053 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:46:50.055 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: d2-1.mkv (3052984682 bytes) into 91 chunks using 8 workers
+2025-11-07 22:47:19.909 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3052984682 -> 3052450963 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:47:19.914 [pool-6-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :  2073.48 ms (  1.9%) [91 runs, avg: 22.79 ms]
+Huffman Tree Build       :    49.75 ms (  0.0%) [91 runs, avg: 0.55 ms]
+Encoding                 : 64278.89 ms ( 59.7%) [91 runs, avg: 706.36 ms]
+Checksum Computation     :  5953.33 ms (  5.5%) [91 runs, avg: 65.42 ms]
+File I/O                 : 35382.15 ms ( 32.8%) [92 runs, avg: 384.59 ms]
+Header Write             :     5.33 ms (  0.0%) [1 runs, avg: 5.33 ms]
+
+2025-11-07 22:47:48.877 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:47:48.877 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:48:13.323 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:48:13.324 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:48:13.325 [pool-9-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: d2.mkv (3052984682 bytes) into 91 chunks using 8 workers
+2025-11-07 22:49:21.532 [pool-9-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3052984682 -> 3052450961 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-07 22:49:21.762 [pool-9-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :   355.18 ms (  0.2%) [91 runs, avg: 3.90 ms]
+Huffman Tree Build       :     7.18 ms (  0.0%) [91 runs, avg: 0.08 ms]
+Encoding                 : 23174.18 ms ( 14.2%) [91 runs, avg: 254.66 ms]
+Checksum Computation     :  2727.80 ms (  1.7%) [91 runs, avg: 29.98 ms]
+File I/O                 : 136677.29 ms ( 83.9%) [92 runs, avg: 1485.62 ms]
+Header Write             :     1.24 ms (  0.0%) [1 runs, avg: 1.24 ms]
+
+2025-11-07 22:49:35.697 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
+2025-11-07 22:49:35.698 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-07 22:49:50.293 [pool-12-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: d2.mkv.dcz to d2-2.mkv using 8 workers
+2025-11-07 22:49:50.298 [pool-12-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 91 chunks, original size: 3052984682 bytes
+2025-11-07 22:50:36.424 [JavaFX Application Thread] ERROR com.datacomp.ui.CompressController - Decompression failed
+java.io.IOException: Chunk decompression failed
+	at com.datacomp.service.cpu.CpuCompressionService.decompress(CpuCompressionService.java:361)
+	at com.datacomp.ui.CompressController$2.call(CompressController.java:334)
+	at com.datacomp.ui.CompressController$2.call(CompressController.java:326)
 	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
@@ -118,416 +537,18 @@ uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Una
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
-		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
-		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
-		... 11 common frames omitted
-2025-11-05 20:57:59.717 [pool-2-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
-java.lang.RuntimeException: GPU computation failed
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
-	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
-	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+Caused by: java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
+	at com.datacomp.service.cpu.CpuCompressionService.decompress(CpuCompressionService.java:352)
+	... 9 common frames omitted
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at com.datacomp.service.cpu.CpuCompressionService.decodeChunk(CpuCompressionService.java:444)
+	at com.datacomp.service.cpu.CpuCompressionService.decodeChunkParallel(CpuCompressionService.java:405)
+	at com.datacomp.service.cpu.CpuCompressionService.lambda$decompress$1(CpuCompressionService.java:344)
+	at com.datacomp.service.cpu.CpuCompressionService$$Lambda/0x00007f237ec96818.call(Unknown Source)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m
-	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
-	... 11 common frames omitted
-	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
-		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
-		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
-		... 11 common frames omitted
-2025-11-05 20:57:59.720 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
-2025-11-05 20:59:37.580 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052853540 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:00:00.015 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:00:00.062 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:00:00.091 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:02:29.561 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 21:02:29.562 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:02:29.562 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing inp.tar (178196480 bytes) into 1 chunks
-2025-11-05 21:02:30.991 [pool-3-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU encoding failed: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m - Falling back to multi-threaded CPU
-2025-11-05 21:02:35.715 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compression complete: 178196480 -> 143372548 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:02:35.715 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
-2025-11-05 21:02:58.086 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:02:58.110 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:02:58.142 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:03:23.368 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing inp.tar.dcz to inp1.tar
-2025-11-05 21:03:23.368 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 178196480 bytes
-2025-11-05 21:03:23.377 [JavaFX Application Thread] ERROR com.datacomp.ui.CompressController - Decompression failed
-java.lang.RuntimeException: Decode error at position 0
-	at com.datacomp.service.cpu.CpuCompressionService.decodeChunk(CpuCompressionService.java:265)
-	at com.datacomp.service.cpu.CpuCompressionService.decompress(CpuCompressionService.java:226)
-	at com.datacomp.service.gpu.GpuCompressionService.decompress(GpuCompressionService.java:444)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:315)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:307)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-11-05 21:03:25.758 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing inp.tar.dcz to inp1.tar
-2025-11-05 21:03:25.758 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 178196480 bytes
-2025-11-05 21:03:25.766 [JavaFX Application Thread] ERROR com.datacomp.ui.CompressController - Decompression failed
-java.lang.RuntimeException: Decode error at position 0
-	at com.datacomp.service.cpu.CpuCompressionService.decodeChunk(CpuCompressionService.java:265)
-	at com.datacomp.service.cpu.CpuCompressionService.decompress(CpuCompressionService.java:226)
-	at com.datacomp.service.gpu.GpuCompressionService.decompress(GpuCompressionService.java:444)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:315)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:307)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-11-05 21:03:36.239 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
-2025-11-05 21:05:29.303 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 21:05:29.592 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 21:05:30.296 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:05:30.807 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:05:30.832 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:05:31.123 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 21:05:33.983 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:05:34.014 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:05:34.041 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:05:42.963 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing inp.tar.dcz to inp.tar
-2025-11-05 21:05:42.984 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 178196480 bytes
-2025-11-05 21:05:43.128 [JavaFX Application Thread] ERROR com.datacomp.ui.CompressController - Decompression failed
-java.lang.RuntimeException: Decode error at position 0
-	at com.datacomp.service.cpu.CpuCompressionService.decodeChunk(CpuCompressionService.java:265)
-	at com.datacomp.service.cpu.CpuCompressionService.decompress(CpuCompressionService.java:226)
-	at com.datacomp.service.gpu.GpuCompressionService.decompress(GpuCompressionService.java:444)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:315)
-	at com.datacomp.ui.CompressController$2.call(CompressController.java:307)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2025-11-05 21:06:03.023 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
-2025-11-05 21:09:53.682 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 21:09:54.027 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 21:09:54.679 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:09:55.658 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:09:55.688 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:09:56.551 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 21:10:03.721 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:10:03.748 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:10:03.776 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:10:23.891 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 21:10:23.892 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:10:23.893 [pool-2-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 6 chunks
-2025-11-05 21:10:26.851 [pool-2-thread-1] ERROR com.datacomp.service.gpu.GpuFrequencyService - GPU histogram computation failed
-uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m
-	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
-	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
-	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
-		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
-		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
-		... 11 common frames omitted
-2025-11-05 21:10:26.857 [pool-2-thread-1] WARN  com.datacomp.service.gpu.GpuCompressionService - ❌ GPU compression failed, falling back to CPU
-java.lang.RuntimeException: GPU computation failed
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:88)
-	at com.datacomp.service.gpu.GpuCompressionService.compressWithGpuHistogram(GpuCompressionService.java:132)
-	at com.datacomp.service.gpu.GpuCompressionService.compress(GpuCompressionService.java:72)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:222)
-	at com.datacomp.ui.CompressController$1.call(CompressController.java:214)
-	at javafx.graphics@21.0.1/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: uk.ac.manchester.tornado.api.exceptions.TornadoOutOfMemoryException: [ERROR] Unable to allocate 536870936 bytes of memory.[33m
-	To increase the maximum device memory, use -Dtornado.device.memory=<X>GB
-[0m
-	at tornado.drivers.common@1.1.2-dev/uk.ac.manchester.tornado.drivers.common.TornadoBufferProvider.getOrAllocateBufferWithSize(TornadoBufferProvider.java:214)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.allocate(OCLArrayWrapper.java:107)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.newDeviceBufferAllocation(OCLTornadoDevice.java:617)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocate(OCLTornadoDevice.java:630)
-	at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.allocateObjects(OCLTornadoDevice.java:593)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.executeAlloc(TornadoVMInterpreter.java:499)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:296)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.interpreter.TornadoVMInterpreter.execute(TornadoVMInterpreter.java:1028)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.executeInterpreterSingleThreaded(TornadoVM.java:127)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.TornadoVM.execute(TornadoVM.java:114)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.scheduleInner(TornadoTaskGraph.java:943)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1606)
-	at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.execute(TornadoTaskGraph.java:1626)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.execute(TaskGraph.java:804)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.execute(ImmutableTaskGraph.java:50)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.lambda$execute$0(TornadoExecutor.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.execute(TornadoExecutor.java:49)
-	at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.execute(TornadoExecutionPlan.java:181)
-	at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:69)
-	... 11 common frames omitted
-	Suppressed: uk.ac.manchester.tornado.api.exceptions.TornadoInternalError: failed guarantee: Fatal error: trying to deallocate an invalid buffer
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.exceptions.TornadoInternalError.guarantee(TornadoInternalError.java:58)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.mm.OCLArrayWrapper.markAsFreeBuffer(OCLArrayWrapper.java:118)
-		at tornado.drivers.opencl@1.1.2-dev/uk.ac.manchester.tornado.drivers.opencl.runtime.OCLTornadoDevice.deallocate(OCLTornadoDevice.java:645)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.releaseObjectFromDeviceMemory(TornadoTaskGraph.java:1270)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemoryObject(TornadoTaskGraph.java:1262)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeIOObjects(TornadoTaskGraph.java:1236)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.free(TornadoTaskGraph.java:1256)
-		at tornado.runtime@1.1.2-dev/uk.ac.manchester.tornado.runtime.tasks.TornadoTaskGraph.freeDeviceMemory(TornadoTaskGraph.java:1226)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TaskGraph.freeDeviceMemory(TaskGraph.java:820)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.ImmutableTaskGraph.freeDeviceMemory(ImmutableTaskGraph.java:66)
-		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutor.freeDeviceMemory(TornadoExecutor.java:111)
-		at tornado.api@1.1.2-dev/uk.ac.manchester.tornado.api.TornadoExecutionPlan.close(TornadoExecutionPlan.java:552)
-		at com.datacomp.service.gpu.GpuFrequencyService.computeHistogram(GpuFrequencyService.java:68)
-		... 11 common frames omitted
-2025-11-05 21:10:26.861 [pool-2-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 6 chunks
-2025-11-05 21:10:35.892 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
-2025-11-05 21:10:41.668 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
-2025-11-05 21:12:20.597 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit16812330928515621617/test.bin
-2025-11-05 21:12:20.632 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
-2025-11-05 21:12:20.634 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit16812330928515621617/test.bin
-2025-11-05 21:12:20.638 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
-2025-11-05 21:12:20.640 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:12:21.624 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:12:21.641 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:12:23.283 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:12:24.455 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:13:23.936 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:13:23.944 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:16.531 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit4640916550112965539/test.bin
-2025-11-05 21:20:16.574 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
-2025-11-05 21:20:16.574 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit4640916550112965539/test.bin
-2025-11-05 21:20:16.577 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
-2025-11-05 21:20:16.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:16.810 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:16.811 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:16.942 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:16.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.045 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.046 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.146 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.147 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.254 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.352 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.353 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.439 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.439 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:20:17.528 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.530 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 10.86 MB/s, 100.06% compression, 0.097s total
-2025-11-05 21:20:17.535 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
-2025-11-05 21:20:17.535 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
-2025-11-05 21:20:17.535 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
-2025-11-05 21:20:17.582 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
-2025-11-05 21:20:17.586 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.586 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
-2025-11-05 21:20:17.588 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
-2025-11-05 21:20:17.598 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.608 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
-2025-11-05 21:20:17.610 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.610 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
-2025-11-05 21:20:17.611 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
-2025-11-05 21:20:17.612 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.618 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
-2025-11-05 21:20:17.622 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.623 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
-2025-11-05 21:20:17.623 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
-2025-11-05 21:20:17.623 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.652 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
-2025-11-05 21:20:17.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:17.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
-2025-11-05 21:20:17.944 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
-2025-11-05 21:20:18.126 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:18.140 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
-2025-11-05 21:20:18.141 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:18.165 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
-2025-11-05 21:20:27.910 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 21:20:28.115 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 21:20:28.820 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:20:29.274 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:20:29.290 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:20:29.527 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 21:20:42.919 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:20:42.932 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:20:42.945 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:20:43.009 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available)
-2025-11-05 21:20:43.028 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:20:43.048 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
-2025-11-05 21:20:53.076 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 21:20:53.076 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:20:53.077 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing input-dec.tar (61419520 bytes) into 2 chunks
-2025-11-05 21:20:55.458 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compression complete: 61419520 -> 50411822 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:20:55.458 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
-2025-11-05 21:21:13.193 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing input.tar.dcz to input-1.tar
-2025-11-05 21:21:13.194 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 2 chunks, original size: 61419520 bytes
-2025-11-05 21:21:17.100 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 61419520 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:21:52.218 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
-2025-11-05 21:21:52.218 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 CL_DEVICE_TYPE_GPU (available))
-2025-11-05 21:21:52.219 [pool-3-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU Compressing d2.mkv (3052984682 bytes) into 91 chunks
-2025-11-05 21:27:21.839 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit17885534892033891665/test.bin
-2025-11-05 21:27:21.858 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
-2025-11-05 21:27:21.858 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit17885534892033891665/test.bin
-2025-11-05 21:27:21.862 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
-2025-11-05 21:27:21.862 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:21.992 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:21.992 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.034 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.034 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.061 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.062 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.089 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.089 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.117 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.117 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.143 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.143 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.169 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.170 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.bin (1048576 bytes) into 1 chunks
-2025-11-05 21:27:22.192 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.195 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 40.04 MB/s, 100.06% compression, 0.026s total
-2025-11-05 21:27:22.197 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
-2025-11-05 21:27:22.197 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
-2025-11-05 21:27:22.198 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
-2025-11-05 21:27:22.232 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing random.bin (10240 bytes) into 1 chunks
-2025-11-05 21:27:22.234 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.234 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing random.dcz to random.decompressed.bin
-2025-11-05 21:27:22.235 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes
-2025-11-05 21:27:22.242 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.247 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (1300 bytes) into 1 chunks
-2025-11-05 21:27:22.248 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.248 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing test.dcz to test.decompressed.txt
-2025-11-05 21:27:22.248 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes
-2025-11-05 21:27:22.249 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.252 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing empty.txt (0 bytes) into 0 chunks
-2025-11-05 21:27:22.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing empty.dcz to empty.decompressed.txt
-2025-11-05 21:27:22.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes
-2025-11-05 21:27:22.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.271 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing large.bin (3145728 bytes) into 3 chunks
-2025-11-05 21:27:22.341 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.342 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing large.dcz to large.decompressed.bin
-2025-11-05 21:27:22.346 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes
-2025-11-05 21:27:22.478 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.490 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing test.txt (29 bytes) into 1 chunks
-2025-11-05 21:27:22.491 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:27:22.515 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
-2025-11-05 21:28:02.420 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
-2025-11-05 21:28:02.636 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
-2025-11-05 21:28:02.640 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
-2025-11-05 21:28:02.864 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
-2025-11-05 21:28:28.253 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
-2025-11-05 21:28:28.330 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
-2025-11-05 21:28:38.625 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - CPU mode forced by configuration
-2025-11-05 21:28:38.628 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compressing d2.mkv (3052984682 bytes) into 91 chunks
-2025-11-05 21:29:42.531 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Compression complete: 3052984682 -> 3052450961 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:30:18.928 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing d2.mkv.dcz to d2-1.mkv
-2025-11-05 21:30:18.936 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 91 chunks, original size: 3052984682 bytes
-2025-11-05 21:32:35.998 [pool-3-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompression complete: 3052984682 bytes in {:.2f}s ({:.2f} MB/s)
-2025-11-05 21:33:02.045 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
-2025-11-05 21:35:08.713 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping
+	at java.base/java.lang.Thread.runWith(Thread.java:1596)
+	... 1 common frames omitted
