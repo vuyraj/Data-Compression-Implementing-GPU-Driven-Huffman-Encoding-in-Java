@@ -21,10 +21,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Duration;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Compression/decompression view controller with drag-and-drop support.
@@ -78,6 +81,16 @@ public class CompressController implements MainViewController.ConfigurableContro
     @Override
     public void setConfig(AppConfig config) {
         this.config = config;
+        
+        // Close old service if it exists
+        if (this.compressionService instanceof AutoCloseable) {
+            try {
+                ((AutoCloseable) this.compressionService).close();
+            } catch (Exception e) {
+                logger.warn("Failed to close previous compression service: {}", e.getMessage());
+            }
+        }
+        
         this.compressionService = ServiceFactory.createCompressionService(config);
     }
     
@@ -208,6 +221,14 @@ public class CompressController implements MainViewController.ConfigurableContro
         
         // Update service based on checkbox
         if (useCpuCheckBox.isSelected() != config.isForceCpu()) {
+            // Close old service before creating new one
+            if (compressionService instanceof AutoCloseable) {
+                try {
+                    ((AutoCloseable) compressionService).close();
+                } catch (Exception e) {
+                    logger.warn("Failed to close compression service: {}", e.getMessage());
+                }
+            }
             compressionService = ServiceFactory.createCompressionService(config);
         }
         
@@ -463,6 +484,37 @@ public class CompressController implements MainViewController.ConfigurableContro
             stageMetricsArea.setText(sb.toString());
             stageMetricsBox.setManaged(true);
             stageMetricsBox.setVisible(true);
+        }
+    }
+    
+    /**
+     * Cleanup resources when controller is destroyed.
+     * MUST be called to prevent memory leaks.
+     */
+    public void cleanup() {
+        logger.info("Cleaning up CompressController resources");
+        
+        // Shutdown executor
+        if (executor != null) {
+            executor.shutdown();
+            try {
+                if (!executor.awaitTermination(5, TimeUnit.SECONDS)) {
+                    executor.shutdownNow();
+                }
+            } catch (InterruptedException e) {
+                executor.shutdownNow();
+                Thread.currentThread().interrupt();
+            }
+        }
+        
+        // Close compression service
+        if (compressionService instanceof AutoCloseable) {
+            try {
+                ((AutoCloseable) compressionService).close();
+                logger.info("✅ Compression service closed successfully");
+            } catch (Exception e) {
+                logger.error("Failed to close compression service: {}", e.getMessage());
+            }
         }
     }
 }

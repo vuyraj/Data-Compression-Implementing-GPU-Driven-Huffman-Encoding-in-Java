@@ -26,7 +26,7 @@ import java.util.function.Consumer;
  * GPU-accelerated compression service using TornadoVM with parallel chunk processing.
  * Falls back to CPU implementation if GPU is unavailable.
  */
-public class GpuCompressionService implements CompressionService {
+public class GpuCompressionService implements CompressionService, AutoCloseable {
     
     private static final Logger logger = LoggerFactory.getLogger(GpuCompressionService.class);
     
@@ -44,19 +44,19 @@ public class GpuCompressionService implements CompressionService {
         this.cpuFallback = new CpuCompressionService(chunkSizeMB);
         this.lastStageMetrics = new StageMetrics();
         
-        // Determine number of parallel chunks for GPU processing
-        // GPUs work best with 2-4 concurrent chunks to keep GPU busy while waiting for transfers
-        int availableProcessors = Runtime.getRuntime().availableProcessors();
-        this.parallelChunks = Math.min(4, Math.max(2, availableProcessors / 2));
-        this.executorService = Executors.newFixedThreadPool(parallelChunks);
-        
         try {
             this.frequencyService = new GpuFrequencyService();
             if (frequencyService.isAvailable()) {
+                // Calculate safe parallel chunks based on GPU memory
+                this.parallelChunks = calculateSafeParallelChunks(chunkSizeMB);
+                this.executorService = Executors.newFixedThreadPool(parallelChunks);
+                
                 logger.info("GPU compression service initialized: {} with {} parallel chunk workers",
                           frequencyService.getServiceName(), parallelChunks);
             } else {
                 logger.warn("GPU not available, will use CPU fallback");
+                this.parallelChunks = 1;
+                this.executorService = Executors.newFixedThreadPool(1);
             }
         } catch (NoClassDefFoundError | ExceptionInInitializerError e) {
             logger.warn("TornadoVM runtime not available: {}", e.getMessage());
@@ -65,6 +65,49 @@ public class GpuCompressionService implements CompressionService {
             logger.error("Failed to initialize GPU service: {}", e.getMessage());
             throw new RuntimeException("GPU initialization failed", e);
         }
+    }
+    
+    /**
+     * Calculate safe number of parallel chunks based on GPU memory.
+     * Formula: parallelChunks = (availableGPUMem * safetyFactor) / chunkMemoryUsage
+     */
+    private int calculateSafeParallelChunks(int chunkSizeMB) {
+        if (!(frequencyService instanceof GpuFrequencyService)) {
+            return 1; // CPU fallback
+        }
+        
+        GpuFrequencyService gpuService = (GpuFrequencyService) frequencyService;
+        long availableMemBytes = gpuService.getAvailableMemoryBytes();
+        
+        // Memory usage per chunk:
+        // - Input data: chunkSizeMB
+        // - Histogram: 256 * 4 bytes = 1KB (negligible)
+        // - TornadoVM overhead: ~20% of input data
+        // - Kernel compilation cache: ~50MB (one-time)
+        long chunkMemUsage = (long)(chunkSizeMB * 1024 * 1024 * 1.2); // 20% overhead
+        long reservedMem = 50L * 1024 * 1024; // Reserve 50MB for TornadoVM
+        long usableMemory = Math.max(availableMemBytes - reservedMem, chunkMemUsage);
+        
+        int maxParallel = (int)(usableMemory / chunkMemUsage);
+        
+        // Apply safety limits:
+        // - Minimum: 1 (sequential)
+        // - Maximum: 4 (to avoid driver instability)
+        // - Cap at available memory / chunk size
+        int safeParallel = Math.max(1, Math.min(4, maxParallel));
+        
+        // Estimate total VRAM based on available memory (available is ~40% of total)
+        long estimatedTotalVRAM = (availableMemBytes * 100) / 40;
+        
+        logger.info("🎮 GPU Memory Analysis:");
+        logger.info("   Estimated Total VRAM: {} MB", estimatedTotalVRAM / (1024 * 1024));
+        logger.info("   Safe Available Memory: {} MB", availableMemBytes / (1024 * 1024));
+        logger.info("   Chunk Size: {} MB", chunkSizeMB);
+        logger.info("   Memory per Chunk (with overhead): {} MB", chunkMemUsage / (1024 * 1024));
+        logger.info("   Calculated Max Parallel: {}", maxParallel);
+        logger.info("   Safe Parallel Chunks: {} (capped at 4 for stability)", safeParallel);
+        
+        return safeParallel;
     }
     
     /**
@@ -232,6 +275,9 @@ public class GpuCompressionService implements CompressionService {
             synchronized (lastStageMetrics) {
                 lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, writeTime, Files.size(outputPath));
             }
+            
+            // Clear all large data structures to free memory immediately
+            compressedChunks.clear();
         }
         
         long duration = System.nanoTime() - startTime;
@@ -241,6 +287,11 @@ public class GpuCompressionService implements CompressionService {
         
         logger.info("✅ GPU Parallel compression complete: {} -> {} bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)",
                    fileSize, compressedSize, ratio * 100, duration / 1e9, throughputMBps);
+        
+        // Suggest garbage collection to free memory
+        System.gc();
+        logger.debug("🧹 Memory cleanup complete, suggested GC to free ~{} MB", 
+                    (fileSize / 1_000_000));
         
         // Log stage metrics
         logger.info("\n{}", lastStageMetrics.getSummary());
@@ -446,6 +497,43 @@ public class GpuCompressionService implements CompressionService {
             }
             return buffer.toByteArray();
         }
+    }
+    
+    /**
+     * Shutdown the executor service and release all resources.
+     * This MUST be called when the service is no longer needed to prevent memory leaks.
+     */
+    @Override
+    public void close() {
+        logger.info("🛑 Shutting down GPU compression service with {} workers", parallelChunks);
+        
+        // Shutdown GPU executor
+        executorService.shutdown();
+        try {
+            // Wait up to 30 seconds for tasks to complete
+            if (!executorService.awaitTermination(30, TimeUnit.SECONDS)) {
+                logger.warn("GPU executor did not terminate in time, forcing shutdown");
+                executorService.shutdownNow();
+                if (!executorService.awaitTermination(10, TimeUnit.SECONDS)) {
+                    logger.error("GPU executor did not terminate after forced shutdown");
+                }
+            }
+        } catch (InterruptedException e) {
+            logger.error("GPU shutdown interrupted, forcing immediate shutdown");
+            executorService.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
+        
+        // Also shutdown CPU fallback service
+        if (cpuFallback instanceof AutoCloseable) {
+            try {
+                ((AutoCloseable) cpuFallback).close();
+            } catch (Exception e) {
+                logger.error("Failed to close CPU fallback service: {}", e.getMessage());
+            }
+        }
+        
+        logger.info("✅ GPU compression service shutdown complete");
     }
 }
 

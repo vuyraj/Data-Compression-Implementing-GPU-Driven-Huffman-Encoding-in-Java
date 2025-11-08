@@ -41,10 +41,10 @@ public class SettingsController implements MainViewController.ConfigurableContro
     public void initialize() {
         logger.debug("Initializing settings controller");
         
-        // Initialize chunk size spinner
+        // Initialize chunk size spinner (16-128 MB range, default 32 MB for MX330)
         if (chunkSizeSpinner != null) {
             SpinnerValueFactory<Integer> valueFactory = 
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(64, 1024, 512, 64);
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(16, 128, 32, 16);
             chunkSizeSpinner.setValueFactory(valueFactory);
             chunkSizeSpinner.setEditable(true);
         }

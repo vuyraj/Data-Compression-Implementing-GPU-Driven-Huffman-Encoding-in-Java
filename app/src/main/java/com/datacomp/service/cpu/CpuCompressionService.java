@@ -23,7 +23,7 @@ import java.util.function.Consumer;
 /**
  * CPU-based compression service with parallel chunk processing for large files.
  */
-public class CpuCompressionService implements CompressionService {
+public class CpuCompressionService implements CompressionService, AutoCloseable {
     
     private static final Logger logger = LoggerFactory.getLogger(CpuCompressionService.class);
     
@@ -169,6 +169,9 @@ public class CpuCompressionService implements CompressionService {
             }
             long writeTime = System.nanoTime() - writeStart;
             lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, writeTime, Files.size(outputPath));
+            
+            // Clear all large data structures to free memory immediately
+            compressedChunks.clear();
         }
         
         long duration = System.nanoTime() - startTime;
@@ -178,6 +181,11 @@ public class CpuCompressionService implements CompressionService {
         
         logger.info("✅ Parallel compression complete: {} -> {} bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)",
                    fileSize, compressedSize, ratio * 100, duration / 1e9, throughputMBps);
+        
+        // Suggest garbage collection to free memory
+        System.gc();
+        logger.debug("🧹 Memory cleanup complete, suggested GC to free ~{} MB", 
+                    (fileSize / 1_000_000));
         
         // Log stage metrics
         logger.info("\n{}", lastStageMetrics.getSummary());
@@ -304,75 +312,123 @@ public class CpuCompressionService implements CompressionService {
         logger.info("🚀 Parallel decompression: {} to {} using {} workers", 
                    inputPath.getFileName(), outputPath.getFileName(), parallelChunks);
         
-        // Read header and all compressed chunk data first
+        // Read header first and determine where compressed data starts
         CompressionHeader header;
-        List<byte[]> compressedChunksData = new ArrayList<>();
+        long compressedDataStart;
         
         try (DataInputStream input = new DataInputStream(
                 new BufferedInputStream(Files.newInputStream(inputPath)))) {
             
-            // Read header
+            // Mark position before reading header
             long headerStart = System.nanoTime();
+            
             header = CompressionHeader.readFrom(input);
+            
+            // After reading header, calculate where compressed data starts
+            // Sum all compressed sizes to find total compressed data size
+            long totalCompressedSize = 0;
+            for (ChunkMetadata chunk : header.getChunks()) {
+                totalCompressedSize += chunk.getCompressedSize();
+            }
+            long totalFileSize = Files.size(inputPath);
+            compressedDataStart = totalFileSize - totalCompressedSize;
+            
             lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - headerStart, 0);
             
             int numChunks = header.getNumChunks();
             
-            logger.info("Decompressing {} chunks, original size: {} bytes",
-                       numChunks, header.getOriginalFileSize());
-            
-            // Read all compressed chunks
-            for (int i = 0; i < numChunks; i++) {
-                ChunkMetadata chunk = header.getChunks().get(i);
-                byte[] compressedData = new byte[chunk.getCompressedSize()];
-                input.readFully(compressedData);
-                compressedChunksData.add(compressedData);
-            }
+            logger.info("Decompressing {} chunks, original size: {} bytes, header size: {} bytes",
+                       numChunks, header.getOriginalFileSize(), compressedDataStart);
         }
         
-        // Process chunks in parallel
-        Map<Integer, byte[]> decodedChunks = new ConcurrentHashMap<>();
+        // Process chunks in batches to avoid OOM (read batch -> decode parallel -> write -> free memory)
+        // Smaller batch size to reduce memory footprint
+        int batchSize = Math.max(parallelChunks, 4);  // Only keep 1x worker count in memory
         AtomicInteger completedChunks = new AtomicInteger(0);
-        List<Future<DecodedChunkData>> futures = new ArrayList<>();
         
-        for (int i = 0; i < header.getNumChunks(); i++) {
-            final int index = i;
-            final ChunkMetadata chunk = header.getChunks().get(i);
-            final byte[] compressedData = compressedChunksData.get(i);
-            
-            Future<DecodedChunkData> future = executorService.submit(() -> 
-                decodeChunkParallel(index, compressedData, chunk)
-            );
-            futures.add(future);
-        }
-        
-        // Collect results
-        for (int i = 0; i < futures.size(); i++) {
-            try {
-                DecodedChunkData chunkData = futures.get(i).get();
-                decodedChunks.put(chunkData.index, chunkData.decodedData);
-                
-                int completed = completedChunks.incrementAndGet();
-                if (progressCallback != null) {
-                    progressCallback.accept((double) completed / header.getNumChunks());
-                }
-                
-            } catch (InterruptedException | ExecutionException e) {
-                throw new IOException("Chunk decompression failed", e);
-            }
-        }
-        
-        // Write decoded chunks in order
-        try (FileChannel outputChannel = FileChannel.open(outputPath,
+        try (RandomAccessFile inputFile = new RandomAccessFile(inputPath.toFile(), "r");
+             FileChannel outputChannel = FileChannel.open(outputPath,
                 StandardOpenOption.CREATE, StandardOpenOption.WRITE,
                 StandardOpenOption.TRUNCATE_EXISTING)) {
             
-            long writeStart = System.nanoTime();
-            for (int i = 0; i < header.getNumChunks(); i++) {
-                byte[] decodedData = decodedChunks.get(i);
-                outputChannel.write(ByteBuffer.wrap(decodedData));
+            int numChunks = header.getNumChunks();
+            int numBatches = (numChunks + batchSize - 1) / batchSize;
+            
+            logger.debug("Processing {} chunks in {} batches of ~{} chunks (memory-efficient streaming)", 
+                        numChunks, numBatches, batchSize);
+            
+            for (int batchIdx = 0; batchIdx < numBatches; batchIdx++) {
+                int startChunk = batchIdx * batchSize;
+                int endChunk = Math.min(startChunk + batchSize, numChunks);
+                int batchChunkCount = endChunk - startChunk;
+                
+                // Read ONLY this batch's compressed data (streaming from disk)
+                Map<Integer, byte[]> compressedBatchData = new ConcurrentHashMap<>();
+                long readStart = System.nanoTime();
+                
+                synchronized (inputFile) {  // Synchronized file access
+                    for (int i = startChunk; i < endChunk; i++) {
+                        ChunkMetadata chunk = header.getChunks().get(i);
+                        byte[] compressedData = new byte[chunk.getCompressedSize()];
+                        
+                        // Seek to absolute position: header + chunk's compressed offset
+                        long absolutePosition = compressedDataStart + chunk.getCompressedOffset();
+                        inputFile.seek(absolutePosition);
+                        inputFile.readFully(compressedData);
+                        compressedBatchData.put(i, compressedData);
+                    }
+                }
+                lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - readStart, 
+                    batchChunkCount * (long)chunkSizeBytes);
+                
+                // Submit batch for parallel decoding
+                Map<Integer, byte[]> decodedChunks = new ConcurrentHashMap<>();
+                List<Future<DecodedChunkData>> futures = new ArrayList<>();
+                
+                for (int i = startChunk; i < endChunk; i++) {
+                    final int index = i;
+                    final ChunkMetadata chunk = header.getChunks().get(i);
+                    final byte[] compressedData = compressedBatchData.get(i);
+                    
+                    Future<DecodedChunkData> future = executorService.submit(() -> 
+                        decodeChunkParallel(index, compressedData, chunk)
+                    );
+                    futures.add(future);
+                }
+                
+                // Collect batch results
+                for (Future<DecodedChunkData> future : futures) {
+                    try {
+                        DecodedChunkData chunkData = future.get();
+                        decodedChunks.put(chunkData.index, chunkData.decodedData);
+                        
+                        int completed = completedChunks.incrementAndGet();
+                        if (progressCallback != null) {
+                            progressCallback.accept((double) completed / numChunks);
+                        }
+                        
+                    } catch (InterruptedException | ExecutionException e) {
+                        throw new IOException("Chunk decompression failed", e);
+                    }
+                }
+                
+                // Write batch in order (this frees memory immediately)
+                long writeStart = System.nanoTime();
+                for (int i = startChunk; i < endChunk; i++) {
+                    byte[] decodedData = decodedChunks.get(i);
+                    outputChannel.write(ByteBuffer.wrap(decodedData));
+                }
+                lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - writeStart, 
+                    batchChunkCount * (long)chunkSizeBytes);
+                
+                // Clear batch data to free memory ASAP
+                compressedBatchData.clear();
+                decodedChunks.clear();
+                futures.clear();
+                
+                logger.debug("Batch {}/{} complete ({}-{}), memory freed", 
+                           batchIdx + 1, numBatches, startChunk, endChunk - 1);
             }
-            lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - writeStart, Files.size(outputPath));
         }
         
         long duration = System.nanoTime() - startTime;
@@ -381,6 +437,10 @@ public class CpuCompressionService implements CompressionService {
         
         logger.info("✅ Parallel decompression complete: {} bytes in {:.2f}s ({:.2f} MB/s)",
                    outputSize, duration / 1e9, throughputMBps);
+        
+        // Suggest garbage collection to free memory
+        System.gc();
+        logger.debug("🧹 Memory cleanup complete after decompression");
         
         // Log stage metrics
         logger.info("\n{}", lastStageMetrics.getSummary());
@@ -567,6 +627,32 @@ public class CpuCompressionService implements CompressionService {
             }
             
             return bit;
+        }
+    }
+    
+    /**
+     * Shutdown the executor service and release all resources.
+     * This MUST be called when the service is no longer needed to prevent memory leaks.
+     */
+    @Override
+    public void close() {
+        logger.info("🛑 Shutting down CPU compression service with {} workers", parallelChunks);
+        executorService.shutdown();
+        try {
+            // Wait up to 30 seconds for tasks to complete
+            if (!executorService.awaitTermination(30, TimeUnit.SECONDS)) {
+                logger.warn("Executor did not terminate in time, forcing shutdown");
+                executorService.shutdownNow();
+                // Wait a bit more for tasks to respond to cancellation
+                if (!executorService.awaitTermination(10, TimeUnit.SECONDS)) {
+                    logger.error("Executor did not terminate after forced shutdown");
+                }
+            }
+            logger.info("✅ CPU compression service shutdown complete");
+        } catch (InterruptedException e) {
+            logger.error("Shutdown interrupted, forcing immediate shutdown");
+            executorService.shutdownNow();
+            Thread.currentThread().interrupt();
         }
     }
 }

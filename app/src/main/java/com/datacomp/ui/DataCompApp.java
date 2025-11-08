@@ -20,6 +20,7 @@ public class DataCompApp extends Application {
     
     private AppConfig config;
     private Stage primaryStage;
+    private MainViewController mainController;
     
     @Override
     public void init() throws Exception {
@@ -39,6 +40,7 @@ public class DataCompApp extends Application {
             // Get controller and inject dependencies
             MainViewController controller = loader.getController();
             controller.setConfig(config);
+            this.mainController = controller; // Keep reference for cleanup
             
             // Create scene with theme
             Scene scene = new Scene(root, config.getWindowWidth(), config.getWindowHeight());
@@ -83,8 +85,15 @@ public class DataCompApp extends Application {
     
     @Override
     public void stop() throws Exception {
-        logger.info("Application stopping");
+        logger.info("Application stopping - cleaning up resources");
+        
+        // Cleanup main controller and all child controllers
+        if (mainController != null) {
+            mainController.cleanup();
+        }
+        
         super.stop();
+        logger.info("✅ Application stopped successfully");
     }
     
     public static void main(String[] args) {

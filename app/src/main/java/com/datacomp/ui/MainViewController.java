@@ -37,6 +37,7 @@ public class MainViewController {
     private AppConfig config;
     private CompressionService compressionService;
     private ToggleGroup navigationGroup;
+    private Object currentController; // Track current view controller for cleanup
     
     @FXML
     public void initialize() {
@@ -91,6 +92,8 @@ public class MainViewController {
             
             // Inject config into controller if it has setConfig method
             Object controller = loader.getController();
+            this.currentController = controller; // Track for cleanup
+            
             if (controller instanceof ConfigurableController) {
                 ((ConfigurableController) controller).setConfig(config);
             }
@@ -144,6 +147,28 @@ public class MainViewController {
      */
     public interface ConfigurableController {
         void setConfig(AppConfig config);
+    }
+    
+    /**
+     * Cleanup all resources when app is closing.
+     */
+    public void cleanup() {
+        logger.info("Cleaning up MainViewController resources");
+        
+        // Cleanup current view controller if it has cleanup method
+        if (currentController != null && currentController instanceof CompressController) {
+            ((CompressController) currentController).cleanup();
+        }
+        
+        // Close compression service
+        if (compressionService instanceof AutoCloseable) {
+            try {
+                ((AutoCloseable) compressionService).close();
+                logger.info("✅ Main controller compression service closed");
+            } catch (Exception e) {
+                logger.error("Failed to close compression service: {}", e.getMessage());
+            }
+        }
     }
 }
 
