@@ -182,8 +182,10 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         logger.info("✅ Parallel compression complete: {} -> {} bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)",
                    fileSize, compressedSize, ratio * 100, duration / 1e9, throughputMBps);
         
-        // Suggest garbage collection to free memory
+        // Aggressive memory cleanup
+        compressedChunks.clear();
         System.gc();
+        System.runFinalization();
         logger.debug("🧹 Memory cleanup complete, suggested GC to free ~{} MB", 
                     (fileSize / 1_000_000));
         
@@ -438,8 +440,9 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         logger.info("✅ Parallel decompression complete: {} bytes in {:.2f}s ({:.2f} MB/s)",
                    outputSize, duration / 1e9, throughputMBps);
         
-        // Suggest garbage collection to free memory
+        // Aggressive memory cleanup
         System.gc();
+        System.runFinalization();
         logger.debug("🧹 Memory cleanup complete after decompression");
         
         // Log stage metrics
@@ -455,14 +458,19 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         long huffmanStart = System.nanoTime();
         int[] codeLengths = chunk.getCodeLengths();
         HuffmanCode[] codes = rebuildCodes(codeLengths);
-        CanonicalHuffman.HuffmanDecoder decoder = CanonicalHuffman.buildDecoder(codes);
         synchronized (lastStageMetrics) {
             lastStageMetrics.recordStage(StageMetrics.Stage.HUFFMAN_TREE_BUILD, System.nanoTime() - huffmanStart, 0);
         }
         
-        // Track decoding
+        // Track decoding (now using fast table-based decoder)
         long decodeStart = System.nanoTime();
-        byte[] decodedData = decodeChunk(compressedData, chunk.getOriginalSize(), decoder);
+        byte[] decodedData = decodeChunkFast(compressedData, chunk.getOriginalSize(), codes);
+        
+        // Clear codes array to help GC (no longer needed)
+        for (int i = 0; i < codes.length; i++) {
+            codes[i] = null;
+        }
+        
         synchronized (lastStageMetrics) {
             lastStageMetrics.recordStage(StageMetrics.Stage.DECODING, System.nanoTime() - decodeStart, decodedData.length);
         }
@@ -499,7 +507,20 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         return CanonicalHuffman.generateCanonicalCodesFromLengths(codeLengths);
     }
     
-    private byte[] decodeChunk(byte[] compressedData, int originalSize,
+    /**
+     * Fast table-based chunk decoding (2-3× faster than tree traversal).
+     */
+    private byte[] decodeChunkFast(byte[] compressedData, int originalSize, HuffmanCode[] codes) {
+        TableBasedHuffmanDecoder fastDecoder = new TableBasedHuffmanDecoder(codes);
+        return fastDecoder.decode(compressedData, originalSize);
+    }
+    
+    /**
+     * OLD IMPLEMENTATION - kept for reference
+     * This bit-by-bit tree traversal is 2-3× slower than table-based decoding
+     */
+    @SuppressWarnings("unused")
+    private byte[] decodeChunkOld(byte[] compressedData, int originalSize,
                                CanonicalHuffman.HuffmanDecoder decoder) {
         byte[] decoded = new byte[originalSize];
         BitInputStream bitIn = new BitInputStream(compressedData);

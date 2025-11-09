@@ -49,7 +49,7 @@ public class CompressController implements MainViewController.ConfigurableContro
     @FXML private Label etaLabel;
     @FXML private CheckBox useCpuCheckBox;
     @FXML private VBox stageMetricsBox;
-    @FXML private TextArea stageMetricsArea;
+    @FXML private VBox stageMetricsContainer; // Changed from TextArea to VBox for cards
     
     private AppConfig config;
     private CompressionService compressionService;
@@ -236,6 +236,15 @@ public class CompressController implements MainViewController.ConfigurableContro
         final String processorType = useCpuCheckBox != null && useCpuCheckBox.isSelected() ? "CPU" : "GPU";
         final Path finalOutputPath = outputPath;
         
+        // Clear previous metrics display
+        if (stageMetricsContainer != null) {
+            stageMetricsContainer.getChildren().clear();
+        }
+        if (stageMetricsBox != null) {
+            stageMetricsBox.setManaged(false);
+            stageMetricsBox.setVisible(false);
+        }
+        
         // Run compression in background
         Task<Void> task = new Task<Void>() {
             @Override
@@ -282,14 +291,23 @@ public class CompressController implements MainViewController.ConfigurableContro
                 StageMetrics stageMetrics = null;
                 if (compressionService instanceof CpuCompressionService) {
                     stageMetrics = ((CpuCompressionService) compressionService).getLastStageMetrics();
+                    logger.debug("Retrieved CPU compression metrics: {} stages", 
+                        stageMetrics != null ? stageMetrics.getAllStageTimes().size() : 0);
                 } else if (compressionService instanceof GpuCompressionService) {
                     stageMetrics = ((GpuCompressionService) compressionService).getLastStageMetrics();
+                    logger.debug("Retrieved GPU compression metrics: {} stages", 
+                        stageMetrics != null ? stageMetrics.getAllStageTimes().size() : 0);
                 }
                 
                 // Display stage metrics
                 final StageMetrics finalMetrics = stageMetrics;
                 if (finalMetrics != null) {
-                    Platform.runLater(() -> displayStageMetrics(finalMetrics));
+                    Platform.runLater(() -> {
+                        logger.info("Displaying compression metrics with {} stages", finalMetrics.getAllStageTimes().size());
+                        displayStageMetrics(finalMetrics);
+                    });
+                } else {
+                    logger.warn("No compression metrics available to display");
                 }
                 
                 return null;
@@ -343,6 +361,15 @@ public class CompressController implements MainViewController.ConfigurableContro
         final String processorType = useCpuCheckBox != null && useCpuCheckBox.isSelected() ? "CPU" : "GPU";
         final Path finalOutputPath = outputPath;
         
+        // Clear previous metrics display
+        if (stageMetricsContainer != null) {
+            stageMetricsContainer.getChildren().clear();
+        }
+        if (stageMetricsBox != null) {
+            stageMetricsBox.setManaged(false);
+            stageMetricsBox.setVisible(false);
+        }
+        
         // Run decompression in background
         Task<Void> task = new Task<Void>() {
             @Override
@@ -389,14 +416,23 @@ public class CompressController implements MainViewController.ConfigurableContro
                 StageMetrics stageMetrics = null;
                 if (compressionService instanceof CpuCompressionService) {
                     stageMetrics = ((CpuCompressionService) compressionService).getLastStageMetrics();
+                    logger.debug("Retrieved CPU decompression metrics: {} stages", 
+                        stageMetrics != null ? stageMetrics.getAllStageTimes().size() : 0);
                 } else if (compressionService instanceof GpuCompressionService) {
                     stageMetrics = ((GpuCompressionService) compressionService).getLastStageMetrics();
+                    logger.debug("Retrieved GPU decompression metrics: {} stages", 
+                        stageMetrics != null ? stageMetrics.getAllStageTimes().size() : 0);
                 }
                 
                 // Display stage metrics
                 final StageMetrics finalMetrics = stageMetrics;
                 if (finalMetrics != null) {
-                    Platform.runLater(() -> displayStageMetrics(finalMetrics));
+                    Platform.runLater(() -> {
+                        logger.info("Displaying decompression metrics with {} stages", finalMetrics.getAllStageTimes().size());
+                        displayStageMetrics(finalMetrics);
+                    });
+                } else {
+                    logger.warn("No decompression metrics available to display");
                 }
                 
                 return null;
@@ -450,41 +486,136 @@ public class CompressController implements MainViewController.ConfigurableContro
     }
     
     /**
-     * Display stage performance metrics in the GUI.
+     * Display stage performance metrics in a modern card-based UI.
      */
     private void displayStageMetrics(StageMetrics metrics) {
-        if (stageMetricsBox != null && stageMetricsArea != null) {
-            // Build formatted display text
-            StringBuilder sb = new StringBuilder();
-            sb.append("═══════════════════════════════════════════════════\n");
-            
-            // Get all stages
-            for (StageMetrics.Stage stage : StageMetrics.Stage.values()) {
-                if (metrics.getStageCount(stage) > 0) {
-                    double timeMs = metrics.getStageTimeMs(stage);
-                    double percentage = metrics.getStagePercentage(stage);
-                    int count = metrics.getStageCount(stage);
-                    double avgMs = metrics.getAverageStageTimeMs(stage);
-                    double throughput = metrics.getStageThroughputMBps(stage);
-                    
-                    sb.append(String.format("%-25s: %8.2f ms (%5.1f%%)\n",
-                        stage.getDisplayName(), timeMs, percentage));
-                    sb.append(String.format("    %d runs, avg: %.2f ms", count, avgMs));
-                    
-                    if (throughput > 0) {
-                        sb.append(String.format(", %.2f MB/s", throughput));
-                    }
-                    sb.append("\n\n");
-                }
-            }
-            
-            sb.append("═══════════════════════════════════════════════════\n");
-            
-            // Update UI
-            stageMetricsArea.setText(sb.toString());
-            stageMetricsBox.setManaged(true);
-            stageMetricsBox.setVisible(true);
+        if (stageMetricsBox == null || stageMetricsContainer == null || metrics == null) {
+            return;
         }
+        
+        stageMetricsContainer.getChildren().clear();
+        
+        // Get total time for percentage calculations
+        long totalTimeNs = 0;
+        for (StageMetrics.Stage stage : StageMetrics.Stage.values()) {
+            if (metrics.getStageCount(stage) > 0) {
+                totalTimeNs += (long)(metrics.getStageTimeMs(stage) * 1_000_000);
+            }
+        }
+        
+        if (totalTimeNs == 0) {
+            return; // No metrics to display
+        }
+        
+        // Create card for each stage
+        for (StageMetrics.Stage stage : StageMetrics.Stage.values()) {
+            if (metrics.getStageCount(stage) > 0) {
+                VBox card = createStageCard(stage, metrics);
+                stageMetricsContainer.getChildren().add(card);
+            }
+        }
+        
+        // Show the metrics box
+        stageMetricsBox.setManaged(true);
+        stageMetricsBox.setVisible(true);
+    }
+    
+    /**
+     * Create a modern card UI for a single stage metric.
+     */
+    private VBox createStageCard(StageMetrics.Stage stage, StageMetrics metrics) {
+        VBox card = new VBox(5);
+        card.setStyle(
+            "-fx-background-color: #2b2b2b;" +
+            "-fx-background-radius: 8;" +
+            "-fx-padding: 12;" +
+            "-fx-border-color: #3a3a3a;" +
+            "-fx-border-radius: 8;" +
+            "-fx-border-width: 1;" +
+            "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);"
+        );
+        
+        // Stage name header
+        Label nameLabel = new Label(stage.getDisplayName());
+        nameLabel.setStyle(
+            "-fx-font-size: 14px;" +
+            "-fx-font-weight: bold;" +
+            "-fx-text-fill: #e0e0e0;"
+        );
+        
+        // Metrics row container
+        javafx.scene.layout.HBox metricsRow = new javafx.scene.layout.HBox(20);
+        metricsRow.setStyle("-fx-padding: 5 0 0 0;");
+        
+        // Time metric
+        VBox timeBox = createMetricBox("Time", 
+            String.format("%.2f ms", metrics.getStageTimeMs(stage)), 
+            "#4CAF50");
+        
+        // Percentage metric
+        VBox percentBox = createMetricBox("% of Total", 
+            String.format("%.1f%%", metrics.getStagePercentage(stage)), 
+            "#2196F3");
+        
+        // Runs metric
+        VBox runsBox = createMetricBox("Runs", 
+            String.valueOf(metrics.getStageCount(stage)), 
+            "#FF9800");
+        
+        // Average time metric
+        VBox avgBox = createMetricBox("Avg Time", 
+            String.format("%.2f ms", metrics.getAverageStageTimeMs(stage)), 
+            "#9C27B0");
+        
+        metricsRow.getChildren().addAll(timeBox, percentBox, runsBox, avgBox);
+        
+        // Throughput metric (if available)
+        double throughput = metrics.getStageThroughputMBps(stage);
+        if (throughput > 0) {
+            VBox throughputBox = createMetricBox("Throughput", 
+                String.format("%.2f MB/s", throughput), 
+                "#F44336");
+            metricsRow.getChildren().add(throughputBox);
+        }
+        
+        // Progress bar for percentage visualization
+        javafx.scene.control.ProgressBar progressBar = new javafx.scene.control.ProgressBar(
+            metrics.getStagePercentage(stage) / 100.0
+        );
+        progressBar.setMaxWidth(Double.MAX_VALUE);
+        progressBar.setStyle(
+            "-fx-accent: #4CAF50;" +
+            "-fx-pref-height: 4;"
+        );
+        javafx.scene.layout.VBox.setMargin(progressBar, new javafx.geometry.Insets(5, 0, 0, 0));
+        
+        card.getChildren().addAll(nameLabel, metricsRow, progressBar);
+        
+        return card;
+    }
+    
+    /**
+     * Create a metric box with label and value.
+     */
+    private VBox createMetricBox(String label, String value, String accentColor) {
+        VBox box = new VBox(2);
+        
+        Label labelText = new Label(label);
+        labelText.setStyle(
+            "-fx-font-size: 10px;" +
+            "-fx-text-fill: #999999;"
+        );
+        
+        Label valueText = new Label(value);
+        valueText.setStyle(
+            "-fx-font-size: 13px;" +
+            "-fx-font-weight: bold;" +
+            "-fx-text-fill: " + accentColor + ";"
+        );
+        
+        box.getChildren().addAll(labelText, valueText);
+        
+        return box;
     }
     
     /**

@@ -26,6 +26,23 @@ public class DataCompApp extends Application {
     public void init() throws Exception {
         logger.info("Initializing DataComp application");
         config = new AppConfig();
+        
+        // Add shutdown hook for cleanup
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            logger.info("🛑 Shutdown hook triggered - forcing cleanup");
+            try {
+                if (mainController != null) {
+                    mainController.cleanup();
+                }
+                // Force aggressive garbage collection
+                System.gc();
+                System.runFinalization();
+                System.gc();
+                logger.info("✅ Shutdown cleanup complete");
+            } catch (Exception e) {
+                logger.error("Error during shutdown cleanup: {}", e.getMessage());
+            }
+        }, "Cleanup-Thread"));
     }
     
     @Override
@@ -91,6 +108,12 @@ public class DataCompApp extends Application {
         if (mainController != null) {
             mainController.cleanup();
         }
+        
+        // Force aggressive garbage collection
+        logger.info("🗑️ Forcing garbage collection...");
+        System.gc();
+        System.runFinalization();
+        System.gc();
         
         super.stop();
         logger.info("✅ Application stopped successfully");

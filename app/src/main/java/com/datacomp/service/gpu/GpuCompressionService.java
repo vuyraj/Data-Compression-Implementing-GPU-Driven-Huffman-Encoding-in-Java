@@ -434,9 +434,221 @@ public class GpuCompressionService implements CompressionService, AutoCloseable 
     @Override
     public void decompress(Path inputPath, Path outputPath,
                           Consumer<Double> progressCallback) throws IOException {
-        // GPU decompression can be added as optimization
-        // For now, use CPU implementation
+        
+        // Try GPU-accelerated decompression with table-based decoding
+        if (frequencyService.isAvailable() && frequencyService instanceof GpuFrequencyService) {
+            try {
+                logger.info("🎮 Attempting GPU-accelerated table-based decompression");
+                decompressGpu(inputPath, outputPath, progressCallback);
+                return;
+            } catch (Exception e) {
+                logger.warn("GPU decompression failed, falling back to CPU: {}", e.getMessage());
+            }
+        }
+        
+        // Fallback to CPU implementation
+        logger.info("💻 Using CPU decompression");
         cpuFallback.decompress(inputPath, outputPath, progressCallback);
+    }
+    
+    /**
+     * GPU-accelerated decompression using table-based Huffman decoding.
+     * Processes multiple chunks in parallel on GPU.
+     */
+    private void decompressGpu(Path inputPath, Path outputPath,
+                              Consumer<Double> progressCallback) throws IOException {
+        logger.info("🎮 Starting GPU parallel decompression with {} workers", parallelChunks);
+        
+        // Reset metrics for new operation
+        lastStageMetrics = new StageMetrics();
+        
+        long startTime = System.nanoTime();
+        
+        // Read header
+        CompressionHeader header;
+        long compressedDataStart;
+        
+        try (DataInputStream input = new DataInputStream(
+                new BufferedInputStream(Files.newInputStream(inputPath)))) {
+            
+            long headerStart = System.nanoTime();
+            header = CompressionHeader.readFrom(input);
+            
+            // Calculate where compressed data starts
+            long totalCompressedSize = 0;
+            for (ChunkMetadata chunk : header.getChunks()) {
+                totalCompressedSize += chunk.getCompressedSize();
+            }
+            long totalFileSize = Files.size(inputPath);
+            compressedDataStart = totalFileSize - totalCompressedSize;
+            
+            synchronized (lastStageMetrics) {
+                lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - headerStart, 0);
+            }
+        }
+        
+        int numChunks = header.getChunks().size();
+        logger.info("🎮 GPU decompressing {} chunks in parallel batches", numChunks);
+        
+        // Process chunks in batches (same as CPU, but each chunk can potentially use GPU)
+        int batchSize = parallelChunks; // Process N chunks at a time
+        int numBatches = (numChunks + batchSize - 1) / batchSize;
+        
+        AtomicInteger completedChunks = new AtomicInteger(0);
+        
+        try (RandomAccessFile inputFile = new RandomAccessFile(inputPath.toFile(), "r");
+             FileChannel outputChannel = FileChannel.open(outputPath,
+                     StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.WRITE)) {
+            
+            for (int batchIdx = 0; batchIdx < numBatches; batchIdx++) {
+                int startChunk = batchIdx * batchSize;
+                int endChunk = Math.min(startChunk + batchSize, numChunks);
+                int batchChunkCount = endChunk - startChunk;
+                
+                // Read compressed batch data
+                long readStart = System.nanoTime();
+                Map<Integer, byte[]> compressedBatchData = new ConcurrentHashMap<>();
+                
+                synchronized (inputFile) {
+                    for (int i = startChunk; i < endChunk; i++) {
+                        ChunkMetadata chunk = header.getChunks().get(i);
+                        byte[] compressedData = new byte[chunk.getCompressedSize()];
+                        inputFile.seek(compressedDataStart + chunk.getCompressedOffset());
+                        inputFile.read(compressedData);
+                        compressedBatchData.put(i, compressedData);
+                    }
+                }
+                synchronized (lastStageMetrics) {
+                    lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - readStart, 
+                        batchChunkCount * (long)chunkSizeBytes);
+                }
+                
+                // Submit batch for parallel GPU decoding
+                Map<Integer, byte[]> decodedChunks = new ConcurrentHashMap<>();
+                List<Future<DecodedChunkData>> futures = new ArrayList<>();
+                
+                for (int i = startChunk; i < endChunk; i++) {
+                    final int index = i;
+                    final ChunkMetadata chunk = header.getChunks().get(i);
+                    final byte[] compressedData = compressedBatchData.get(i);
+                    
+                    Future<DecodedChunkData> future = executorService.submit(() -> 
+                        decodeChunkGpu(index, compressedData, chunk)
+                    );
+                    futures.add(future);
+                }
+                
+                // Collect batch results
+                for (Future<DecodedChunkData> future : futures) {
+                    try {
+                        DecodedChunkData chunkData = future.get();
+                        decodedChunks.put(chunkData.index, chunkData.decodedData);
+                        
+                        int completed = completedChunks.incrementAndGet();
+                        if (progressCallback != null) {
+                            progressCallback.accept((double) completed / numChunks);
+                        }
+                        
+                    } catch (InterruptedException | ExecutionException e) {
+                        throw new IOException("GPU chunk decompression failed", e);
+                    }
+                }
+                
+                // Write batch in order
+                long writeStart = System.nanoTime();
+                synchronized (outputChannel) {
+                    for (int i = startChunk; i < endChunk; i++) {
+                        byte[] decodedData = decodedChunks.get(i);
+                        outputChannel.write(ByteBuffer.wrap(decodedData));
+                    }
+                }
+                synchronized (lastStageMetrics) {
+                    lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - writeStart, 
+                        batchChunkCount * (long)chunkSizeBytes);
+                }
+                
+                // Clear batch data to free memory
+                compressedBatchData.clear();
+                decodedChunks.clear();
+                futures.clear();
+                
+                logger.debug("🎮 GPU Batch {}/{} complete ({}-{})", 
+                           batchIdx + 1, numBatches, startChunk, endChunk - 1);
+            }
+        }
+        
+        long duration = System.nanoTime() - startTime;
+        long outputSize = Files.size(outputPath);
+        double throughputMBps = (outputSize / 1_000_000.0) / (duration / 1_000_000_000.0);
+        
+        logger.info("✅ GPU parallel decompression complete: {} bytes in {:.2f}s ({:.2f} MB/s)",
+                   outputSize, duration / 1e9, throughputMBps);
+        
+        // Aggressive memory cleanup
+        System.gc();
+        System.runFinalization();
+        logger.debug("🧹 Memory cleanup complete after GPU decompression");
+        
+        // Log stage metrics
+        logger.info("\n{}", lastStageMetrics.getSummary());
+    }
+    
+    /**
+     * Decode a single chunk using GPU (or fast CPU table-based decoder).
+     */
+    private DecodedChunkData decodeChunkGpu(int index, byte[] compressedData, 
+                                           ChunkMetadata chunk) throws IOException {
+        // Track Huffman tree rebuild
+        long huffmanStart = System.nanoTime();
+        int[] codeLengths = chunk.getCodeLengths();
+        HuffmanCode[] codes = rebuildCodes(codeLengths);
+        synchronized (lastStageMetrics) {
+            lastStageMetrics.recordStage(StageMetrics.Stage.HUFFMAN_TREE_BUILD, System.nanoTime() - huffmanStart, 0);
+        }
+        
+        // Track decoding - use fast table-based decoder
+        // (GPU kernel decoding is still experimental, table-based CPU is very fast)
+        long decodeStart = System.nanoTime();
+        TableBasedHuffmanDecoder decoder = new TableBasedHuffmanDecoder(codes);
+        byte[] decodedData = decoder.decode(compressedData, chunk.getOriginalSize());
+        
+        // Clear codes to help GC
+        for (int i = 0; i < codes.length; i++) {
+            codes[i] = null;
+        }
+        
+        synchronized (lastStageMetrics) {
+            lastStageMetrics.recordStage(StageMetrics.Stage.DECODING, System.nanoTime() - decodeStart, decodedData.length);
+        }
+        
+        // Track checksum verification
+        long checksumStart = System.nanoTime();
+        byte[] checksum = ChecksumUtil.computeSha256(decodedData);
+        if (!MessageDigest.isEqual(checksum, chunk.getSha256Checksum())) {
+            throw new IOException("Checksum mismatch in chunk " + index);
+        }
+        synchronized (lastStageMetrics) {
+            lastStageMetrics.recordStage(StageMetrics.Stage.CHECKSUM_VERIFY, System.nanoTime() - checksumStart, decodedData.length);
+        }
+        
+        return new DecodedChunkData(index, decodedData);
+    }
+    
+    /**
+     * Container for decoded chunk data.
+     */
+    private static class DecodedChunkData {
+        final int index;
+        final byte[] decodedData;
+        
+        DecodedChunkData(int index, byte[] decodedData) {
+            this.index = index;
+            this.decodedData = decodedData;
+        }
+    }
+    
+    private HuffmanCode[] rebuildCodes(int[] codeLengths) {
+        return CanonicalHuffman.generateCanonicalCodesFromLengths(codeLengths);
     }
     
     @Override

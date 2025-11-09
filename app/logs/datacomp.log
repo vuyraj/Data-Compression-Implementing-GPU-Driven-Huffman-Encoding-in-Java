@@ -944,3 +944,1849 @@ Checksum Verification    :  3535.17 ms (  0.9%) [91 runs, avg: 38.85 ms]
 2025-11-08 23:03:40.420 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
 2025-11-08 23:03:40.420 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
 2025-11-08 23:03:40.420 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-08 23:19:41.376 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit15137527310394550548/test.bin
+2025-11-08 23:19:41.393 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:19:41.393 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit15137527310394550548/test.bin
+2025-11-08 23:19:41.395 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.396 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:19:41.396 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.488 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.502 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    11.79 ms ( 15.5%) [1 runs, avg: 11.79 ms]
+Huffman Tree Build       :     1.67 ms (  2.2%) [1 runs, avg: 1.67 ms]
+Encoding                 :    40.94 ms ( 53.9%) [1 runs, avg: 40.94 ms]
+Checksum Computation     :    19.09 ms ( 25.1%) [1 runs, avg: 19.09 ms]
+File I/O                 :     2.14 ms (  2.8%) [2 runs, avg: 1.07 ms]
+Header Write             :     0.36 ms (  0.5%) [1 runs, avg: 0.36 ms]
+
+2025-11-08 23:19:41.502 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.550 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.558 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.34 ms (  1.0%) [1 runs, avg: 0.34 ms]
+Huffman Tree Build       :     0.85 ms (  2.5%) [1 runs, avg: 0.85 ms]
+Encoding                 :    29.38 ms ( 87.4%) [1 runs, avg: 29.38 ms]
+Checksum Computation     :     1.16 ms (  3.4%) [1 runs, avg: 1.16 ms]
+File I/O                 :     1.61 ms (  4.8%) [2 runs, avg: 0.81 ms]
+Header Write             :     0.26 ms (  0.8%) [1 runs, avg: 0.26 ms]
+
+2025-11-08 23:19:41.559 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.590 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.598 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.50 ms (  1.8%) [1 runs, avg: 0.50 ms]
+Huffman Tree Build       :     0.28 ms (  1.0%) [1 runs, avg: 0.28 ms]
+Encoding                 :    24.58 ms ( 86.9%) [1 runs, avg: 24.58 ms]
+Checksum Computation     :     1.32 ms (  4.6%) [1 runs, avg: 1.32 ms]
+File I/O                 :     1.53 ms (  5.4%) [2 runs, avg: 0.76 ms]
+Header Write             :     0.09 ms (  0.3%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:19:41.599 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.630 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.638 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.25 ms (  0.9%) [1 runs, avg: 0.25 ms]
+Huffman Tree Build       :     0.16 ms (  0.6%) [1 runs, avg: 0.16 ms]
+Encoding                 :    25.05 ms ( 89.4%) [1 runs, avg: 25.05 ms]
+Checksum Computation     :     1.06 ms (  3.8%) [1 runs, avg: 1.06 ms]
+File I/O                 :     1.43 ms (  5.1%) [2 runs, avg: 0.72 ms]
+Header Write             :     0.07 ms (  0.2%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:19:41.639 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.669 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.677 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  1.1%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.19 ms (  0.7%) [1 runs, avg: 0.19 ms]
+Encoding                 :    24.66 ms ( 88.8%) [1 runs, avg: 24.66 ms]
+Checksum Computation     :     1.06 ms (  3.8%) [1 runs, avg: 1.06 ms]
+File I/O                 :     1.49 ms (  5.4%) [2 runs, avg: 0.74 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:19:41.678 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.718 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.726 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.36 ms (  1.1%) [1 runs, avg: 0.36 ms]
+Huffman Tree Build       :     0.26 ms (  0.8%) [1 runs, avg: 0.26 ms]
+Encoding                 :    30.31 ms ( 90.2%) [1 runs, avg: 30.31 ms]
+Checksum Computation     :     1.21 ms (  3.6%) [1 runs, avg: 1.21 ms]
+File I/O                 :     1.40 ms (  4.2%) [2 runs, avg: 0.70 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:19:41.727 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.761 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.770 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.75 ms (  2.5%) [1 runs, avg: 0.75 ms]
+Huffman Tree Build       :     0.27 ms (  0.9%) [1 runs, avg: 0.27 ms]
+Encoding                 :    26.63 ms ( 87.2%) [1 runs, avg: 26.63 ms]
+Checksum Computation     :     1.09 ms (  3.6%) [1 runs, avg: 1.09 ms]
+File I/O                 :     1.72 ms (  5.6%) [2 runs, avg: 0.86 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:19:41.771 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.807 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.815 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     3.43 ms ( 10.3%) [1 runs, avg: 3.43 ms]
+Huffman Tree Build       :     0.19 ms (  0.6%) [1 runs, avg: 0.19 ms]
+Encoding                 :    27.58 ms ( 82.4%) [1 runs, avg: 27.58 ms]
+Checksum Computation     :     0.95 ms (  2.8%) [1 runs, avg: 0.95 ms]
+File I/O                 :     1.26 ms (  3.8%) [2 runs, avg: 0.63 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:19:41.817 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 24.31 MB/s, 100.06% compression, 0.043s total
+2025-11-08 23:19:41.818 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.820 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:19:41.820 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:19:41.820 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:19:41.863 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.864 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.867 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.877 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.16 ms ( 14.8%) [1 runs, avg: 0.16 ms]
+Huffman Tree Build       :     0.19 ms ( 16.9%) [1 runs, avg: 0.19 ms]
+Encoding                 :     0.30 ms ( 27.0%) [1 runs, avg: 0.30 ms]
+Checksum Computation     :     0.06 ms (  5.4%) [1 runs, avg: 0.06 ms]
+File I/O                 :     0.33 ms ( 30.3%) [2 runs, avg: 0.17 ms]
+Header Write             :     0.06 ms (  5.6%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:19:41.878 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:19:41.878 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:19:41.884 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.896 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.05 ms (  1.6%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.30 ms ( 10.3%) [3 runs, avg: 0.10 ms]
+Decoding                 :     2.47 ms ( 84.6%) [1 runs, avg: 2.47 ms]
+Checksum Verification    :     0.10 ms (  3.5%) [1 runs, avg: 0.10 ms]
+
+2025-11-08 23:19:41.901 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.901 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:41.902 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.911 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.03 ms (  7.1%) [1 runs, avg: 0.03 ms]
+Huffman Tree Build       :     0.04 ms (  9.9%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.02 ms (  5.8%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.05 ms ( 11.9%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.22 ms ( 55.2%) [2 runs, avg: 0.11 ms]
+Header Write             :     0.04 ms ( 10.1%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:19:41.912 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:19:41.913 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:19:41.938 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.939 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:19:41.939 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.949 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.10 ms ( 84.8%) [1 runs, avg: 0.10 ms]
+Header Write             :     0.02 ms ( 15.2%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:19:41.950 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:19:41.950 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:19:41.951 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:41.959 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.09 ms (100.0%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:19:41.961 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:41.979 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:19:42.028 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:42.040 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    16.00 ms ( 12.2%) [3 runs, avg: 5.33 ms]
+Huffman Tree Build       :     0.51 ms (  0.4%) [3 runs, avg: 0.17 ms]
+Encoding                 :   103.16 ms ( 78.7%) [3 runs, avg: 34.39 ms]
+Checksum Computation     :     3.09 ms (  2.4%) [3 runs, avg: 1.03 ms]
+File I/O                 :     8.22 ms (  6.3%) [4 runs, avg: 2.06 ms]
+Header Write             :     0.16 ms (  0.1%) [1 runs, avg: 0.16 ms]
+
+2025-11-08 23:19:42.041 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:19:42.041 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:19:42.076 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:42.077 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:19:42.079 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:19:42.088 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.01 ms (  1.2%) [1 runs, avg: 0.01 ms]
+Huffman Tree Build       :     0.07 ms ( 14.1%) [1 runs, avg: 0.07 ms]
+Encoding                 :     0.01 ms (  1.6%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.03 ms (  6.4%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.31 ms ( 61.8%) [2 runs, avg: 0.15 ms]
+Header Write             :     0.07 ms ( 14.9%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:19:42.090 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:19:42.114 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:20:35.744 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:35.749 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:35.755 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:35.765 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  1.0%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.50 ms ( 23.2%) [1 runs, avg: 0.50 ms]
+Encoding                 :     0.31 ms ( 14.7%) [1 runs, avg: 0.31 ms]
+Checksum Computation     :     0.41 ms ( 19.4%) [1 runs, avg: 0.41 ms]
+File I/O                 :     0.65 ms ( 30.6%) [2 runs, avg: 0.33 ms]
+Header Write             :     0.24 ms ( 11.2%) [1 runs, avg: 0.24 ms]
+
+2025-11-08 23:20:35.767 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:20:35.768 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:20:35.771 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:35.777 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  1.4%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.18 ms ( 11.4%) [3 runs, avg: 0.06 ms]
+Decoding                 :     1.03 ms ( 64.1%) [1 runs, avg: 1.03 ms]
+Checksum Verification    :     0.37 ms ( 23.0%) [1 runs, avg: 0.37 ms]
+
+2025-11-08 23:20:48.843 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit17070112535755111833/test.bin
+2025-11-08 23:20:48.855 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:20:48.855 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit17070112535755111833/test.bin
+2025-11-08 23:20:48.857 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:48.857 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:20:48.857 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:48.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:48.957 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    14.43 ms ( 20.9%) [1 runs, avg: 14.43 ms]
+Huffman Tree Build       :     1.65 ms (  2.4%) [1 runs, avg: 1.65 ms]
+Encoding                 :    31.28 ms ( 45.2%) [1 runs, avg: 31.28 ms]
+Checksum Computation     :    19.79 ms ( 28.6%) [1 runs, avg: 19.79 ms]
+File I/O                 :     1.74 ms (  2.5%) [2 runs, avg: 0.87 ms]
+Header Write             :     0.28 ms (  0.4%) [1 runs, avg: 0.28 ms]
+
+2025-11-08 23:20:48.958 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.005 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.014 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.99 ms (  3.0%) [1 runs, avg: 0.99 ms]
+Huffman Tree Build       :     0.29 ms (  0.9%) [1 runs, avg: 0.29 ms]
+Encoding                 :    28.55 ms ( 87.8%) [1 runs, avg: 28.55 ms]
+Checksum Computation     :     1.15 ms (  3.6%) [1 runs, avg: 1.15 ms]
+File I/O                 :     1.33 ms (  4.1%) [2 runs, avg: 0.66 ms]
+Header Write             :     0.22 ms (  0.7%) [1 runs, avg: 0.22 ms]
+
+2025-11-08 23:20:49.015 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.045 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.054 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  1.1%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.16 ms (  0.6%) [1 runs, avg: 0.16 ms]
+Encoding                 :    23.77 ms ( 85.6%) [1 runs, avg: 23.77 ms]
+Checksum Computation     :     1.57 ms (  5.6%) [1 runs, avg: 1.57 ms]
+File I/O                 :     1.83 ms (  6.6%) [2 runs, avg: 0.92 ms]
+Header Write             :     0.15 ms (  0.5%) [1 runs, avg: 0.15 ms]
+
+2025-11-08 23:20:49.055 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.092 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.101 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.43 ms (  1.3%) [1 runs, avg: 0.43 ms]
+Huffman Tree Build       :     0.29 ms (  0.9%) [1 runs, avg: 0.29 ms]
+Encoding                 :    29.74 ms ( 88.9%) [1 runs, avg: 29.74 ms]
+Checksum Computation     :     1.31 ms (  3.9%) [1 runs, avg: 1.31 ms]
+File I/O                 :     1.59 ms (  4.8%) [2 runs, avg: 0.80 ms]
+Header Write             :     0.08 ms (  0.2%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:20:49.102 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.132 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.138 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  1.1%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.17 ms (  0.6%) [1 runs, avg: 0.17 ms]
+Encoding                 :    24.97 ms ( 90.8%) [1 runs, avg: 24.97 ms]
+Checksum Computation     :     0.83 ms (  3.0%) [1 runs, avg: 0.83 ms]
+File I/O                 :     1.19 ms (  4.3%) [2 runs, avg: 0.59 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:20:49.139 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.175 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.184 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.33 ms (  1.0%) [1 runs, avg: 0.33 ms]
+Huffman Tree Build       :     0.21 ms (  0.6%) [1 runs, avg: 0.21 ms]
+Encoding                 :    29.39 ms ( 89.6%) [1 runs, avg: 29.39 ms]
+Checksum Computation     :     1.21 ms (  3.7%) [1 runs, avg: 1.21 ms]
+File I/O                 :     1.57 ms (  4.8%) [2 runs, avg: 0.78 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:20:49.185 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.217 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.224 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.36 ms (  1.2%) [1 runs, avg: 0.36 ms]
+Huffman Tree Build       :     0.21 ms (  0.7%) [1 runs, avg: 0.21 ms]
+Encoding                 :    25.90 ms ( 88.5%) [1 runs, avg: 25.90 ms]
+Checksum Computation     :     1.06 ms (  3.6%) [1 runs, avg: 1.06 ms]
+File I/O                 :     1.69 ms (  5.8%) [2 runs, avg: 0.84 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:20:49.225 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.261 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.269 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     3.86 ms ( 11.4%) [1 runs, avg: 3.86 ms]
+Huffman Tree Build       :     0.14 ms (  0.4%) [1 runs, avg: 0.14 ms]
+Encoding                 :    26.94 ms ( 79.6%) [1 runs, avg: 26.94 ms]
+Checksum Computation     :     1.18 ms (  3.5%) [1 runs, avg: 1.18 ms]
+File I/O                 :     1.66 ms (  4.9%) [2 runs, avg: 0.83 ms]
+Header Write             :     0.05 ms (  0.1%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:20:49.271 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 24.44 MB/s, 100.06% compression, 0.043s total
+2025-11-08 23:20:49.272 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.274 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:20:49.274 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:20:49.274 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:20:49.302 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.302 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.304 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.314 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.15 ms ( 16.9%) [1 runs, avg: 0.15 ms]
+Huffman Tree Build       :     0.15 ms ( 16.4%) [1 runs, avg: 0.15 ms]
+Encoding                 :     0.24 ms ( 26.8%) [1 runs, avg: 0.24 ms]
+Checksum Computation     :     0.03 ms (  3.8%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.26 ms ( 29.1%) [2 runs, avg: 0.13 ms]
+Header Write             :     0.06 ms (  7.0%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:20:49.315 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:20:49.315 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:20:49.320 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.332 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.05 ms (  1.8%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.28 ms ( 10.4%) [3 runs, avg: 0.09 ms]
+Decoding                 :     2.31 ms ( 85.2%) [1 runs, avg: 2.31 ms]
+Checksum Verification    :     0.07 ms (  2.6%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:20:49.335 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.336 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.337 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.348 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  6.1%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.04 ms ( 11.9%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.02 ms (  5.0%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.03 ms ( 10.3%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.18 ms ( 55.1%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.04 ms ( 11.7%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:20:49.349 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:20:49.349 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:20:49.350 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.360 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  3.9%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.13 ms ( 32.2%) [3 runs, avg: 0.04 ms]
+Decoding                 :     0.21 ms ( 51.9%) [1 runs, avg: 0.21 ms]
+Checksum Verification    :     0.05 ms ( 12.1%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:20:49.365 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.365 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:20:49.366 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.375 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.13 ms ( 86.3%) [1 runs, avg: 0.13 ms]
+Header Write             :     0.02 ms ( 13.7%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:20:49.375 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:20:49.375 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:20:49.376 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.388 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.08 ms (100.0%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:20:49.390 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.404 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:20:49.449 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.456 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     8.74 ms (  7.3%) [3 runs, avg: 2.91 ms]
+Huffman Tree Build       :     1.77 ms (  1.5%) [3 runs, avg: 0.59 ms]
+Encoding                 :    96.81 ms ( 80.7%) [3 runs, avg: 32.27 ms]
+Checksum Computation     :     5.21 ms (  4.3%) [3 runs, avg: 1.74 ms]
+File I/O                 :     7.29 ms (  6.1%) [4 runs, avg: 1.82 ms]
+Header Write             :     0.12 ms (  0.1%) [1 runs, avg: 0.12 ms]
+
+2025-11-08 23:20:49.457 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:20:49.457 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:20:49.500 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.507 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.11 ms (  0.1%) [3 runs, avg: 0.04 ms]
+File I/O                 :     3.16 ms (  2.8%) [3 runs, avg: 1.05 ms]
+Decoding                 :   109.11 ms ( 94.9%) [3 runs, avg: 36.37 ms]
+Checksum Verification    :     2.54 ms (  2.2%) [3 runs, avg: 0.85 ms]
+
+2025-11-08 23:20:49.518 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.518 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:20:49.519 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:20:49.527 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.6%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.04 ms ( 12.1%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.01 ms (  1.8%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.03 ms ( 10.5%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.19 ms ( 59.7%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.05 ms ( 15.4%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:20:49.530 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:20:49.545 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:21:24.910 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-08 23:21:25.080 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-08 23:21:25.084 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:21:25.537 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:21:25.537 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:21:25.537 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:21:25.539 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:21:25.540 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:21:25.873 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:21:25.888 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:21:26.089 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-08 23:21:28.241 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:21:28.242 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:21:28.242 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:21:28.242 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:21:28.242 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:21:28.242 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:21:28.255 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:21:28.268 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:21:58.339 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: d2.mkv.dcz to d2-3.mkv using 8 workers
+2025-11-08 23:21:58.346 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 91 chunks, original size: 3052984682 bytes, header size: 52126 bytes
+2025-11-08 23:22:29.380 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3052984682 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:22:29.431 [pool-4-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :    10.59 ms (  0.0%) [91 runs, avg: 0.12 ms]
+File I/O                 : 17396.91 ms ( 14.7%) [25 runs, avg: 695.88 ms]
+Decoding                 : 97494.95 ms ( 82.4%) [91 runs, avg: 1071.37 ms]
+Checksum Verification    :  3433.47 ms (  2.9%) [91 runs, avg: 37.73 ms]
+
+2025-11-08 23:23:07.474 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping - cleaning up resources
+2025-11-08 23:23:07.475 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:23:07.475 [JavaFX Application Thread] INFO  com.datacomp.ui.CompressController - Cleaning up CompressController resources
+2025-11-08 23:23:07.476 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:23:07.477 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:23:07.478 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:23:07.478 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:23:07.478 [JavaFX Application Thread] INFO  com.datacomp.ui.CompressController - ✅ Compression service closed successfully
+2025-11-08 23:23:07.478 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:23:07.479 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:23:07.479 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:23:07.479 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:23:07.479 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:23:07.480 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-08 23:28:10.936 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit14933629317874336363/test.bin
+2025-11-08 23:28:10.949 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:28:10.949 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit14933629317874336363/test.bin
+2025-11-08 23:28:10.951 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:10.952 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:28:10.952 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.032 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.046 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    15.01 ms ( 24.2%) [1 runs, avg: 15.01 ms]
+Huffman Tree Build       :     1.31 ms (  2.1%) [1 runs, avg: 1.31 ms]
+Encoding                 :    31.37 ms ( 50.5%) [1 runs, avg: 31.37 ms]
+Checksum Computation     :    12.51 ms ( 20.1%) [1 runs, avg: 12.51 ms]
+File I/O                 :     1.60 ms (  2.6%) [2 runs, avg: 0.80 ms]
+Header Write             :     0.27 ms (  0.4%) [1 runs, avg: 0.27 ms]
+
+2025-11-08 23:28:11.047 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.094 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.102 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.75 ms (  2.3%) [1 runs, avg: 0.75 ms]
+Huffman Tree Build       :     0.28 ms (  0.9%) [1 runs, avg: 0.28 ms]
+Encoding                 :    27.56 ms ( 86.2%) [1 runs, avg: 27.56 ms]
+Checksum Computation     :     1.32 ms (  4.1%) [1 runs, avg: 1.32 ms]
+File I/O                 :     1.84 ms (  5.7%) [2 runs, avg: 0.92 ms]
+Header Write             :     0.24 ms (  0.7%) [1 runs, avg: 0.24 ms]
+
+2025-11-08 23:28:11.103 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.131 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.138 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.35 ms (  1.4%) [1 runs, avg: 0.35 ms]
+Huffman Tree Build       :     0.16 ms (  0.6%) [1 runs, avg: 0.16 ms]
+Encoding                 :    22.48 ms ( 87.8%) [1 runs, avg: 22.48 ms]
+Checksum Computation     :     1.06 ms (  4.1%) [1 runs, avg: 1.06 ms]
+File I/O                 :     1.48 ms (  5.8%) [2 runs, avg: 0.74 ms]
+Header Write             :     0.09 ms (  0.3%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:28:11.138 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.169 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.175 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.42 ms (  1.5%) [1 runs, avg: 0.42 ms]
+Huffman Tree Build       :     0.18 ms (  0.6%) [1 runs, avg: 0.18 ms]
+Encoding                 :    25.21 ms ( 89.5%) [1 runs, avg: 25.21 ms]
+Checksum Computation     :     1.09 ms (  3.9%) [1 runs, avg: 1.09 ms]
+File I/O                 :     1.21 ms (  4.3%) [2 runs, avg: 0.61 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:28:11.176 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.205 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.213 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.31 ms (  1.2%) [1 runs, avg: 0.31 ms]
+Huffman Tree Build       :     0.15 ms (  0.6%) [1 runs, avg: 0.15 ms]
+Encoding                 :    23.25 ms ( 88.8%) [1 runs, avg: 23.25 ms]
+Checksum Computation     :     0.78 ms (  3.0%) [1 runs, avg: 0.78 ms]
+File I/O                 :     1.64 ms (  6.3%) [2 runs, avg: 0.82 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:28:11.214 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.245 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.251 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  1.1%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.16 ms (  0.6%) [1 runs, avg: 0.16 ms]
+Encoding                 :    24.51 ms ( 89.7%) [1 runs, avg: 24.51 ms]
+Checksum Computation     :     0.77 ms (  2.8%) [1 runs, avg: 0.77 ms]
+File I/O                 :     1.51 ms (  5.5%) [2 runs, avg: 0.75 ms]
+Header Write             :     0.09 ms (  0.3%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:28:11.252 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.282 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.288 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.31 ms (  1.1%) [1 runs, avg: 0.31 ms]
+Huffman Tree Build       :     0.19 ms (  0.7%) [1 runs, avg: 0.19 ms]
+Encoding                 :    23.78 ms ( 89.2%) [1 runs, avg: 23.78 ms]
+Checksum Computation     :     0.87 ms (  3.3%) [1 runs, avg: 0.87 ms]
+File I/O                 :     1.42 ms (  5.3%) [2 runs, avg: 0.71 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:28:11.289 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.320 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.328 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.38 ms (  1.4%) [1 runs, avg: 0.38 ms]
+Huffman Tree Build       :     0.19 ms (  0.7%) [1 runs, avg: 0.19 ms]
+Encoding                 :    24.98 ms ( 89.0%) [1 runs, avg: 24.98 ms]
+Checksum Computation     :     0.95 ms (  3.4%) [1 runs, avg: 0.95 ms]
+File I/O                 :     1.47 ms (  5.2%) [2 runs, avg: 0.74 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:28:11.329 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 27.65 MB/s, 100.06% compression, 0.038s total
+2025-11-08 23:28:11.330 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.331 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:28:11.332 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:28:11.332 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:28:11.417 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.418 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.419 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.428 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.16 ms ( 18.4%) [1 runs, avg: 0.16 ms]
+Huffman Tree Build       :     0.15 ms ( 16.7%) [1 runs, avg: 0.15 ms]
+Encoding                 :     0.24 ms ( 27.0%) [1 runs, avg: 0.24 ms]
+Checksum Computation     :     0.04 ms (  4.0%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.24 ms ( 27.2%) [2 runs, avg: 0.12 ms]
+Header Write             :     0.06 ms (  6.8%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:28:11.429 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:28:11.430 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:28:11.434 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.445 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.03 ms (  1.4%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.25 ms ( 10.4%) [3 runs, avg: 0.08 ms]
+Decoding                 :     2.09 ms ( 85.7%) [1 runs, avg: 2.09 ms]
+Checksum Verification    :     0.06 ms (  2.5%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:28:11.449 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.449 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.450 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.460 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  5.5%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.03 ms (  8.8%) [1 runs, avg: 0.03 ms]
+Encoding                 :     0.02 ms (  5.5%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.04 ms ( 13.1%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.17 ms ( 55.0%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.04 ms ( 12.1%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:28:11.460 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:28:11.461 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:28:11.463 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.473 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.05 ms (  6.7%) [1 runs, avg: 0.05 ms]
+File I/O                 :     0.21 ms ( 30.5%) [3 runs, avg: 0.07 ms]
+Decoding                 :     0.37 ms ( 53.9%) [1 runs, avg: 0.37 ms]
+Checksum Verification    :     0.06 ms (  8.9%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:28:11.477 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.477 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:28:11.478 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.487 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.14 ms ( 86.2%) [1 runs, avg: 0.14 ms]
+Header Write             :     0.02 ms ( 13.8%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:28:11.488 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:28:11.488 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:28:11.488 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.500 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.19 ms (100.0%) [1 runs, avg: 0.19 ms]
+
+2025-11-08 23:28:11.502 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.515 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:28:11.559 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.567 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     4.50 ms (  3.8%) [3 runs, avg: 1.50 ms]
+Huffman Tree Build       :     1.72 ms (  1.5%) [3 runs, avg: 0.57 ms]
+Encoding                 :   102.24 ms ( 86.4%) [3 runs, avg: 34.08 ms]
+Checksum Computation     :     2.86 ms (  2.4%) [3 runs, avg: 0.95 ms]
+File I/O                 :     6.83 ms (  5.8%) [4 runs, avg: 1.71 ms]
+Header Write             :     0.13 ms (  0.1%) [1 runs, avg: 0.13 ms]
+
+2025-11-08 23:28:11.568 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:28:11.568 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:28:11.613 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.620 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.18 ms (  0.1%) [3 runs, avg: 0.06 ms]
+File I/O                 :     3.47 ms (  2.8%) [3 runs, avg: 1.16 ms]
+Decoding                 :   115.57 ms ( 94.4%) [3 runs, avg: 38.52 ms]
+Checksum Verification    :     3.15 ms (  2.6%) [3 runs, avg: 1.05 ms]
+
+2025-11-08 23:28:11.634 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.635 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:28:11.635 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:28:11.646 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.6%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.04 ms ( 15.2%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.00 ms (  1.7%) [1 runs, avg: 0.00 ms]
+Checksum Computation     :     0.04 ms ( 13.0%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.16 ms ( 56.5%) [2 runs, avg: 0.08 ms]
+Header Write             :     0.04 ms ( 12.9%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:28:11.648 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:11.663 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:28:54.644 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-08 23:28:54.809 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-08 23:28:54.813 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:28:55.307 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:28:55.307 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:28:55.307 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:28:55.309 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:28:55.310 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:28:55.625 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:28:55.625 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:28:55.625 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:28:55.625 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:28:55.625 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:28:55.626 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:28:55.626 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:28:55.626 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:28:55.640 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:28:55.842 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-08 23:29:00.180 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-11-08 23:29:02.109 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:29:02.109 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:29:02.110 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:29:02.110 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:29:02.110 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:29:02.110 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:29:02.126 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:29:02.127 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:29:02.141 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:29:25.237 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-08 23:29:25.237 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 GPU [PTX])
+2025-11-08 23:29:25.237 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 GPU Parallel Compression: d2.mkv (3052984682 bytes) into 91 chunks using 4 GPU workers
+2025-11-08 23:29:58.799 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU Parallel compression complete: 3052984682 -> 3053036808 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:29:58.844 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       : 15596.41 ms ( 19.0%) [91 runs, avg: 171.39 ms]
+Huffman Tree Build       :    21.51 ms (  0.0%) [91 runs, avg: 0.24 ms]
+Encoding                 : 33861.25 ms ( 41.2%) [91 runs, avg: 372.10 ms]
+Checksum Computation     :  3695.67 ms (  4.5%) [91 runs, avg: 40.61 ms]
+File I/O                 : 28995.83 ms ( 35.3%) [92 runs, avg: 315.17 ms]
+Header Write             :     3.47 ms (  0.0%) [1 runs, avg: 3.47 ms]
+
+2025-11-08 23:29:58.844 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
+2025-11-08 23:30:19.699 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:30:19.699 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:30:19.700 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:30:19.700 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:30:19.700 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:30:19.701 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:30:19.719 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:30:19.723 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:30:38.268 [pool-8-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Attempting GPU-accelerated table-based decompression
+2025-11-08 23:30:38.269 [pool-8-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Starting GPU table-based decompression with 4 parallel chunks
+2025-11-08 23:30:38.269 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: d2.mkv.dcz to d2-3.mkv using 8 workers
+2025-11-08 23:30:38.272 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 91 chunks, original size: 3052984682 bytes, header size: 52126 bytes
+2025-11-08 23:31:57.779 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3052984682 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:31:57.822 [pool-8-thread-1] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     2.85 ms (  0.0%) [91 runs, avg: 0.03 ms]
+File I/O                 : 60945.83 ms ( 40.3%) [25 runs, avg: 2437.83 ms]
+Decoding                 : 87112.49 ms ( 57.6%) [91 runs, avg: 957.28 ms]
+Checksum Verification    :  3306.23 ms (  2.2%) [91 runs, avg: 36.33 ms]
+
+2025-11-08 23:32:23.357 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping - cleaning up resources
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:32:23.358 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-08 23:36:46.364 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit12187353474099945240/test.bin
+2025-11-08 23:36:46.388 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:36:46.389 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit12187353474099945240/test.bin
+2025-11-08 23:36:46.391 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:46.392 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:36:46.392 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.490 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.509 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     9.10 ms ( 11.8%) [1 runs, avg: 9.10 ms]
+Huffman Tree Build       :     2.84 ms (  3.7%) [1 runs, avg: 2.84 ms]
+Encoding                 :    35.69 ms ( 46.2%) [1 runs, avg: 35.69 ms]
+Checksum Computation     :    27.39 ms ( 35.5%) [1 runs, avg: 27.39 ms]
+File I/O                 :     1.91 ms (  2.5%) [2 runs, avg: 0.96 ms]
+Header Write             :     0.30 ms (  0.4%) [1 runs, avg: 0.30 ms]
+
+2025-11-08 23:36:46.510 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.569 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.578 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.07 ms (  2.7%) [1 runs, avg: 1.07 ms]
+Huffman Tree Build       :     1.81 ms (  4.5%) [1 runs, avg: 1.81 ms]
+Encoding                 :    32.03 ms ( 80.5%) [1 runs, avg: 32.03 ms]
+Checksum Computation     :     1.28 ms (  3.2%) [1 runs, avg: 1.28 ms]
+File I/O                 :     3.33 ms (  8.4%) [2 runs, avg: 1.67 ms]
+Header Write             :     0.28 ms (  0.7%) [1 runs, avg: 0.28 ms]
+
+2025-11-08 23:36:46.579 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.602 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.612 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.43 ms (  3.0%) [1 runs, avg: 0.43 ms]
+Huffman Tree Build       :     0.32 ms (  2.2%) [1 runs, avg: 0.32 ms]
+Encoding                 :    10.86 ms ( 75.8%) [1 runs, avg: 10.86 ms]
+Checksum Computation     :     1.18 ms (  8.3%) [1 runs, avg: 1.18 ms]
+File I/O                 :     1.47 ms ( 10.2%) [2 runs, avg: 0.73 ms]
+Header Write             :     0.06 ms (  0.4%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:36:46.613 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.640 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.651 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.79 ms (  3.8%) [1 runs, avg: 0.79 ms]
+Huffman Tree Build       :     0.28 ms (  1.3%) [1 runs, avg: 0.28 ms]
+Encoding                 :    16.08 ms ( 76.9%) [1 runs, avg: 16.08 ms]
+Checksum Computation     :     1.78 ms (  8.5%) [1 runs, avg: 1.78 ms]
+File I/O                 :     1.94 ms (  9.3%) [2 runs, avg: 0.97 ms]
+Header Write             :     0.05 ms (  0.3%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:36:46.652 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.669 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.682 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.46 ms (  3.8%) [1 runs, avg: 0.46 ms]
+Huffman Tree Build       :     0.17 ms (  1.4%) [1 runs, avg: 0.17 ms]
+Encoding                 :     9.20 ms ( 76.5%) [1 runs, avg: 9.20 ms]
+Checksum Computation     :     0.89 ms (  7.4%) [1 runs, avg: 0.89 ms]
+File I/O                 :     1.24 ms ( 10.3%) [2 runs, avg: 0.62 ms]
+Header Write             :     0.05 ms (  0.4%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:36:46.683 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.710 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.720 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  2.8%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.16 ms (  1.4%) [1 runs, avg: 0.16 ms]
+Encoding                 :     7.62 ms ( 70.7%) [1 runs, avg: 7.62 ms]
+Checksum Computation     :     0.87 ms (  8.1%) [1 runs, avg: 0.87 ms]
+File I/O                 :     1.75 ms ( 16.2%) [2 runs, avg: 0.88 ms]
+Header Write             :     0.07 ms (  0.7%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:36:46.721 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.734 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.741 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.32 ms (  3.1%) [1 runs, avg: 0.32 ms]
+Huffman Tree Build       :     0.17 ms (  1.6%) [1 runs, avg: 0.17 ms]
+Encoding                 :     7.82 ms ( 75.1%) [1 runs, avg: 7.82 ms]
+Checksum Computation     :     0.79 ms (  7.6%) [1 runs, avg: 0.79 ms]
+File I/O                 :     1.26 ms ( 12.1%) [2 runs, avg: 0.63 ms]
+Header Write             :     0.05 ms (  0.5%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:36:46.741 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.757 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.763 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.94 ms (  7.1%) [1 runs, avg: 0.94 ms]
+Huffman Tree Build       :     0.16 ms (  1.2%) [1 runs, avg: 0.16 ms]
+Encoding                 :     9.97 ms ( 75.2%) [1 runs, avg: 9.97 ms]
+Checksum Computation     :     0.78 ms (  5.9%) [1 runs, avg: 0.78 ms]
+File I/O                 :     1.33 ms ( 10.1%) [2 runs, avg: 0.67 ms]
+Header Write             :     0.08 ms (  0.6%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:36:46.765 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 34.80 MB/s, 100.06% compression, 0.030s total
+2025-11-08 23:36:46.766 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:46.767 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:36:46.768 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:36:46.768 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:36:46.944 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:46.945 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.947 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.956 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.25 ms ( 20.7%) [1 runs, avg: 0.25 ms]
+Huffman Tree Build       :     0.28 ms ( 22.9%) [1 runs, avg: 0.28 ms]
+Encoding                 :     0.14 ms ( 11.7%) [1 runs, avg: 0.14 ms]
+Checksum Computation     :     0.06 ms (  5.3%) [1 runs, avg: 0.06 ms]
+File I/O                 :     0.42 ms ( 34.4%) [2 runs, avg: 0.21 ms]
+Header Write             :     0.06 ms (  5.0%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:36:46.957 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:36:46.957 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:36:46.962 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.972 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.03 ms (  1.2%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.18 ms (  6.0%) [3 runs, avg: 0.06 ms]
+Decoding                 :     2.65 ms ( 90.8%) [1 runs, avg: 2.65 ms]
+Checksum Verification    :     0.06 ms (  2.0%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:36:46.978 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:46.978 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:46.979 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:46.991 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.03 ms (  5.5%) [1 runs, avg: 0.03 ms]
+Huffman Tree Build       :     0.04 ms (  8.0%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.01 ms (  2.0%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.06 ms ( 11.7%) [1 runs, avg: 0.06 ms]
+File I/O                 :     0.28 ms ( 59.0%) [2 runs, avg: 0.14 ms]
+Header Write             :     0.07 ms ( 13.7%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:36:46.992 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:36:46.992 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:36:46.993 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.004 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  3.7%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.15 ms ( 36.2%) [3 runs, avg: 0.05 ms]
+Decoding                 :     0.20 ms ( 48.6%) [1 runs, avg: 0.20 ms]
+Checksum Verification    :     0.05 ms ( 11.6%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:36:47.042 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:47.063 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:36:47.071 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.091 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     1.71 ms ( 89.2%) [1 runs, avg: 1.71 ms]
+Header Write             :     0.21 ms ( 10.8%) [1 runs, avg: 0.21 ms]
+
+2025-11-08 23:36:47.091 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:36:47.092 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:36:47.092 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.109 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.10 ms (100.0%) [1 runs, avg: 0.10 ms]
+
+2025-11-08 23:36:47.112 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:47.129 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:36:47.154 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.176 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     5.21 ms (  8.1%) [3 runs, avg: 1.74 ms]
+Huffman Tree Build       :     0.70 ms (  1.1%) [3 runs, avg: 0.23 ms]
+Encoding                 :    48.53 ms ( 75.2%) [3 runs, avg: 16.18 ms]
+Checksum Computation     :     3.65 ms (  5.6%) [3 runs, avg: 1.22 ms]
+File I/O                 :     6.35 ms (  9.8%) [4 runs, avg: 1.59 ms]
+Header Write             :     0.12 ms (  0.2%) [1 runs, avg: 0.12 ms]
+
+2025-11-08 23:36:47.177 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:36:47.178 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:36:47.227 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.239 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.15 ms (  0.1%) [3 runs, avg: 0.05 ms]
+File I/O                 :     4.20 ms (  3.2%) [3 runs, avg: 1.40 ms]
+Decoding                 :   125.10 ms ( 94.7%) [3 runs, avg: 41.70 ms]
+Checksum Verification    :     2.70 ms (  2.0%) [3 runs, avg: 0.90 ms]
+
+2025-11-08 23:36:47.252 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:47.253 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:36:47.254 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:36:47.265 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.5%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.08 ms ( 14.8%) [1 runs, avg: 0.08 ms]
+Encoding                 :     0.01 ms (  1.3%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.07 ms ( 12.6%) [1 runs, avg: 0.07 ms]
+File I/O                 :     0.31 ms ( 55.3%) [2 runs, avg: 0.16 ms]
+Header Write             :     0.09 ms ( 15.6%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:36:47.268 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:36:47.296 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:42:08.664 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit6957633404126113381/test.bin
+2025-11-08 23:42:08.673 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:42:08.673 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit6957633404126113381/test.bin
+2025-11-08 23:42:08.676 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:08.676 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:42:08.676 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:08.781 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:08.799 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    12.95 ms ( 14.8%) [1 runs, avg: 12.95 ms]
+Huffman Tree Build       :    11.69 ms ( 13.3%) [1 runs, avg: 11.69 ms]
+Encoding                 :    35.29 ms ( 40.3%) [1 runs, avg: 35.29 ms]
+Checksum Computation     :    25.18 ms ( 28.7%) [1 runs, avg: 25.18 ms]
+File I/O                 :     2.23 ms (  2.5%) [2 runs, avg: 1.11 ms]
+Header Write             :     0.29 ms (  0.3%) [1 runs, avg: 0.29 ms]
+
+2025-11-08 23:42:08.800 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:08.848 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:08.859 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.40 ms (  1.2%) [1 runs, avg: 0.40 ms]
+Huffman Tree Build       :     0.25 ms (  0.8%) [1 runs, avg: 0.25 ms]
+Encoding                 :    30.10 ms ( 89.2%) [1 runs, avg: 30.10 ms]
+Checksum Computation     :     1.17 ms (  3.5%) [1 runs, avg: 1.17 ms]
+File I/O                 :     1.59 ms (  4.7%) [2 runs, avg: 0.80 ms]
+Header Write             :     0.23 ms (  0.7%) [1 runs, avg: 0.23 ms]
+
+2025-11-08 23:42:08.860 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:08.896 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:08.903 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  0.9%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.25 ms (  0.8%) [1 runs, avg: 0.25 ms]
+Encoding                 :    29.28 ms ( 90.5%) [1 runs, avg: 29.28 ms]
+Checksum Computation     :     1.09 ms (  3.4%) [1 runs, avg: 1.09 ms]
+File I/O                 :     1.33 ms (  4.1%) [2 runs, avg: 0.66 ms]
+Header Write             :     0.09 ms (  0.3%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:42:08.904 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:08.935 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:08.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.39 ms (  1.3%) [1 runs, avg: 0.39 ms]
+Huffman Tree Build       :     0.24 ms (  0.8%) [1 runs, avg: 0.24 ms]
+Encoding                 :    26.17 ms ( 89.9%) [1 runs, avg: 26.17 ms]
+Checksum Computation     :     1.11 ms (  3.8%) [1 runs, avg: 1.11 ms]
+File I/O                 :     1.14 ms (  3.9%) [2 runs, avg: 0.57 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:42:08.943 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:08.973 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:08.981 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.31 ms (  1.2%) [1 runs, avg: 0.31 ms]
+Huffman Tree Build       :     0.15 ms (  0.6%) [1 runs, avg: 0.15 ms]
+Encoding                 :    23.73 ms ( 90.9%) [1 runs, avg: 23.73 ms]
+Checksum Computation     :     0.78 ms (  3.0%) [1 runs, avg: 0.78 ms]
+File I/O                 :     1.09 ms (  4.2%) [2 runs, avg: 0.54 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:42:08.982 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.015 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.022 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.35 ms (  1.2%) [1 runs, avg: 0.35 ms]
+Huffman Tree Build       :     0.16 ms (  0.5%) [1 runs, avg: 0.16 ms]
+Encoding                 :    26.37 ms ( 90.7%) [1 runs, avg: 26.37 ms]
+Checksum Computation     :     0.80 ms (  2.7%) [1 runs, avg: 0.80 ms]
+File I/O                 :     1.34 ms (  4.6%) [2 runs, avg: 0.67 ms]
+Header Write             :     0.08 ms (  0.3%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:42:09.023 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.056 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.067 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.54 ms (  1.8%) [1 runs, avg: 0.54 ms]
+Huffman Tree Build       :     0.17 ms (  0.6%) [1 runs, avg: 0.17 ms]
+Encoding                 :    25.81 ms ( 87.8%) [1 runs, avg: 25.81 ms]
+Checksum Computation     :     1.20 ms (  4.1%) [1 runs, avg: 1.20 ms]
+File I/O                 :     1.61 ms (  5.5%) [2 runs, avg: 0.81 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:42:09.068 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.107 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.117 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.79 ms (  2.2%) [1 runs, avg: 0.79 ms]
+Huffman Tree Build       :     0.21 ms (  0.6%) [1 runs, avg: 0.21 ms]
+Encoding                 :    31.84 ms ( 89.9%) [1 runs, avg: 31.84 ms]
+Checksum Computation     :     1.18 ms (  3.3%) [1 runs, avg: 1.18 ms]
+File I/O                 :     1.35 ms (  3.8%) [2 runs, avg: 0.68 ms]
+Header Write             :     0.05 ms (  0.2%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:42:09.119 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 24.57 MB/s, 100.06% compression, 0.043s total
+2025-11-08 23:42:09.120 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.122 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:42:09.122 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:42:09.122 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:42:09.152 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.153 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.154 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.164 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.14 ms ( 18.1%) [1 runs, avg: 0.14 ms]
+Huffman Tree Build       :     0.13 ms ( 16.5%) [1 runs, avg: 0.13 ms]
+Encoding                 :     0.24 ms ( 30.6%) [1 runs, avg: 0.24 ms]
+Checksum Computation     :     0.03 ms (  3.9%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.20 ms ( 26.1%) [2 runs, avg: 0.10 ms]
+Header Write             :     0.04 ms (  4.9%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:42:09.164 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:42:09.165 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:42:09.169 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.180 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.03 ms (  1.4%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.23 ms ( 10.4%) [3 runs, avg: 0.08 ms]
+Decoding                 :     1.86 ms ( 85.6%) [1 runs, avg: 1.86 ms]
+Checksum Verification    :     0.06 ms (  2.6%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:42:09.183 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.184 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.185 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.198 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  4.6%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.04 ms ( 10.1%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.02 ms (  5.8%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.04 ms (  8.9%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.23 ms ( 55.6%) [2 runs, avg: 0.11 ms]
+Header Write             :     0.06 ms ( 15.0%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:42:09.199 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:42:09.199 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:42:09.201 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.211 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  3.5%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.15 ms ( 28.6%) [3 runs, avg: 0.05 ms]
+Decoding                 :     0.29 ms ( 56.6%) [1 runs, avg: 0.29 ms]
+Checksum Verification    :     0.06 ms ( 11.3%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:42:09.217 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.217 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:42:09.218 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.229 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.11 ms ( 84.7%) [1 runs, avg: 0.11 ms]
+Header Write             :     0.02 ms ( 15.3%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:42:09.230 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:42:09.230 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:42:09.230 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.241 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.08 ms (100.0%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:42:09.244 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.256 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:42:09.300 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.311 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     2.09 ms (  1.8%) [3 runs, avg: 0.70 ms]
+Huffman Tree Build       :     0.66 ms (  0.6%) [3 runs, avg: 0.22 ms]
+Encoding                 :    98.95 ms ( 85.4%) [3 runs, avg: 32.98 ms]
+Checksum Computation     :     3.27 ms (  2.8%) [3 runs, avg: 1.09 ms]
+File I/O                 :    10.79 ms (  9.3%) [4 runs, avg: 2.70 ms]
+Header Write             :     0.09 ms (  0.1%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:42:09.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:42:09.312 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:42:09.362 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.369 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.11 ms (  0.1%) [3 runs, avg: 0.04 ms]
+File I/O                 :     3.19 ms (  2.5%) [3 runs, avg: 1.06 ms]
+Decoding                 :   119.57 ms ( 95.1%) [3 runs, avg: 39.86 ms]
+Checksum Verification    :     2.90 ms (  2.3%) [3 runs, avg: 0.97 ms]
+
+2025-11-08 23:42:09.380 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.381 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:42:09.382 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:42:09.390 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.7%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.06 ms ( 17.8%) [1 runs, avg: 0.06 ms]
+Encoding                 :     0.01 ms (  1.9%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.04 ms ( 11.6%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.19 ms ( 56.2%) [2 runs, avg: 0.10 ms]
+Header Write             :     0.04 ms ( 11.9%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:42:09.393 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:42:09.408 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:43:49.447 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-08 23:43:49.932 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-08 23:43:49.942 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:43:50.834 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:43:50.834 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:43:50.834 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:43:50.838 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:43:50.839 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:43:51.957 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:43:51.958 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:43:52.004 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:43:52.653 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:44:37.862 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:44:37.886 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:44:37.887 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:44:37.902 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:44:49.165 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-08 23:44:49.166 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 GPU [PTX])
+2025-11-08 23:44:49.166 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 GPU Parallel Compression: d2.mkv (3052984682 bytes) into 91 chunks using 4 GPU workers
+2025-11-08 23:45:23.073 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU Parallel compression complete: 3052984682 -> 3053036808 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:45:23.308 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       : 16168.47 ms ( 19.3%) [91 runs, avg: 177.68 ms]
+Huffman Tree Build       :    18.63 ms (  0.0%) [91 runs, avg: 0.20 ms]
+Encoding                 : 34780.77 ms ( 41.5%) [91 runs, avg: 382.21 ms]
+Checksum Computation     :  3315.64 ms (  4.0%) [91 runs, avg: 36.44 ms]
+File I/O                 : 29502.35 ms ( 35.2%) [92 runs, avg: 320.68 ms]
+Header Write             :     4.05 ms (  0.0%) [1 runs, avg: 4.05 ms]
+
+2025-11-08 23:45:23.308 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:45:37.455 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:45:37.470 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:45:37.471 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:45:37.476 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:46:04.670 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Attempting GPU-accelerated table-based decompression
+2025-11-08 23:46:04.670 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Starting GPU parallel decompression with 4 workers
+2025-11-08 23:46:04.673 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU decompressing 91 chunks in parallel batches
+2025-11-08 23:46:33.314 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU parallel decompression complete: 3052984682 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:46:33.392 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     2.02 ms (  0.0%) [91 runs, avg: 0.02 ms]
+File I/O                 : 13342.62 ms ( 23.4%) [47 runs, avg: 283.89 ms]
+Decoding                 : 41478.95 ms ( 72.8%) [91 runs, avg: 455.81 ms]
+Checksum Verification    :  2186.35 ms (  3.8%) [91 runs, avg: 24.03 ms]
+
+2025-11-08 23:47:26.508 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping - cleaning up resources
+2025-11-08 23:47:26.508 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:47:26.508 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:47:26.509 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:47:26.509 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:47:26.509 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:47:26.510 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:47:26.510 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - 🗑️ Forcing garbage collection...
+2025-11-08 23:47:26.582 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-08 23:53:17.742 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit2117619598420861010/test.bin
+2025-11-08 23:53:17.756 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:53:17.757 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit2117619598420861010/test.bin
+2025-11-08 23:53:17.760 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:17.760 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:53:17.760 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:17.895 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:17.916 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    23.75 ms ( 20.8%) [1 runs, avg: 23.75 ms]
+Huffman Tree Build       :     2.49 ms (  2.2%) [1 runs, avg: 2.49 ms]
+Encoding                 :    46.18 ms ( 40.3%) [1 runs, avg: 46.18 ms]
+Checksum Computation     :    39.66 ms ( 34.6%) [1 runs, avg: 39.66 ms]
+File I/O                 :     2.02 ms (  1.8%) [2 runs, avg: 1.01 ms]
+Header Write             :     0.36 ms (  0.3%) [1 runs, avg: 0.36 ms]
+
+2025-11-08 23:53:17.917 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:17.984 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:17.994 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.57 ms (  1.2%) [1 runs, avg: 0.57 ms]
+Huffman Tree Build       :     0.68 ms (  1.4%) [1 runs, avg: 0.68 ms]
+Encoding                 :    41.45 ms ( 87.8%) [1 runs, avg: 41.45 ms]
+Checksum Computation     :     1.70 ms (  3.6%) [1 runs, avg: 1.70 ms]
+File I/O                 :     2.41 ms (  5.1%) [2 runs, avg: 1.21 ms]
+Header Write             :     0.38 ms (  0.8%) [1 runs, avg: 0.38 ms]
+
+2025-11-08 23:53:17.995 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.040 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.053 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     1.21 ms (  2.9%) [1 runs, avg: 1.21 ms]
+Huffman Tree Build       :     0.33 ms (  0.8%) [1 runs, avg: 0.33 ms]
+Encoding                 :    36.24 ms ( 86.4%) [1 runs, avg: 36.24 ms]
+Checksum Computation     :     1.91 ms (  4.6%) [1 runs, avg: 1.91 ms]
+File I/O                 :     2.15 ms (  5.1%) [2 runs, avg: 1.07 ms]
+Header Write             :     0.11 ms (  0.3%) [1 runs, avg: 0.11 ms]
+
+2025-11-08 23:53:18.054 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.099 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.110 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.60 ms (  1.5%) [1 runs, avg: 0.60 ms]
+Huffman Tree Build       :     0.28 ms (  0.7%) [1 runs, avg: 0.28 ms]
+Encoding                 :    37.40 ms ( 90.1%) [1 runs, avg: 37.40 ms]
+Checksum Computation     :     1.67 ms (  4.0%) [1 runs, avg: 1.67 ms]
+File I/O                 :     1.50 ms (  3.6%) [2 runs, avg: 0.75 ms]
+Header Write             :     0.06 ms (  0.1%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.111 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.154 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.163 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.49 ms (  1.2%) [1 runs, avg: 0.49 ms]
+Huffman Tree Build       :     0.30 ms (  0.8%) [1 runs, avg: 0.30 ms]
+Encoding                 :    35.95 ms ( 90.4%) [1 runs, avg: 35.95 ms]
+Checksum Computation     :     1.35 ms (  3.4%) [1 runs, avg: 1.35 ms]
+File I/O                 :     1.61 ms (  4.1%) [2 runs, avg: 0.81 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.164 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.212 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.223 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.49 ms (  1.2%) [1 runs, avg: 0.49 ms]
+Huffman Tree Build       :     0.29 ms (  0.7%) [1 runs, avg: 0.29 ms]
+Encoding                 :    34.47 ms ( 85.5%) [1 runs, avg: 34.47 ms]
+Checksum Computation     :     3.30 ms (  8.2%) [1 runs, avg: 3.30 ms]
+File I/O                 :     1.67 ms (  4.1%) [2 runs, avg: 0.83 ms]
+Header Write             :     0.10 ms (  0.3%) [1 runs, avg: 0.10 ms]
+
+2025-11-08 23:53:18.224 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.265 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.275 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.44 ms (  1.1%) [1 runs, avg: 0.44 ms]
+Huffman Tree Build       :     0.28 ms (  0.7%) [1 runs, avg: 0.28 ms]
+Encoding                 :    34.75 ms ( 90.7%) [1 runs, avg: 34.75 ms]
+Checksum Computation     :     1.24 ms (  3.2%) [1 runs, avg: 1.24 ms]
+File I/O                 :     1.54 ms (  4.0%) [2 runs, avg: 0.77 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.276 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.307 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.317 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.40 ms (  1.3%) [1 runs, avg: 0.40 ms]
+Huffman Tree Build       :     0.13 ms (  0.4%) [1 runs, avg: 0.13 ms]
+Encoding                 :    26.86 ms ( 91.5%) [1 runs, avg: 26.86 ms]
+Checksum Computation     :     0.79 ms (  2.7%) [1 runs, avg: 0.79 ms]
+File I/O                 :     1.13 ms (  3.9%) [2 runs, avg: 0.57 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.318 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 19.94 MB/s, 100.06% compression, 0.053s total
+2025-11-08 23:53:18.319 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.321 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:53:18.321 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:53:18.321 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:53:18.405 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.406 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.407 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.416 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.13 ms ( 14.0%) [1 runs, avg: 0.13 ms]
+Huffman Tree Build       :     0.18 ms ( 19.1%) [1 runs, avg: 0.18 ms]
+Encoding                 :     0.34 ms ( 35.8%) [1 runs, avg: 0.34 ms]
+Checksum Computation     :     0.03 ms (  3.6%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.21 ms ( 22.5%) [2 runs, avg: 0.11 ms]
+Header Write             :     0.05 ms (  5.0%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:53:18.416 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:53:18.417 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:53:18.422 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.433 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.04 ms (  1.6%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.30 ms ( 11.4%) [3 runs, avg: 0.10 ms]
+Decoding                 :     2.20 ms ( 84.6%) [1 runs, avg: 2.20 ms]
+Checksum Verification    :     0.06 ms (  2.4%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.438 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.439 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.440 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.451 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  5.8%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.03 ms (  8.7%) [1 runs, avg: 0.03 ms]
+Encoding                 :     0.02 ms (  4.6%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.04 ms ( 12.8%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.19 ms ( 56.3%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.04 ms ( 11.9%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:53:18.452 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:53:18.452 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:53:18.453 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.463 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  3.2%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.21 ms ( 32.8%) [3 runs, avg: 0.07 ms]
+Decoding                 :     0.33 ms ( 51.6%) [1 runs, avg: 0.33 ms]
+Checksum Verification    :     0.08 ms ( 12.4%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:53:18.478 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.479 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:53:18.479 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.490 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.12 ms ( 87.2%) [1 runs, avg: 0.12 ms]
+Header Write             :     0.02 ms ( 12.8%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:53:18.491 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:53:18.491 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:53:18.491 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.501 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.06 ms (100.0%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:53:18.503 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.514 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:53:18.558 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.566 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     8.07 ms (  7.1%) [3 runs, avg: 2.69 ms]
+Huffman Tree Build       :     0.50 ms (  0.4%) [3 runs, avg: 0.17 ms]
+Encoding                 :    90.75 ms ( 80.1%) [3 runs, avg: 30.25 ms]
+Checksum Computation     :     3.14 ms (  2.8%) [3 runs, avg: 1.05 ms]
+File I/O                 :    10.74 ms (  9.5%) [4 runs, avg: 2.68 ms]
+Header Write             :     0.09 ms (  0.1%) [1 runs, avg: 0.09 ms]
+
+2025-11-08 23:53:18.567 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:53:18.567 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:53:18.633 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.642 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.13 ms (  0.1%) [3 runs, avg: 0.04 ms]
+File I/O                 :     5.24 ms (  2.9%) [3 runs, avg: 1.75 ms]
+Decoding                 :   171.64 ms ( 95.4%) [3 runs, avg: 57.21 ms]
+Checksum Verification    :     2.86 ms (  1.6%) [3 runs, avg: 0.95 ms]
+
+2025-11-08 23:53:18.654 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.655 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:53:18.656 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:53:18.666 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.5%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.06 ms ( 16.3%) [1 runs, avg: 0.06 ms]
+Encoding                 :     0.01 ms (  1.8%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.04 ms ( 11.6%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.22 ms ( 58.5%) [2 runs, avg: 0.11 ms]
+Header Write             :     0.04 ms ( 11.3%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:53:18.671 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:18.691 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:53:30.738 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-08 23:53:30.902 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-08 23:53:30.907 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:31.525 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:53:31.526 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:53:31.526 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:53:31.527 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:53:31.528 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:53:31.860 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:53:31.860 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:53:31.860 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:53:31.860 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:53:31.861 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:53:31.861 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:53:31.861 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:53:31.861 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:53:31.875 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:53:32.095 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:53:35.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:53:35.763 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:53:35.764 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:53:35.776 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:53:38.570 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:53:38.570 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:53:38.570 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:53:38.570 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:53:38.570 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:53:38.571 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:53:38.582 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:53:38.583 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:53:38.594 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:53:44.782 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-08 23:53:44.783 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 GPU [PTX])
+2025-11-08 23:53:44.783 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 GPU Parallel Compression: d2.mkv (3052984682 bytes) into 91 chunks using 4 GPU workers
+2025-11-08 23:54:23.464 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU Parallel compression complete: 3052984682 -> 3053036808 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:54:23.512 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       : 16641.49 ms ( 16.2%) [91 runs, avg: 182.87 ms]
+Huffman Tree Build       :    21.50 ms (  0.0%) [91 runs, avg: 0.24 ms]
+Encoding                 : 46606.32 ms ( 45.5%) [91 runs, avg: 512.16 ms]
+Checksum Computation     :  3700.71 ms (  3.6%) [91 runs, avg: 40.67 ms]
+File I/O                 : 35504.63 ms ( 34.6%) [92 runs, avg: 385.92 ms]
+Header Write             :     7.19 ms (  0.0%) [1 runs, avg: 7.19 ms]
+
+2025-11-08 23:54:23.512 [pool-7-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
+2025-11-08 23:54:30.670 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping - cleaning up resources
+2025-11-08 23:54:30.670 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:54:30.670 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:54:30.671 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:54:30.672 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:54:30.672 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:54:30.672 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:54:30.672 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - 🗑️ Forcing garbage collection...
+2025-11-08 23:54:30.754 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-08 23:55:29.627 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Generating 1MB random test file: /tmp/junit4394312893314907089/test.bin
+2025-11-08 23:55:29.648 [Test worker] INFO  com.datacomp.util.TestDataGenerator - Test file generated: 1048576 bytes
+2025-11-08 23:55:29.648 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Starting benchmark suite on file: /tmp/junit4394312893314907089/test.bin
+2025-11-08 23:55:29.650 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:29.650 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmarking CPU: CPU Compression
+2025-11-08 23:55:29.651 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:29.877 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:29.904 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    18.14 ms ( 16.3%) [1 runs, avg: 18.14 ms]
+Huffman Tree Build       :     2.77 ms (  2.5%) [1 runs, avg: 2.77 ms]
+Encoding                 :    49.16 ms ( 44.1%) [1 runs, avg: 49.16 ms]
+Checksum Computation     :    35.80 ms ( 32.1%) [1 runs, avg: 35.80 ms]
+File I/O                 :     5.25 ms (  4.7%) [2 runs, avg: 2.62 ms]
+Header Write             :     0.44 ms (  0.4%) [1 runs, avg: 0.44 ms]
+
+2025-11-08 23:55:29.905 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:29.963 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:29.974 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.92 ms (  2.5%) [1 runs, avg: 0.92 ms]
+Huffman Tree Build       :     0.73 ms (  1.9%) [1 runs, avg: 0.73 ms]
+Encoding                 :    31.37 ms ( 83.4%) [1 runs, avg: 31.37 ms]
+Checksum Computation     :     1.35 ms (  3.6%) [1 runs, avg: 1.35 ms]
+File I/O                 :     2.92 ms (  7.8%) [2 runs, avg: 1.46 ms]
+Header Write             :     0.30 ms (  0.8%) [1 runs, avg: 0.30 ms]
+
+2025-11-08 23:55:29.975 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.010 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.019 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.34 ms (  1.1%) [1 runs, avg: 0.34 ms]
+Huffman Tree Build       :     0.21 ms (  0.6%) [1 runs, avg: 0.21 ms]
+Encoding                 :    28.61 ms ( 89.6%) [1 runs, avg: 28.61 ms]
+Checksum Computation     :     1.27 ms (  4.0%) [1 runs, avg: 1.27 ms]
+File I/O                 :     1.41 ms (  4.4%) [2 runs, avg: 0.70 ms]
+Header Write             :     0.07 ms (  0.2%) [1 runs, avg: 0.07 ms]
+
+2025-11-08 23:55:30.020 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.054 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.062 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.41 ms (  1.3%) [1 runs, avg: 0.41 ms]
+Huffman Tree Build       :     0.19 ms (  0.6%) [1 runs, avg: 0.19 ms]
+Encoding                 :    28.37 ms ( 89.4%) [1 runs, avg: 28.37 ms]
+Checksum Computation     :     1.24 ms (  3.9%) [1 runs, avg: 1.24 ms]
+File I/O                 :     1.47 ms (  4.6%) [2 runs, avg: 0.73 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:55:30.063 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.098 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.108 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.30 ms (  0.9%) [1 runs, avg: 0.30 ms]
+Huffman Tree Build       :     0.19 ms (  0.6%) [1 runs, avg: 0.19 ms]
+Encoding                 :    27.09 ms ( 86.3%) [1 runs, avg: 27.09 ms]
+Checksum Computation     :     0.94 ms (  3.0%) [1 runs, avg: 0.94 ms]
+File I/O                 :     2.75 ms (  8.8%) [2 runs, avg: 1.37 ms]
+Header Write             :     0.11 ms (  0.4%) [1 runs, avg: 0.11 ms]
+
+2025-11-08 23:55:30.109 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.158 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.168 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.38 ms (  0.9%) [1 runs, avg: 0.38 ms]
+Huffman Tree Build       :     0.30 ms (  0.7%) [1 runs, avg: 0.30 ms]
+Encoding                 :    40.73 ms ( 91.0%) [1 runs, avg: 40.73 ms]
+Checksum Computation     :     1.44 ms (  3.2%) [1 runs, avg: 1.44 ms]
+File I/O                 :     1.83 ms (  4.1%) [2 runs, avg: 0.92 ms]
+Header Write             :     0.08 ms (  0.2%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:55:30.169 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.204 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.216 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.48 ms (  1.5%) [1 runs, avg: 0.48 ms]
+Huffman Tree Build       :     0.30 ms (  0.9%) [1 runs, avg: 0.30 ms]
+Encoding                 :    28.97 ms ( 89.6%) [1 runs, avg: 28.97 ms]
+Checksum Computation     :     1.01 ms (  3.1%) [1 runs, avg: 1.01 ms]
+File I/O                 :     1.52 ms (  4.7%) [2 runs, avg: 0.76 ms]
+Header Write             :     0.06 ms (  0.2%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:55:30.218 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.bin (1048576 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.282 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1048576 -> 1049224 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.293 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.49 ms (  1.1%) [1 runs, avg: 0.49 ms]
+Huffman Tree Build       :     0.24 ms (  0.5%) [1 runs, avg: 0.24 ms]
+Encoding                 :    39.32 ms ( 89.7%) [1 runs, avg: 39.32 ms]
+Checksum Computation     :     1.44 ms (  3.3%) [1 runs, avg: 1.44 ms]
+File I/O                 :     2.29 ms (  5.2%) [2 runs, avg: 1.14 ms]
+Header Write             :     0.06 ms (  0.1%) [1 runs, avg: 0.06 ms]
+
+2025-11-08 23:55:30.295 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - Benchmark complete: CPU [CPU Compression]: 19.21 MB/s, 100.06% compression, 0.055s total
+2025-11-08 23:55:30.296 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.299 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: null
+2025-11-08 23:55:30.299 [Test worker] WARN  com.datacomp.service.gpu.GpuCompressionService - GPU not available, will use CPU fallback
+2025-11-08 23:55:30.299 [Test worker] INFO  com.datacomp.benchmark.BenchmarkSuite - GPU not available, skipping GPU benchmark
+2025-11-08 23:55:30.377 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.378 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: random.bin (10240 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.380 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 10240 -> 10889 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.391 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.16 ms ( 17.9%) [1 runs, avg: 0.16 ms]
+Huffman Tree Build       :     0.13 ms ( 14.9%) [1 runs, avg: 0.13 ms]
+Encoding                 :     0.25 ms ( 27.7%) [1 runs, avg: 0.25 ms]
+Checksum Computation     :     0.04 ms (  4.6%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.26 ms ( 28.8%) [2 runs, avg: 0.13 ms]
+Header Write             :     0.05 ms (  6.0%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:55:30.392 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: random.dcz to random.decompressed.bin using 8 workers
+2025-11-08 23:55:30.392 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 10240 bytes, header size: 650 bytes
+2025-11-08 23:55:30.400 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 10240 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.412 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.09 ms (  2.3%) [1 runs, avg: 0.09 ms]
+File I/O                 :     0.27 ms (  7.0%) [3 runs, avg: 0.09 ms]
+Decoding                 :     3.37 ms ( 87.9%) [1 runs, avg: 3.37 ms]
+Checksum Verification    :     0.11 ms (  2.8%) [1 runs, avg: 0.11 ms]
+
+2025-11-08 23:55:30.418 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.419 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (1300 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.421 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 1300 -> 1148 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.433 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.02 ms (  5.8%) [1 runs, avg: 0.02 ms]
+Huffman Tree Build       :     0.04 ms (  9.8%) [1 runs, avg: 0.04 ms]
+Encoding                 :     0.02 ms (  4.7%) [1 runs, avg: 0.02 ms]
+Checksum Computation     :     0.04 ms ( 10.9%) [1 runs, avg: 0.04 ms]
+File I/O                 :     0.21 ms ( 57.0%) [2 runs, avg: 0.10 ms]
+Header Write             :     0.04 ms ( 11.8%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:55:30.433 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: test.dcz to test.decompressed.txt using 8 workers
+2025-11-08 23:55:30.434 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 1 chunks, original size: 1300 bytes, header size: 648 bytes
+2025-11-08 23:55:30.435 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 1300 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.446 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.02 ms (  3.6%) [1 runs, avg: 0.02 ms]
+File I/O                 :     0.20 ms ( 38.9%) [3 runs, avg: 0.07 ms]
+Decoding                 :     0.24 ms ( 46.7%) [1 runs, avg: 0.24 ms]
+Checksum Verification    :     0.05 ms ( 10.8%) [1 runs, avg: 0.05 ms]
+
+2025-11-08 23:55:30.461 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.462 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: empty.txt (0 bytes) into 0 chunks using 8 workers
+2025-11-08 23:55:30.462 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 0 -> 77 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.475 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.12 ms ( 84.3%) [1 runs, avg: 0.12 ms]
+Header Write             :     0.02 ms ( 15.7%) [1 runs, avg: 0.02 ms]
+
+2025-11-08 23:55:30.475 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: empty.dcz to empty.decompressed.txt using 8 workers
+2025-11-08 23:55:30.476 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 0 chunks, original size: 0 bytes, header size: 77 bytes
+2025-11-08 23:55:30.476 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 0 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.486 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+File I/O                 :     0.08 ms (100.0%) [1 runs, avg: 0.08 ms]
+
+2025-11-08 23:55:30.489 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.503 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: large.bin (3145728 bytes) into 3 chunks using 8 workers
+2025-11-08 23:55:30.552 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 3145728 -> 3147521 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.562 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     3.26 ms (  2.5%) [3 runs, avg: 1.09 ms]
+Huffman Tree Build       :     0.58 ms (  0.4%) [3 runs, avg: 0.19 ms]
+Encoding                 :   114.02 ms ( 87.9%) [3 runs, avg: 38.01 ms]
+Checksum Computation     :     3.19 ms (  2.5%) [3 runs, avg: 1.06 ms]
+File I/O                 :     8.57 ms (  6.6%) [4 runs, avg: 2.14 ms]
+Header Write             :     0.14 ms (  0.1%) [1 runs, avg: 0.14 ms]
+
+2025-11-08 23:55:30.563 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel decompression: large.dcz to large.decompressed.bin using 8 workers
+2025-11-08 23:55:30.563 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Decompressing 3 chunks, original size: 3145728 bytes, header size: 1793 bytes
+2025-11-08 23:55:30.637 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel decompression complete: 3145728 bytes in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.646 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Huffman Tree Build       :     0.11 ms (  0.1%) [3 runs, avg: 0.04 ms]
+File I/O                 :     5.63 ms (  2.8%) [3 runs, avg: 1.88 ms]
+Decoding                 :   191.09 ms ( 95.5%) [3 runs, avg: 63.70 ms]
+Checksum Verification    :     3.34 ms (  1.7%) [3 runs, avg: 1.11 ms]
+
+2025-11-08 23:55:30.657 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.658 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 🚀 Parallel compression: test.txt (29 bytes) into 1 chunks using 8 workers
+2025-11-08 23:55:30.659 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ Parallel compression complete: 29 -> 663 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:55:30.668 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :     0.00 ms (  0.7%) [1 runs, avg: 0.00 ms]
+Huffman Tree Build       :     0.05 ms ( 16.1%) [1 runs, avg: 0.05 ms]
+Encoding                 :     0.01 ms (  4.3%) [1 runs, avg: 0.01 ms]
+Checksum Computation     :     0.03 ms (  9.7%) [1 runs, avg: 0.03 ms]
+File I/O                 :     0.19 ms ( 56.6%) [2 runs, avg: 0.09 ms]
+Header Write             :     0.04 ms ( 12.6%) [1 runs, avg: 0.04 ms]
+
+2025-11-08 23:55:30.671 [Test worker] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:55:30.690 [Test worker] WARN  com.datacomp.service.gpu.GpuFrequencyService - Failed to initialize TornadoVM device: Could not initialize class uk.ac.manchester.tornado.api.runtime.TornadoRuntimeProvider
+2025-11-08 23:56:06.864 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-08 23:56:07.014 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-08 23:56:07.018 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:56:07.745 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:56:07.745 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:56:07.745 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:56:07.746 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:56:07.747 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:56:08.028 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:56:08.029 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:56:08.042 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:56:08.247 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-08 23:56:10.378 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-08 23:56:10.378 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-08 23:56:10.378 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-08 23:56:10.378 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-08 23:56:10.378 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-08 23:56:10.379 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-08 23:56:10.390 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 32 MB
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 38 MB
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 19
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (capped at 4 for stability)
+2025-11-08 23:56:10.391 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-08 23:56:10.402 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-08 23:56:17.369 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 Starting GPU-ACCELERATED compression
+2025-11-08 23:56:17.370 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Device: GPU (NVIDIA GeForce MX330 GPU [PTX])
+2025-11-08 23:56:17.370 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🚀 GPU Parallel Compression: sample.pdf (1159383 bytes) into 1 chunks using 4 GPU workers
+2025-11-08 23:56:17.572 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU Parallel compression complete: 1159383 -> 1160033 bytes ({:.2f}%) in {:.2f}s ({:.2f} MB/s)
+2025-11-08 23:56:17.603 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 
+Stage Performance Breakdown:
+═══════════════════════════════════════════════════
+Frequency Analysis       :    47.65 ms ( 26.3%) [1 runs, avg: 47.65 ms]
+Huffman Tree Build       :     2.05 ms (  1.1%) [1 runs, avg: 2.05 ms]
+Encoding                 :    82.85 ms ( 45.7%) [1 runs, avg: 82.85 ms]
+Checksum Computation     :    22.63 ms ( 12.5%) [1 runs, avg: 22.63 ms]
+File I/O                 :    25.80 ms ( 14.2%) [2 runs, avg: 12.90 ms]
+Header Write             :     0.29 ms (  0.2%) [1 runs, avg: 0.29 ms]
+
+2025-11-08 23:56:17.603 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression completed successfully
+2025-11-08 23:56:17.612 [JavaFX Application Thread] INFO  com.datacomp.ui.CompressController - Displaying compression metrics with 0 stages
+2025-11-08 23:56:44.992 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Attempting GPU-accelerated table-based decompression
+2025-11-08 23:56:44.992 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 Starting GPU parallel decompression with 4 workers
+2025-11-08 23:56:44.995 [pool-4-thread-1] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU decompressing 91 chunks in parallel batches
+2025-11-08 23:57:43.327 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - 🛑 Shutdown hook triggered - forcing cleanup
+2025-11-08 23:57:43.351 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - 🛑 Shutdown hook triggered - forcing cleanup
+2025-11-08 23:57:43.354 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:57:43.354 [Cleanup-Thread] INFO  com.datacomp.ui.CompressController - Cleaning up CompressController resources
+2025-11-08 23:57:43.347 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:57:43.372 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:57:43.375 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:57:43.375 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:57:43.376 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:57:43.376 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:57:43.369 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - 🛑 Shutdown hook triggered - forcing cleanup
+2025-11-08 23:57:43.378 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-08 23:57:43.388 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-08 23:57:43.392 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-08 23:57:43.392 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-08 23:57:43.392 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-08 23:57:43.392 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-08 23:57:43.707 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Shutdown cleanup complete
+2025-11-08 23:57:43.799 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Shutdown cleanup complete

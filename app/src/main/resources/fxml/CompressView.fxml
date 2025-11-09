@@ -73,13 +73,14 @@
         
         <Label fx:id="statusLabel" text="" styleClass="status-message"/>
         
-        <!-- Stage Metrics Display -->
+        <!-- Stage Metrics Display (Modern Card Layout) -->
         <VBox spacing="5" fx:id="stageMetricsBox" managed="false" visible="false">
-            <Label text="Performance Breakdown:" styleClass="section-label"/>
-            <TextArea fx:id="stageMetricsArea" editable="false" wrapText="true" 
-                      prefRowCount="8" styleClass="stage-metrics-area"/>
+            <Label text="📊 Performance Breakdown" styleClass="section-label" 
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 5 0 10 0;"/>
+            <VBox fx:id="stageMetricsContainer" spacing="8" style="-fx-padding: 5;"/>
         </VBox>
     </VBox>
     
 </VBox>
+
 
