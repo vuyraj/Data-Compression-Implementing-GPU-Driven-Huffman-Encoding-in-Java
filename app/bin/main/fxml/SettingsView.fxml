@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.datacomp.ui.SettingsController"
+      spacing="20">
+    
+    <Label text="Settings" styleClass="view-title"/>
+    
+    <!-- GPU Settings -->
+    <VBox spacing="10" styleClass="section">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="GPU Settings" styleClass="section-title"/>
+        
+        <CheckBox fx:id="autoDetectGpuCheckBox" text="Auto-detect GPU" selected="true"/>
+        <CheckBox fx:id="fallbackToCpuCheckBox" text="Fallback to CPU on error" selected="true"/>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Preferred Device:"/>
+            <ComboBox fx:id="preferredDeviceComboBox" promptText="Any">
+                <items>
+                    <javafx.collections.FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Any"/>
+                        <String fx:value="CUDA"/>
+                        <String fx:value="OpenCL"/>
+                    </javafx.collections.FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+    </VBox>
+    
+    <!-- Compression Settings -->
+    <VBox spacing="10" styleClass="section">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Compression Settings" styleClass="section-title"/>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Chunk Size (MB):"/>
+            <Spinner fx:id="chunkSizeSpinner" min="16" max="128" initialValue="32" editable="true"/>
+        </HBox>
+        
+        <CheckBox fx:id="verifyAfterCompressionCheckBox" text="Verify after compression" selected="true"/>
+        <CheckBox fx:id="keepOriginalFileCheckBox" text="Keep original file" selected="true"/>
+    </VBox>
+    
+    <!-- UI Settings -->
+    <VBox spacing="10" styleClass="section">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="UI Settings" styleClass="section-title"/>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Theme:"/>
+            <ComboBox fx:id="themeComboBox" value="Dark">
+                <items>
+                    <javafx.collections.FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Dark"/>
+                        <String fx:value="Light"/>
+                    </javafx.collections.FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+        
+        <CheckBox fx:id="enableAnimationsCheckBox" text="Enable animations" selected="true"/>
+    </VBox>
+    
+    <!-- Save Button -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Save Settings" styleClass="primary-button" onAction="#handleSaveSettings"/>
+        <Button text="Reset to Defaults" onAction="#handleResetToDefaults"/>
+    </HBox>
+    
+</VBox>
+

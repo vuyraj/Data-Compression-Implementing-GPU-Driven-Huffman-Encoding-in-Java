@@ -36,7 +36,6 @@ public class DataCompApp extends Application {
                 }
                 // Force aggressive garbage collection
                 System.gc();
-                System.runFinalization();
                 System.gc();
                 logger.info("✅ Shutdown cleanup complete");
             } catch (Exception e) {
@@ -112,7 +111,6 @@ public class DataCompApp extends Application {
         // Force aggressive garbage collection
         logger.info("🗑️ Forcing garbage collection...");
         System.gc();
-        System.runFinalization();
         System.gc();
         
         super.stop();

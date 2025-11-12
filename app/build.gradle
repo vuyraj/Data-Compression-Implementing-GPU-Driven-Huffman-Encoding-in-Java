@@ -100,7 +100,7 @@ tasks.register('runTornado', Exec) {
     }.collect { it.absolutePath }.join(':')
     
     commandLine 'tornado',
-            '--jvm', '--add-modules jdk.incubator.vector --add-modules javafx.controls,javafx.fxml,javafx.graphics',
+            '--jvm', '-Xmx4g -Xms2g --add-modules jdk.incubator.vector --add-modules javafx.controls,javafx.fxml,javafx.graphics',
             '--module-path', javaFxJars,
             '--classpath', classPath,
             mainClass

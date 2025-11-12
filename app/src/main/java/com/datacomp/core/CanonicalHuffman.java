@@ -44,10 +44,8 @@ public class CanonicalHuffman {
             return codes;
         }
         
-        // Build Huffman tree
+        // Build Huffman tree and generate canonical codes
         int[] codeLengths = buildCodeLengths(frequencies);
-        
-        // Generate canonical codes from lengths
         return generateCanonicalCodes(codeLengths);
     }
     

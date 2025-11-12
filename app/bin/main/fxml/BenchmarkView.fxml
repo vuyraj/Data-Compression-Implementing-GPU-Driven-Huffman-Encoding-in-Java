@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.datacomp.ui.BenchmarkController"
+      spacing="20">
+    
+    <Label text="Benchmark CPU vs GPU" styleClass="view-title"/>
+    
+    <!-- Test File Selection -->
+    <VBox spacing="10" styleClass="section">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Test File" styleClass="section-title"/>
+        
+        <HBox spacing="10">
+            <TextField fx:id="testFileField" promptText="Select a file to benchmark" 
+                      HBox.hgrow="ALWAYS" editable="false"/>
+            <Button fx:id="selectFileButton" text="Browse..." onAction="#handleSelectFile"/>
+        </HBox>
+    </VBox>
+    
+    <!-- Run Button -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="runBenchmarkButton" text="Run Benchmark" onAction="#handleRunBenchmark" 
+                styleClass="primary-button" disable="true"/>
+    </HBox>
+    
+    <!-- Progress -->
+    <VBox spacing="5">
+        <ProgressBar fx:id="progressBar" maxWidth="Infinity" progress="0"/>
+        <Label fx:id="statusLabel" text="" styleClass="status-text"/>
+    </VBox>
+    
+    <!-- Results Chart -->
+    <VBox styleClass="chart-card" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Results" styleClass="card-title"/>
+        
+        <BarChart fx:id="resultsChart" VBox.vgrow="ALWAYS">
+            <xAxis>
+                <CategoryAxis label="Service"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Throughput (MB/s)"/>
+            </yAxis>
+        </BarChart>
+    </VBox>
+    
+    <!-- Results Text -->
+    <VBox styleClass="section">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Detailed Results" styleClass="section-title"/>
+        <TextArea fx:id="resultsTextArea" editable="false" wrapText="true" 
+                 VBox.vgrow="ALWAYS" minHeight="150"/>
+    </VBox>
+    
+</VBox>
+

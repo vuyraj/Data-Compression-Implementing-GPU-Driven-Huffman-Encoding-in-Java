@@ -150,22 +150,34 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
                 compressedOffset += chunkData.compressedData.length;
             }
             
-            // Write header and compressed chunks to output file
+            // Write compressed chunks and footer to output file
             long writeStart = System.nanoTime();
             try (DataOutputStream output = new DataOutputStream(
                     new BufferedOutputStream(Files.newOutputStream(outputPath,
                         StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)))) {
                 
-                // Write header
-                long headerStart = System.nanoTime();
-                finalHeader.writeTo(output);
-                lastStageMetrics.recordStage(StageMetrics.Stage.HEADER_WRITE, System.nanoTime() - headerStart, 0);
-                
-                // Write compressed chunks in order
+                // Write compressed chunks in order FIRST
                 for (int i = 0; i < numChunks; i++) {
                     CompressedChunkData chunkData = compressedChunks.get(i);
                     output.write(chunkData.compressedData);
                 }
+                
+                // Remember where footer starts
+                long footerStartPosition = compressedOffset;
+                
+                // Write footer at the end
+                long headerStart = System.nanoTime();
+                finalHeader.writeTo(output);
+                
+                // Write footer start pointer at the very end (last 8 bytes)
+                // This allows instant footer location regardless of file size
+                output.writeLong(footerStartPosition);
+                
+                output.flush(); // Ensure footer is written to disk
+                
+                lastStageMetrics.recordStage(StageMetrics.Stage.HEADER_WRITE, System.nanoTime() - headerStart, 0);
+                
+                logger.debug("Footer written at offset {}, file size: {} bytes", footerStartPosition, Files.size(outputPath));
             }
             long writeTime = System.nanoTime() - writeStart;
             lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, writeTime, Files.size(outputPath));
@@ -185,7 +197,6 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         // Aggressive memory cleanup
         compressedChunks.clear();
         System.gc();
-        System.runFinalization();
         logger.debug("🧹 Memory cleanup complete, suggested GC to free ~{} MB", 
                     (fileSize / 1_000_000));
         
@@ -314,33 +325,74 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         logger.info("🚀 Parallel decompression: {} to {} using {} workers", 
                    inputPath.getFileName(), outputPath.getFileName(), parallelChunks);
         
-        // Read header first and determine where compressed data starts
-        CompressionHeader header;
-        long compressedDataStart;
+        // Read header - supports both old (header-first) and new (footer-last) formats
+        CompressionHeader header = null;
+        long compressedDataStart = 0;
+        boolean isFooterFormat = false;
         
-        try (DataInputStream input = new DataInputStream(
-                new BufferedInputStream(Files.newInputStream(inputPath)))) {
-            
-            // Mark position before reading header
+        try (RandomAccessFile file = new RandomAccessFile(inputPath.toFile(), "r")) {
             long headerStart = System.nanoTime();
+            long totalFileSize = file.length();
             
-            header = CompressionHeader.readFrom(input);
-            
-            // After reading header, calculate where compressed data starts
-            // Sum all compressed sizes to find total compressed data size
-            long totalCompressedSize = 0;
-            for (ChunkMetadata chunk : header.getChunks()) {
-                totalCompressedSize += chunk.getCompressedSize();
+            // First, try reading header from beginning (old format)
+            file.seek(0);
+            try {
+                byte[] headerBuffer = new byte[Math.min(64 * 1024, (int) totalFileSize)];
+                file.readFully(headerBuffer, 0, Math.min(4096, headerBuffer.length));
+                ByteArrayInputStream headerStream = new ByteArrayInputStream(headerBuffer);
+                DataInputStream headerInput = new DataInputStream(headerStream);
+                
+                header = CompressionHeader.readFrom(headerInput);
+                
+                // If successful, this is old header-first format
+                // Calculate where compressed data starts
+                long totalCompressedSize = 0;
+                for (ChunkMetadata chunk : header.getChunks()) {
+                    totalCompressedSize += chunk.getCompressedSize();
+                }
+                compressedDataStart = totalFileSize - totalCompressedSize;
+                isFooterFormat = false;
+                
+                logger.info("Decompressing {} chunks (header-first format), original size: {} bytes",
+                           header.getNumChunks(), header.getOriginalFileSize());
+                
+            } catch (Exception e) {
+                // Old format failed, try new footer-last format
+                header = null;
+                
+                logger.debug("Header-first format failed, trying footer-last format");
+                
+                // NEW APPROACH: Read last 8 bytes to get footer start position
+                file.seek(totalFileSize - 8);
+                long footerStartPosition = file.readLong();
+                
+                logger.debug("Read footer pointer: footer starts at offset {}", footerStartPosition);
+                
+                // Validate footer position
+                if (footerStartPosition < 0 || footerStartPosition >= totalFileSize - 8) {
+                    throw new IOException("Invalid footer position: " + footerStartPosition);
+                }
+                
+                // Seek to footer and read it
+                file.seek(footerStartPosition);
+                byte[] footerBuffer = new byte[(int)(totalFileSize - footerStartPosition - 8)]; // Exclude the 8-byte pointer
+                file.readFully(footerBuffer);
+                
+                ByteArrayInputStream footerStream = new ByteArrayInputStream(footerBuffer);
+                DataInputStream footerInput = new DataInputStream(footerStream);
+                
+                header = CompressionHeader.readFrom(footerInput);
+                compressedDataStart = 0; // Data starts at beginning in footer format
+                
+                logger.info("Decompressing {} chunks (footer-based format, footer at {}), original size: {} bytes",
+                           header.getNumChunks(), footerStartPosition, header.getOriginalFileSize());
+                
+                if (header == null) {
+                    throw new IOException("Could not find valid header in compressed file (tried both header-first and footer-last formats)");
+                }
             }
-            long totalFileSize = Files.size(inputPath);
-            compressedDataStart = totalFileSize - totalCompressedSize;
             
             lastStageMetrics.recordStage(StageMetrics.Stage.FILE_IO, System.nanoTime() - headerStart, 0);
-            
-            int numChunks = header.getNumChunks();
-            
-            logger.info("Decompressing {} chunks, original size: {} bytes, header size: {} bytes",
-                       numChunks, header.getOriginalFileSize(), compressedDataStart);
         }
         
         // Process chunks in batches to avoid OOM (read batch -> decode parallel -> write -> free memory)
@@ -375,6 +427,11 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
                         
                         // Seek to absolute position: header + chunk's compressed offset
                         long absolutePosition = compressedDataStart + chunk.getCompressedOffset();
+                        
+                        logger.info("Reading chunk {}: offset={}, size={}, absolutePos={}, dataStart={}", 
+                                   i, chunk.getCompressedOffset(), chunk.getCompressedSize(), 
+                                   absolutePosition, compressedDataStart);
+                        
                         inputFile.seek(absolutePosition);
                         inputFile.readFully(compressedData);
                         compressedBatchData.put(i, compressedData);
@@ -442,7 +499,6 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         
         // Aggressive memory cleanup
         System.gc();
-        System.runFinalization();
         logger.debug("🧹 Memory cleanup complete after decompression");
         
         // Log stage metrics
@@ -479,13 +535,35 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
         long checksumStart = System.nanoTime();
         byte[] checksum = ChecksumUtil.computeSha256(decodedData);
         if (!MessageDigest.isEqual(checksum, chunk.getSha256Checksum())) {
-            throw new IOException("Checksum mismatch in chunk " + index);
+            String expectedHex = bytesToHex(chunk.getSha256Checksum());
+            String actualHex = bytesToHex(checksum);
+            throw new IOException(String.format(
+                "Checksum mismatch in chunk %d:\n" +
+                "  Expected: %s\n" +
+                "  Actual:   %s\n" +
+                "  Chunk size: %d bytes\n" +
+                "  Compressed size: %d bytes\n" +
+                "  Compressed offset: %d",
+                index, expectedHex, actualHex, 
+                chunk.getOriginalSize(), compressedData.length, 
+                chunk.getCompressedOffset()));
         }
         synchronized (lastStageMetrics) {
             lastStageMetrics.recordStage(StageMetrics.Stage.CHECKSUM_VERIFY, System.nanoTime() - checksumStart, decodedData.length);
         }
         
         return new DecodedChunkData(index, decodedData);
+    }
+    
+    /**
+     * Convert byte array to hex string for debugging.
+     */
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
     }
     
     /**
@@ -564,15 +642,49 @@ public class CpuCompressionService implements CompressionService, AutoCloseable 
     
     @Override
     public boolean verifyIntegrity(Path compressedPath) throws IOException {
-        try (DataInputStream input = new DataInputStream(
-                new BufferedInputStream(Files.newInputStream(compressedPath)))) {
+        // Read footer from end of file
+        CompressionHeader header;
+        long compressedDataLength;
+        
+        try (RandomAccessFile file = new RandomAccessFile(compressedPath.toFile(), "r")) {
+            long totalFileSize = file.length();
             
-            CompressionHeader header = CompressionHeader.readFrom(input);
+            // Read footer from end - scan last 64KB to find it
+            int footerMaxSize = (int) Math.min(64 * 1024, totalFileSize);
+            byte[] buffer = new byte[footerMaxSize];
+            file.seek(totalFileSize - footerMaxSize);
+            file.readFully(buffer);
             
-            // Verify each chunk's checksum
+            // Try parsing from different positions to find valid header
+            header = null;
+            
+            for (int offset = 0; offset < footerMaxSize - 100; offset++) {
+                try {
+                    ByteArrayInputStream testStream = new ByteArrayInputStream(buffer, offset, footerMaxSize - offset);
+                    DataInputStream testInput = new DataInputStream(testStream);
+                    
+                    CompressionHeader testHeader = CompressionHeader.readFrom(testInput);
+                    
+                    if (testHeader.getChunks().size() > 0 && 
+                        testHeader.getOriginalFileSize() > 0) {
+                        header = testHeader;
+                        compressedDataLength = totalFileSize - footerMaxSize + offset;
+                        break;
+                    }
+                } catch (Exception e) {
+                    continue;
+                }
+            }
+            
+            if (header == null) {
+                throw new IOException("Could not find valid header/footer in compressed file");
+            }
+            
+            // Read and verify chunks from start of file
+            file.seek(0);
             for (ChunkMetadata chunk : header.getChunks()) {
                 byte[] compressedData = new byte[chunk.getCompressedSize()];
-                input.readFully(compressedData);
+                file.readFully(compressedData);
                 
                 // For verify-only mode, we could skip full decompression
                 // and just verify the compressed data integrity

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.datacomp.ui.CompressController"
+      spacing="20">
+    
+    <Label text="Compress / Decompress" styleClass="view-title"/>
+    
+    <!-- Input File Selection -->
+    <VBox spacing="10">
+        <Label text="Input File:" styleClass="section-label"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="inputFileField" promptText="Select input file..." HBox.hgrow="ALWAYS" editable="false"/>
+            <Button text="Browse..." onAction="#handleSelectInputFile" styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+    
+    <!-- Output File Selection -->
+    <VBox spacing="10">
+        <Label text="Output File:" styleClass="section-label"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="outputFileField" promptText="Output file will be auto-generated" HBox.hgrow="ALWAYS"/>
+            <Button text="Browse..." onAction="#handleSelectOutputFile" styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+    
+    <!-- Drag and Drop Area (Alternative) -->
+    <VBox fx:id="dragDropArea" styleClass="drag-drop-area" alignment="CENTER" managed="false" visible="false">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+        
+        <Label text="Or drag and drop file here" styleClass="drag-drop-label"/>
+        
+        <Label fx:id="fileLabel" text="No file selected" styleClass="file-label"/>
+    </VBox>
+    
+    <!-- Settings -->
+    <HBox spacing="15" alignment="CENTER_LEFT">
+        <CheckBox fx:id="useCpuCheckBox" text="Force CPU mode"/>
+    </HBox>
+    
+    <!-- Action Buttons -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="compressButton" text="Compress" onAction="#handleCompress" 
+                styleClass="primary-button" disable="true"/>
+        <Button fx:id="decompressButton" text="Decompress" onAction="#handleDecompress" 
+                styleClass="primary-button" disable="true"/>
+    </HBox>
+    
+    <!-- Progress Section -->
+    <VBox spacing="10" styleClass="progress-section">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Progress:" styleClass="progress-title"/>
+            <Label fx:id="progressLabel" text="" styleClass="progress-text"/>
+        </HBox>
+        
+        <ProgressBar fx:id="progressBar" maxWidth="Infinity" progress="0"/>
+        
+        <HBox spacing="20">
+            <Label fx:id="throughputLabel" text="" styleClass="metric-label"/>
+            <Label fx:id="etaLabel" text="" styleClass="metric-label"/>
+        </HBox>
+        
+        <Label fx:id="statusLabel" text="" styleClass="status-message"/>
+        
+        <!-- Stage Metrics Display (Modern Card Layout) -->
+        <VBox spacing="5" fx:id="stageMetricsBox" managed="false" visible="false">
+            <Label text="📊 Performance Breakdown" styleClass="section-label" 
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 5 0 10 0;"/>
+            <VBox fx:id="stageMetricsContainer" spacing="8" style="-fx-padding: 5;"/>
+        </VBox>
+    </VBox>
+    
+</VBox>
+
+

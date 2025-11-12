@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.datacomp.ui.DashboardController"
+      spacing="20">
+    
+    <Label text="Dashboard" styleClass="view-title"/>
+    
+    <!-- System Info Cards -->
+    <HBox spacing="20">
+        <!-- GPU Card -->
+        <VBox styleClass="info-card" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <Label text="GPU Status" styleClass="card-title"/>
+            <Region VBox.vgrow="ALWAYS" minHeight="10"/>
+            <Label fx:id="gpuNameLabel" text="Detecting..." styleClass="card-value"/>
+            <Label fx:id="gpuStatusLabel" text="..." styleClass="card-status"/>
+        </VBox>
+        
+        <!-- CPU Card -->
+        <VBox styleClass="info-card" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <Label text="CPU" styleClass="card-title"/>
+            <Region VBox.vgrow="ALWAYS" minHeight="10"/>
+            <Label fx:id="cpuCoresLabel" text="..." styleClass="card-value"/>
+            <Label text="Available" styleClass="card-status"/>
+        </VBox>
+        
+        <!-- Average Throughput Card -->
+        <VBox styleClass="info-card" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <Label text="Avg. Throughput" styleClass="card-title"/>
+            <Region VBox.vgrow="ALWAYS" minHeight="10"/>
+            <Label fx:id="avgThroughputLabel" text="-" styleClass="card-value"/>
+            <Label text="All Operations" styleClass="card-status"/>
+        </VBox>
+    </HBox>
+    
+    <!-- Last Operation Summary -->
+    <VBox styleClass="info-card">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Last Operation" styleClass="card-title"/>
+        
+        <GridPane hgap="20" vgap="10">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100"/>
+            </columnConstraints>
+            
+            <!-- Row 1: Labels -->
+            <Label text="Operation" styleClass="metric-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="Throughput" styleClass="metric-label" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="Space Saved" styleClass="metric-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <Label text="Duration" styleClass="metric-label" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            
+            <!-- Row 2: Values -->
+            <Label fx:id="lastOperationLabel" text="No operations yet" styleClass="metric-value" 
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label fx:id="lastThroughputLabel" text="-" styleClass="metric-value" 
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label fx:id="lastCompressionRatioLabel" text="-" styleClass="metric-value" 
+                   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Label fx:id="lastDurationLabel" text="-" styleClass="metric-value" 
+                   GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        </GridPane>
+    </VBox>
+    
+    <!-- Performance Chart -->
+    <VBox styleClass="chart-card" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Performance History" styleClass="card-title"/>
+        
+        <LineChart fx:id="performanceChart" VBox.vgrow="ALWAYS">
+            <xAxis>
+                <CategoryAxis label="Time"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Throughput (MB/s)"/>
+            </yAxis>
+        </LineChart>
+    </VBox>
+    
+    <!-- Recent Operations Table -->
+    <VBox styleClass="info-card" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        
+        <Label text="Recent Operations" styleClass="card-title"/>
+        
+        <TableView fx:id="metricsTable" VBox.vgrow="ALWAYS" minHeight="200">
+            <columns>
+                <TableColumn fx:id="timeColumn" text="Time" prefWidth="80"/>
+                <TableColumn fx:id="operationColumn" text="Operation" prefWidth="100"/>
+                <TableColumn fx:id="fileColumn" text="File" prefWidth="200"/>
+                <TableColumn fx:id="sizeColumn" text="Size" prefWidth="150"/>
+                <TableColumn fx:id="throughputColumn" text="Throughput" prefWidth="100"/>
+                <TableColumn fx:id="processorColumn" text="Processor" prefWidth="80"/>
+            </columns>
+        </TableView>
+    </VBox>
+    
+</VBox>
+
