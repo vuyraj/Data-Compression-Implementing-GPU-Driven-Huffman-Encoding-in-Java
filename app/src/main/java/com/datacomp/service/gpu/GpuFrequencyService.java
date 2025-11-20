@@ -98,13 +98,16 @@ public class GpuFrequencyService implements FrequencyService {
             System.arraycopy(data, offset, input, 0, length);
             
             // Allocate output histogram
-            int[] histogram = new int[256];
+            // Use tiled approach to avoid race conditions
+            int chunkSize = 65536; // 64KB per thread
+            int numChunks = (length + chunkSize - 1) / chunkSize;
+            int[] subHistograms = new int[numChunks * 256];
             
             // Create task graph and explicitly set it to use our selected device
             TaskGraph taskGraph = new TaskGraph("histogram")
                 .transferToDevice(DataTransferMode.FIRST_EXECUTION, input)
-                .task("compute", TornadoKernels::histogramKernel, input, length, histogram)
-                .transferToHost(DataTransferMode.EVERY_EXECUTION, histogram);
+                .task("compute", TornadoKernels::histogramTiledKernel, input, length, subHistograms, chunkSize)
+                .transferToHost(DataTransferMode.EVERY_EXECUTION, subHistograms);
             
             ImmutableTaskGraph immutableTaskGraph = taskGraph.snapshot();
             
@@ -114,6 +117,15 @@ public class GpuFrequencyService implements FrequencyService {
                     executor.withDevice(device);
                 }
                 executor.execute();
+            }
+            
+            // Reduce sub-histograms on CPU
+            int[] histogram = new int[256];
+            for (int c = 0; c < numChunks; c++) {
+                int chunkOffset = c * 256;
+                for (int i = 0; i < 256; i++) {
+                    histogram[i] += subHistograms[chunkOffset + i];
+                }
             }
             
             long duration = System.nanoTime() - startTime;

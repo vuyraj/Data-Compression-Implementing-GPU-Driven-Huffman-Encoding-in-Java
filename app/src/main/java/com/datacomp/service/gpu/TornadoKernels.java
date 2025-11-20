@@ -78,15 +78,129 @@ public class TornadoKernels {
     }
     
     /**
-     * Memory bandwidth test kernel.
+     * Tiled histogram kernel - Race-free.
+     * Each thread processes a distinct chunk of input and writes to its own histogram.
      * 
-     * @param input Input array
-     * @param output Output array
-     * @param size Array size
+     * @param input Input byte array
+     * @param length Total length of input
+     * @param subHistograms Output: [numChunks * 256]
+     * @param chunkSize Size of each chunk processed by a thread
      */
-    public static void memoryBandwidthKernel(float[] input, float[] output, int size) {
-        for (@Parallel int i = 0; i < size; i++) {
-            output[i] = input[i] * 2.0f;
+    public static void histogramTiledKernel(byte[] input, int length, int[] subHistograms, int chunkSize) {
+        for (@Parallel int chunkId = 0; chunkId < (length + chunkSize - 1) / chunkSize; chunkId++) {
+            int start = chunkId * chunkSize;
+            int end = Math.min(start + chunkSize, length);
+            int histOffset = chunkId * 256;
+            
+            for (int i = start; i < end; i++) {
+                int symbol = input[i] & 0xFF;
+                subHistograms[histOffset + symbol]++;
+            }
+        }
+    }
+
+    /**
+     * Packet-based encoding kernel - Race-free.
+     * Each thread generates exactly one 32-bit output word.
+     * It finds the relevant input symbols using binary search on bitPositions.
+     * 
+     * @param input Input symbols
+     * @param codewords Huffman codewords
+     * @param codeLengths Huffman code lengths
+     * @param bitPositions Prefix sum of bit positions
+     * @param output Output array (ints)
+     * @param numSymbols Number of input symbols
+     * @param numOutputWords Number of output words to generate
+     */
+    public static void encodePacketKernel(byte[] input, int[] codewords, int[] codeLengths, 
+                                         int[] bitPositions, int[] output, 
+                                         int numSymbols, int numOutputWords) {
+        for (@Parallel int wordIdx = 0; wordIdx < numOutputWords; wordIdx++) {
+            int startBit = wordIdx * 32;
+            int endBit = startBit + 32;
+            
+            // Binary search to find the first symbol that contributes to this word
+            // We look for the first symbol where bitPositions[i] + codeLength > startBit
+            // Or simply, the symbol covering startBit.
+            // Since bitPositions[i] is the START bit of symbol i.
+            // We want largest i such that bitPositions[i] <= startBit + 31 (roughly)
+            // Actually, we want the first symbol that *ends* after startBit.
+            // i.e. bitPositions[i] + codeLengths[i] > startBit.
+            
+            // Binary search for 'startBit' in bitPositions
+            int low = 0;
+            int high = numSymbols - 1;
+            int startSymbolIdx = -1;
+            
+            while (low <= high) {
+                int mid = (low + high) >>> 1;
+                if (bitPositions[mid] <= startBit) {
+                    startSymbolIdx = mid;
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            
+            // startSymbolIdx is the last symbol that starts at or before startBit.
+            // It might end before startBit (if there's a gap? No, packed).
+            // So startSymbolIdx is the symbol covering startBit (or the one just before if it ended exactly at startBit).
+            
+            if (startSymbolIdx < 0) startSymbolIdx = 0;
+            
+            int currentWord = 0;
+            
+            // Iterate through symbols until we pass endBit
+            for (int i = startSymbolIdx; i < numSymbols; i++) {
+                int symStartBit = bitPositions[i];
+                int symLen = codeLengths[input[i] & 0xFF];
+                int symEndBit = symStartBit + symLen;
+                
+                if (symStartBit >= endBit) break; // Past this word
+                
+                // Calculate overlap with this word [startBit, endBit)
+                // Intersection of [symStartBit, symEndBit) and [startBit, endBit)
+                
+                int overlapStart = Math.max(startBit, symStartBit);
+                int overlapEnd = Math.min(endBit, symEndBit);
+                
+                if (overlapStart < overlapEnd) {
+                    int overlapLen = overlapEnd - overlapStart;
+                    
+                    // Extract bits from codeword
+                    // Codeword bits are MSB aligned in the integer? No, usually LSB or just value.
+                    // Let's assume 'codeword' has value. 
+                    // Bit 0 of codeword is LSB? Or MSB?
+                    // Usually Huffman codes are written MSB first.
+                    // Let's assume bit 0 is the MSB of the code (value >> (len-1)).
+                    
+                    // We need bits from (overlapStart - symStartBit) to (overlapEnd - symStartBit)
+                    // relative to the symbol's start.
+                    
+                    int bitsToShift = symLen - (overlapEnd - symStartBit);
+                    int extractedBits = (codewords[input[i] & 0xFF] >>> bitsToShift) & ((1 << overlapLen) - 1);
+                    
+                    // Place into currentWord
+                    // Word is filled from MSB to LSB? Or LSB to MSB?
+                    // Let's assume standard big-endian bit stream:
+                    // Byte 0: bits 0-7. Word 0: bits 0-31.
+                    // Bit 0 of Word 0 is MSB (1<<31) or LSB (1<<0)?
+                    // If we write `int` to file, DataOutputStream writes Big Endian.
+                    // So `int` 0x12345678 becomes bytes 12, 34, 56, 78.
+                    // Bit 0 of the stream is bit 31 of the int (MSB).
+                    
+                    int shiftInWord = 32 - (overlapEnd - startBit); // Shift to position
+                    // Wait, if we fill from MSB (bit 31) down to LSB (bit 0).
+                    // overlapStart relative to startBit:
+                    // offset = overlapStart - startBit (0 to 31)
+                    // We want to place these bits at 31 - offset - overlapLen + 1?
+                    // Let's simplify:
+                    // We want to place bits at `32 - (overlapEnd - startBit)`.
+                    
+                    currentWord |= (extractedBits << shiftInWord);
+                }
+            }
+            output[wordIdx] = currentWord;
         }
     }
     

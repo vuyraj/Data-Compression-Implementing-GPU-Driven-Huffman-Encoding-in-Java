@@ -1,0 +1,14 @@
+2025-11-13 01:12:35.842 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - 🛑 Shutdown hook triggered - forcing cleanup
+2025-11-13 01:12:36.019 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-13 01:12:36.020 [Cleanup-Thread] INFO  com.datacomp.ui.CompressController - Cleaning up CompressController resources
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 5 workers
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.ui.CompressController - ✅ Compression service closed successfully
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 5 workers
+2025-11-13 01:12:36.021 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-13 01:12:36.022 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-13 01:12:36.022 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-13 01:12:36.022 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-13 01:12:36.221 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Shutdown cleanup complete

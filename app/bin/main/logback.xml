@@ -36,10 +36,10 @@
     <logger name="tornado" level="WARN"/>
     
     <!-- Logger for compression services -->
-    <logger name="com.datacomp.service" level="INFO"/>
+    <logger name="com.datacomp.service" level="WARN"/>
     
     <!-- Root Logger -->
-    <root level="INFO">
+    <root level="WARN">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>

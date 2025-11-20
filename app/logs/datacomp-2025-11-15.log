@@ -1,0 +1,52 @@
+2025-11-15 14:25:57.766 [JavaFX-Launcher] INFO  com.datacomp.ui.DataCompApp - Initializing DataComp application
+2025-11-15 14:25:58.075 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Initializing main view controller
+2025-11-15 14:25:58.086 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-15 14:25:59.176 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-15 14:25:59.176 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-15 14:25:59.177 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-15 14:25:59.180 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-15 14:25:59.181 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 16 MB
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 19 MB
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 39
+2025-11-15 14:25:59.930 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (with explicit GPU memory cleanup)
+2025-11-15 14:25:59.931 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-15 14:25:59.961 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-15 14:26:00.537 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application started successfully
+2025-11-15 14:26:07.120 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-11-15 14:28:04.050 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - Initialized CPU compression service with 8 parallel chunk workers
+2025-11-15 14:28:04.050 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Searching for CUDA device among 2 TornadoVM backends
+2025-11-15 14:28:04.050 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 0: OpenCL (2 devices)
+2025-11-15 14:28:04.050 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Backend 1: PTX (1 devices)
+2025-11-15 14:28:04.050 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - ✅ Found CUDA/PTX device: NVIDIA GeForce MX330 GPU
+2025-11-15 14:28:04.051 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuFrequencyService - Selected GPU device: NVIDIA GeForce MX330 GPU (CUDA backend)
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🎮 GPU Memory Analysis:
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Estimated Total VRAM: 2000 MB
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Available Memory: 800 MB
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Chunk Size: 16 MB
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Memory per Chunk (with overhead): 19 MB
+2025-11-15 14:28:04.077 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Calculated Max Parallel: 39
+2025-11-15 14:28:04.078 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService -    Safe Parallel Chunks: 4 (with explicit GPU memory cleanup)
+2025-11-15 14:28:04.078 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - GPU compression service initialized: GPU (NVIDIA GeForce MX330 GPU [PTX]) with 4 parallel chunk workers
+2025-11-15 14:28:04.091 [JavaFX Application Thread] INFO  com.datacomp.service.ServiceFactory - Using GPU compression service
+2025-11-15 14:28:42.205 [JavaFX Application Thread] INFO  com.datacomp.ui.SettingsController - Settings loaded from configuration
+2025-11-15 14:30:18.677 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - Application stopping - cleaning up resources
+2025-11-15 14:30:18.677 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-15 14:30:18.677 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-15 14:30:18.678 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-15 14:30:18.678 [JavaFX Application Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-15 14:30:18.678 [JavaFX Application Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-15 14:30:18.678 [JavaFX Application Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-15 14:30:18.678 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - 🗑️ Forcing garbage collection...
+2025-11-15 14:30:18.795 [JavaFX Application Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Application stopped successfully
+2025-11-15 14:30:18.798 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - 🛑 Shutdown hook triggered - forcing cleanup
+2025-11-15 14:30:18.799 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - Cleaning up MainViewController resources
+2025-11-15 14:30:18.799 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - 🛑 Shutting down GPU compression service with 4 workers
+2025-11-15 14:30:18.799 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - 🛑 Shutting down CPU compression service with 8 workers
+2025-11-15 14:30:18.799 [Cleanup-Thread] INFO  com.datacomp.service.cpu.CpuCompressionService - ✅ CPU compression service shutdown complete
+2025-11-15 14:30:18.800 [Cleanup-Thread] INFO  com.datacomp.service.gpu.GpuCompressionService - ✅ GPU compression service shutdown complete
+2025-11-15 14:30:18.800 [Cleanup-Thread] INFO  com.datacomp.ui.MainViewController - ✅ Main controller compression service closed
+2025-11-15 14:30:18.889 [Cleanup-Thread] INFO  com.datacomp.ui.DataCompApp - ✅ Shutdown cleanup complete
